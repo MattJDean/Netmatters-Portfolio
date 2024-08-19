@@ -9,15 +9,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/assets/img/hero-image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/hero-image.jpg');
 
     &--h1 {
-        font-size: 2rem;
-        color: $heading-color;
+        font-size: 2.5rem;
+        color: $text-color;
+        text-shadow: 1px 1px $background-color;
+       @include center-absolute(50%, 50%);
     }
 
     &--h2 {
         font-size: 1.5rem;
-        color: $heading-color;
+        color: $text-color;
+        text-shadow: 1px 1px $background-color;
+        @include center-absolute(60%, 50%);
+        
     }
 }
