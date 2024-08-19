@@ -2,9 +2,10 @@
 // Colours //
 /////////////
 
-$primary-color: #386787;
-$secondary-color: #2ecc71;
-$text-color: #333;
-$background-color: #fff;
-$heading-color: #333;
-$link-color: #333;
+$primary-color: #355952;
+$secondary-color: #EAB63E;
+$text-color: #355952;
+$secondary-text-color: #E37769;
+$background-color: #F9F6E7;
+$heading-color: darken($text-color, 10%);
+$link-color: lighten($text-color, 10%);
