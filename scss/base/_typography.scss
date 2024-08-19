@@ -7,8 +7,9 @@
 // Variables //
 // --------- //
 
-$base-font-family: 'Roboto', sans-serif;
+$base-font-family: "League Spartan", sans-serif;
 $base-font-size: 16px;
+$base-font-weight: 400;
 $base-line-height: 1.5;
 $link-hover-color: lighten($link-color, 10%);
 $paragraph-margin-bottom: 1em;
@@ -21,6 +22,7 @@ $paragraph-margin-bottom: 1em;
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $text-color;
 
