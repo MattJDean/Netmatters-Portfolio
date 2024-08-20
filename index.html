@@ -88,33 +88,36 @@
 
         <footer>
             <section id="contact" class="contact__container">
-                <h2>Lets Connect</h2>
-                <span><i class="fa-solid fa-mobile-retro"></i><a href="tel:+447368938360">  07368 938360</a></span>
-                <span><i class="fa-solid fa-envelope"></i><a  href="mailto:matt@mattdean.tech">  matt@mattdean.tech</a></span>
+                <h2>Lets Connect...</h2>
+                <span class="icon__phone"><a href="tel:+447368938360"><i class="fa-solid fa-mobile-retro"></i></a>+44(0)7368 938360</span>
+                <span class="icon__email"><a  href="mailto:matt@mattdean.tech"><i class="fa-solid fa-envelope"></i></a>matt@mattdean.tech</span>
                 
-                <form class="contact__form" action="#" method="post">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first_name" required>
-                
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last_name" required>
-                
-                    <label for="email"><i class="fa-solid fa-at"></i>Email:</label>
-                    <input type="email" id="email" name="email" required>
-                
-                    <label for="subject"><i class="fa-solid fa-question"></i>Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-                
-                    <label for="message"><i class="fa-solid fa-pen-fancy"></i>Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                
-                    <button type="submit">Send<i class="fa-solid fa-rocket"></i></button>
-                </form>     
+                <div class="contact__form">
+                    <form class="form" action="#" method="post">
+                        <label for="first-name"></label>
+                        <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                    
+                        <label for="last-name"></label>
+                        <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+                    
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    
+                        <label for="subject"></label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    
+                        <label for="message"></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Message..." required></textarea>
+                    
+                        <button type="submit">Submit</button>
+                    </form>
+                </div> 
+                <div class="footer__top">
+                    <a href="#hero"><i class="fa-solid fa-angles-up"></i></a><br>
+                    <span>Back To Top</span>
+                </div>  
             </section>
-          <div class="footer__top">
-            <i class="fa-solid fa-angles-up"></i>
-            <span>Back To Top</span>
-          </div>
+           
         </footer>
     </div>
    </body>
