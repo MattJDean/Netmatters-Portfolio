@@ -17,7 +17,7 @@
         
         <header>
             <div class="header__container">
-                <div class="header__hero">
+                <section id="hero" class="header__hero">
                     <div class="header__hero--h1">
                         <h1>My Name Is<br> Matt Dean.</h1>
                     </div>
@@ -26,9 +26,9 @@
                     </div> 
                     <div class="header__down">
                         <span>Scroll Down</span><br>
-                        <i class="fa-solid fa-angles-down"></i>
+                       <a href="#projects"><i class="fa-solid fa-angles-down"></i></a>
                     </div>
-                </div> 
+                </section> 
             </div>
         </header>
 
@@ -57,42 +57,40 @@
 
         <main>
             <div class="portfolio__container">
-                <section class="portfolio__grid">
+                <section id="projects" class="portfolio__grid">
                     <article class="portfolio__grid--card">
                         <h3>Project One</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>
                     <article class="portfolio__grid--card">
                         <h3>Project Two</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>
                     <article class="portfolio__grid--card">
                         <h3>Project Three</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>
                     <article class="portfolio__grid--card">
                         <h3>Project Four</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>
                     <article class="portfolio__grid--card">
                         <h3>Project Five</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>
                     <article class="portfolio__grid--card">
                         <h3>Project Six</h3>
-                        <a href="#">View Project<i class="fa-solid fa-angle-right"></i></a>
+                        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
                     </article>  
                 </section>
             </div>
         </main>
 
         <footer>
-            <div class="contact__container">
-                <h2>Get In Touch</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non consectetur culpa ipsa nobis repudiandae incidunt esse nesciunt tenetur. Ipsa.</p>
-                <i class="fa-solid fa-mobile-retro"></i><a href="tel:+447368938360">07368 938360</a>
-                <i class="fa-solid fa-envelope"></i><a  href="mailto:matt@mattdean.tech">matt@mattdean.tech</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis suscipit quo voluptatem velit, nesciunt commodi quia iste nisi natus ab consequuntur ullam facilis expedita reiciendis, quod, officia doloremque rerum amet.</p>
+            <section id="contact" class="contact__container">
+                <h2>Lets Connect</h2>
+                <span><i class="fa-solid fa-mobile-retro"></i><a href="tel:+447368938360">  07368 938360</a></span>
+                <span><i class="fa-solid fa-envelope"></i><a  href="mailto:matt@mattdean.tech">  matt@mattdean.tech</a></span>
                 
                 <form class="contact__form" action="#" method="post">
                     <label for="first-name">First Name:</label>
@@ -112,7 +110,7 @@
                 
                     <button type="submit">Send<i class="fa-solid fa-rocket"></i></button>
                 </form>     
-            </div>
+            </section>
           <div class="footer__top">
             <i class="fa-solid fa-angles-up"></i>
             <span>Back To Top</span>
