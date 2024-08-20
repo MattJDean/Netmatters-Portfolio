@@ -2,7 +2,19 @@
 // Side Menu //
 // --------- //
 
+.sidebar__burger {
+    display: block;
+    @include center-absolute(35px, 35px);
+    z-index: 10;
+    font-size: 3.5rem;
+    color: $secondary-text-color;
+    text-shadow: 2px 2px $background-color;
+    cursor: pointer;
+}
+
+
 .sidebar__container {
+    display: none;
     width: 200px;
     background-color: $background-color;
 }

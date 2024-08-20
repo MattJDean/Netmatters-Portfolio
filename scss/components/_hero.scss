@@ -3,26 +3,40 @@
 // ----------- //
 
 .header__hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     position: relative;
     width: 100%;
-    height: 60vh; 
+    height: 100vh; 
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/hero-image.jpg');
 
     &--h1 {
-        font-size: 2.5rem;
-        color: $text-color;
+        font-size: 2rem;
+        color: $secondary-text-color;
         text-shadow: 1px 1px $background-color;
-       @include center-absolute(50%, 50%);
+       @include center-absolute(30%, 50%);
+       
     }
 
     &--h2 {
-        font-size: 1.5rem;
-        color: $text-color;
+        font-size: 1.25rem;
+        color: $secondary-text-color;
         text-shadow: 1px 1px $background-color;
-        @include center-absolute(60%, 50%);
+        @include center-absolute(39%, 50%);
         
     }
+}
+
+.header__down {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: $secondary-text-color;
+    @include center-absolute(90%, 50%);
 }
