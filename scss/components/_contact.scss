@@ -58,8 +58,8 @@
         width: 100%;
         max-width: 400px;
         padding: 20px;
-        margin-top: 60px;
-        margin-bottom: 20px;
+        margin-top: 70px;
+        margin-bottom: 90px;
         box-shadow: $box-shadow;
         border-radius: 8px;
         background-color: $background-color;
@@ -93,7 +93,7 @@
                 margin-top: 10px;
     
                 &:hover {
-                    background-color: lighten($text-color, 50%);
+                    background-color: lighten($text-color, 10%);
                 }
             }
         }
@@ -107,10 +107,10 @@
             display: none;
         }
         position: relative; 
-        bottom: 0;
+        bottom: 60px;
         left: 0;  
         width: 100%;
-        margin-top: 40px;
+        margin-top: 0;
         text-align: center;
         font-size: 1.5rem;
         color: $primary-color;

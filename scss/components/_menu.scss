@@ -31,7 +31,7 @@ nav {
         width: 150px;    
         height: 100vh; 
         font-family: $base-font-family; 
-        border-right: 2px solid $primary-color;  
+        border-right: 3px solid $primary-color;  
         background-color: $background-color; 
         padding: 20px;
         box-sizing: border-box;
@@ -40,10 +40,12 @@ nav {
         justify-content: space-between;
         z-index: 1000;
 
-        .sidebar__logo {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+        .sidebar__logo { 
+            padding: 10px 10px;
+            margin: 0 auto;
+            border: 3px solid $text-color;
+            border-radius: 50%;
+            font-size: 2rem;
             color: $text-color;
         }
 
@@ -51,6 +53,11 @@ nav {
             list-style: none;
             padding: 0;
             margin: 0;
+            font-size: 0.925rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.25rem;
+            letter-spacing: 2px;
 
             li {
                 margin-bottom: 15px;
@@ -58,11 +65,10 @@ nav {
 
             a {
                 text-decoration: none;
-                font-size: 1.25rem;
-                display: block;
+                
                 
                 &:hover {
-                    color: lighten($text-color, 25%);
+                    color: lighten($text-color, 10%);
                 }
             }
         }
@@ -71,11 +77,12 @@ nav {
             margin-top: 20px;
             display: flex;
             flex-direction: row;
+            justify-content: center;
 
             i {
                 margin-right: 10px;
                 color: $text-color;
-                font-size: 1.5rem;
+                font-size: 1.75rem;
 
                 &:hover{
                     color: lighten($text-color, 25%);
