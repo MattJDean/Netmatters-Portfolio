@@ -112,8 +112,9 @@
         width: 100%;
         margin-top: 0;
         text-align: center;
-        font-size: 1.5rem;
-        color: $primary-color;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: darken($primary-color, 10%);
        
         animation: bounce 3s infinite;
         @keyframes bounce {
