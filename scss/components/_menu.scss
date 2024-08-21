@@ -2,6 +2,10 @@
 // Side Menu //
 // --------- //
 
+nav {
+    display: flex;
+}
+
 .sidebar__burger {
     display: block;
     @include center-absolute(35px, 35px);
@@ -10,11 +14,84 @@
     color: $primary-color;
     text-shadow: 3px 3px darken($primary-color, 20%);
     cursor: pointer;
+
+    @include respond-to(md) {
+        display: none;
+    }
 }
 
 
 .sidebar__container {
     display: none;
-    width: 200px;
-    background-color: $background-color;
+
+    @include respond-to(md) {
+        position: absolute;  
+        top: 0;           
+        left: 0;          
+        width: 150px;    
+        height: 100vh; 
+        font-family: $base-font-family; 
+        border-right: 2px solid $primary-color;  
+        background-color: $background-color; 
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1000;
+
+        .sidebar__logo {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: $text-color;
+        }
+
+        .sidebar__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 15px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 1.25rem;
+                display: block;
+                
+                &:hover {
+                    color: lighten($text-color, 25%);
+                }
+            }
+        }
+       
+        .sidebar__socials {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+
+            i {
+                margin-right: 10px;
+                color: $text-color;
+                font-size: 1.5rem;
+
+                &:hover{
+                    color: lighten($text-color, 25%);
+            }
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+               
+                 }     
+            }
+        }
+    }
 }
+

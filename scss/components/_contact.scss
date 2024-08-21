@@ -3,19 +3,25 @@
 // ------- //
 
 .contact__container {
+    
     position: relative; 
     scroll-snap-align: start;
     height: 100%;
     width: 100%;
     margin-top: 350px;
+    margin-bottom: 50px;
     background-color: $background-color;
     color: $text-color;
     font-family: $base-font-family;
+    @include respond-to(md) {
+        width: calc(100% - 150px);
+        margin-left: 150px;
+    }
 
     h2 {
-        position: absolute;
-        top: -290px;
-        left: 15px;
+        position: relative;
+        top: 0;
+        left: 20px;
         font-size: 2rem;
         line-height: 4rem;
         letter-spacing: 0.1rem;
@@ -23,9 +29,10 @@
 
 
     .icon__phone {
-        position: absolute;
-        top: -240px;
-        left: 18px;
+        position: relative;
+        top: 0;
+        float: left;
+        margin-left: 20px;
         font-size: 1rem;
 
         i {
@@ -34,9 +41,10 @@
     }
 
     .icon__email {
-        position:absolute;
-        top: -210px;
-        left: 15px;
+        position: relative;
+        top: 0;
+        float: left;
+        margin-left: 20px;
         font-size: 1rem;
 
         i {
@@ -45,13 +53,13 @@
     }
 
     .contact__form {
-        position: absolute;
-        top: -150px;
+        position: relative;
         left: calc(50% - 200px);
         width: 100%;
         max-width: 400px;
-        margin-bottom: 500px;
         padding: 20px;
+        margin-top: 60px;
+        margin-bottom: 20px;
         box-shadow: $box-shadow;
         border-radius: 8px;
         background-color: $background-color;
@@ -95,10 +103,14 @@
 
 
     .footer__top {
-        position: absolute; 
-        bottom: -390px;
+        @include respond-to(md) {
+            display: none;
+        }
+        position: relative; 
+        bottom: 0;
         left: 0;  
         width: 100%;
+        margin-top: 40px;
         text-align: center;
         font-size: 1.5rem;
         color: $primary-color;
