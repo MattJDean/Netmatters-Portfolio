@@ -3,96 +3,60 @@
 // ------- //
 
 .contact__container {
-    display: flex;
-    flex-direction: column;
+    position: relative; 
     scroll-snap-align: start;
     height: 100%;
     width: 100%;
-    margin: 20px 20px;
+    margin-top: 350px;
     background-color: $background-color;
     color: $text-color;
     font-family: $base-font-family;
 
     h2 {
+        position: absolute;
+        top: -290px;
+        left: 15px;
         font-size: 2rem;
         line-height: 4rem;
         letter-spacing: 0.1rem;
     }
 
-    span {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        line-height: 2rem;
-        gap: 5px;
-        margin-bottom: 10px;
-    }
 
-    .icon__phone > i {
-        font-size: 3rem;
-    }
+    .icon__phone {
+        position: absolute;
+        top: -240px;
+        left: 18px;
+        font-size: 1rem;
 
-    .icon__email > i {
-        font-size: 3rem;
-    }
-
-    .contact__form {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: auto;
-       
-
-        .form {
-            display: flex;
-            flex-direction: column; 
-            max-height: 100%;
-            gap: 5px; 
-            padding: 10px; 
-            background-color: $background-color; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-           
-            input {
-                padding: 10px; 
-                font-size: 1rem; 
-                border: 1px solid $text-color; 
-                border-radius: 4px;
-                color: $text-color; 
-            }
-
-            button {
-                position: relative;
-                left: calc(50% - 50px);
-                width: 100px;
-                padding: 10px 20px;
-                font-size: 1rem; 
-                color: $background-color; 
-                background-color: $text-color; 
-                border: none; 
-                border-radius: 4px; 
-                cursor: pointer; 
-                transition: background-color 0.3s ease; 
-            }
-
+        i {
+            font-size: 1.5rem;
         }
     }
 
+    .icon__email {
+        position:absolute;
+        top: -210px;
+        left: 15px;
+        font-size: 1rem;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    
+
+
     .footer__top {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        font-size: 0.75rem;
-        font-weight: 500;
-        line-height: 0.25rem;
-        color: darken($text-color, 5%);
+        position: absolute; 
+        bottom: 0px;
+        left: 0px;  
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        color: $primary-color;
+       
         animation: bounce 3s infinite;
-        margin-top: 10%;
-
-            i {
-                justify-self: center;
-            }
-
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
