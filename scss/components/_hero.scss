@@ -13,36 +13,26 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/hero-image.jpg');
-
-            &--h1 {
-                font-size: 2rem;
-                line-height: 2.25rem;
-                letter-spacing: 1.5px;
-                color: $secondary-text-color;
-                text-shadow: 1px 1px $background-color;
-            @include center-absolute(30%, 50%);
             
-            }
 
-            &--h2 {
-                font-size: 1.25rem;
-                letter-spacing: 1.25px;
-                color: $secondary-text-color;
-                text-shadow: 1px 1px $background-color;
-                @include center-absolute(39%, 50%);
-                
-            }
+           img {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            
+           }
         }
 
         .header__down {
-            font-size: 0.75rem;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 48px);
+            text-align: center;
+            font-family: $base-font-family;
+            font-size: 1.25rem;
             font-weight: 500;
             line-height: 1.25rem;
-            color: darken($secondary-text-color, 5%);
-            
-            justify-content: left;
-            @include center-absolute(90%, calc((100vw - 50%) - 40px));
+            color: $primary-color;
             animation: bounce 3s infinite;
             @keyframes bounce {
                 0%, 20%, 50%, 80%, 100% {
@@ -54,6 +44,10 @@
                 60% {
                     transform: translateY(-5px);
                 }
+            }
+
+            i {
+                justify-self: center;
             }
 
         }

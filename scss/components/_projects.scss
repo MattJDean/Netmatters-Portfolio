@@ -2,13 +2,14 @@
 // Projects //
 // -------- //
 
-.portfolio__container {
+.project__container {
     display: flex;
+    position: relative;
     margin: 20px 20px;
     scroll-snap-align: start;
 
 
-    .portfolio__grid {
+    .project__grid {
         height: 100%;
         width: 100%;
         display: flex;
@@ -16,13 +17,14 @@
         gap: 20px;
         max-width: 100%;
         margin: 0 auto; 
+        margin-bottom: 60px;
         padding: 10px;
     
        
 
-            .portfolio__grid--card {
+            .project__grid--card {
                 align-content: center;
-                background-color: $secondary-color;
+                background-color: $primary-color;
                 padding: 15px;
                 border-radius: 8px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -30,7 +32,13 @@
                 color: $background-color;
                 text-align: center;
                 line-height: 1.5rem;
+                cursor: pointer;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+                &:hover {
+                    transform: translateY(-5px); 
+                    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+                }
                 h3{
                     font-size: 1.5rem;
                 }
@@ -43,20 +51,17 @@
             }
 
     }
-}
-    .portfolio__down {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-        height: 100%; 
-        text-align: center; 
-        margin-top: 20px;
-        font-size: 0.75rem;
-        font-weight: 500;
-        line-height: 0.5rem;
-        color: darken($secondary-text-color, 5%);
-       
+
+    .project__down {
+        position: absolute; 
+        bottom: -100px;
+        left: 0px;  
+        // transform: translateX(-50%); 
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 100px;
         animation: bounce 3s infinite;
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -69,6 +74,7 @@
                 transform: translateY(-5px);
             }
         }
-
     }
 
+}
+ 
