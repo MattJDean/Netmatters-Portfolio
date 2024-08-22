@@ -22,7 +22,7 @@
         position: relative;
         top: 0;
         left: 20px;
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 4rem;
         letter-spacing: 0.1rem;
     }
@@ -32,8 +32,10 @@
         position: relative;
         top: 0;
         float: left;
-        margin-left: 20px;
+        margin-left: 22px;
         font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
 
         i {
             font-size: 1.5rem;
@@ -45,7 +47,9 @@
         top: 0;
         float: left;
         margin-left: 20px;
-        font-size: 1rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1px;
 
         i {
             font-size: 1.5rem;
@@ -71,20 +75,21 @@
                 width: 100%;
                 padding: 12px 15px;
                 margin-bottom: 15px;
-                border: 1px solid $primary-color;
-                border-radius: 5px;
+                border: 2px solid $primary-color;
+                border-radius: 3px;
                 box-sizing: border-box;
                 font-size: 16px;
+                background-color: transparent;
     
                 &::placeholder {
-                    color: #999999;
+                    color: lighten($text-color, 25%);
                 }
             }
     
             button {
                 width: 100%;
                 padding: 12px;
-                background-color: $text-color;
+                background-color: darken($primary-color, 10%);
                 border: none;
                 border-radius: 6px;
                 color: $background-color;
@@ -93,7 +98,7 @@
                 margin-top: 10px;
     
                 &:hover {
-                    background-color: lighten($text-color, 10%);
+                    background-color: lighten($primary-color, 5%);
                 }
             }
         }
@@ -114,7 +119,7 @@
         text-align: center;
         font-size: 1.25rem;
         font-weight: 700;
-        color: darken($primary-color, 10%);
+        color: $text-color;
        
         animation: bounce 3s infinite;
         @keyframes bounce {

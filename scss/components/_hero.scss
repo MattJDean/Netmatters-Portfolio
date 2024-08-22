@@ -21,7 +21,7 @@
 
            img {
             position: absolute;
-            top: 50px;
+            top: 100px;
             left: 20px;
             
            }
@@ -39,7 +39,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.25rem;
-            color: darken($primary-color, 10%);
+            color: $text-color;
             animation: bounce 3s infinite;
             @keyframes bounce {
                 0%, 20%, 50%, 80%, 100% {
