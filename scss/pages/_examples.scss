@@ -1,8 +1,8 @@
-// ---------- //
-// SCS Scheme //
-// ---------- // 
+// ------------- //
+// Code Examples //
+// ------------- // 
 
-.scs__container {
+.examples__container {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -24,56 +24,38 @@
     }
 
 
-    .scs__intro {
-        margin-top: 180px;
-        padding: 20px 20px;
-        text-align: justify;
+    .examples__header {
+        margin-top: 210px;
+        padding-left: 20px;
         
         h1 {
             text-transform: uppercase;
-            font-size: 1.25rem;
-            font-weight: 500;
+            font-size: 1.5rem;
+            font-weight: 600;
             letter-spacing: 1px;
             margin-bottom: 5px;
         }
 
         p {
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: .1px;
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: .5px;
             margin-bottom: 20px;
         }
     }
 
-    .scs__image {
+    .examples__image {
         display: flex;
         flex-direction: column;
-        padding: 20px 20px;
+        padding-left: 20px;
     }
 
-    .scs__content {
+    .examples__content {
         display: flex;
         flex-direction: column;
         margin-top: 50px;
         width: calc(100% - 50px);
-        padding: 20px 20px;
+        padding-left: 20px;
 
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            letter-spacing: .5px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            text-align: justify;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 50px;
-        }
-
-        ul {
-            list-style-type: none;
-        }
     }
 }
