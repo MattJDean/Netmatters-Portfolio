@@ -1,0 +1,77 @@
+// ---------- //
+// SCS Scheme //
+// ---------- // 
+
+.scs__container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px 20px 0 20px;
+    scroll-snap-align: start;
+    font-family: $base-font-family;
+    background-color: $background-color;
+    color: $text-color;
+    border-left: 3px solid $primary-color;
+    padding-bottom: 20px;
+    
+    @include respond-to(md) {
+    width: calc(100% - 150px);
+    margin-left: 160px;
+    border-left: none;
+    
+    }
+
+
+    .scs__intro {
+        margin-top: 180px;
+        padding-left: 20px;
+        
+        h1 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .scs__image {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .scs__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        width: calc(100% - 50px);
+        padding-left: 20px;
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    }
+}
