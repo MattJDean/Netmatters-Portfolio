@@ -2,19 +2,15 @@
 // About //
 // ----- // 
 
+
 .about__container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     position: relative;
-    margin: 20px 20px 0 20px;
+    margin: 20px;
     scroll-snap-align: start;
-    font-family: $base-font-family;
     background-color: $background-color;
-    color: $text-color;
     border-left: 3px solid $primary-color;
-    padding-bottom: 20px;
     
     @include respond-to(md) {
     width: calc(100% - 150px);
@@ -23,51 +19,59 @@
     
     }
 
-
-    .about__header {
-        margin-top: 180px;
-        padding-left: 20px;
-        
-        h1 {
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        p {
-            font-size: 1.25rem;
-            font-weight: 500;
-            letter-spacing: .5px;
-            margin-bottom: 20px;
-        }
-    }
-
-    .about__image {
-        display: flex;
-        flex-direction: column;
-        padding-left: 20px;
-    }
-
     .about__content {
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
         width: calc(100% - 50px);
-        padding-left: 20px;
+        height: 100%;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: $base-font-family;
+        color: $text-color;
 
-        h3 {
-            font-size: 1.2rem;
+        .about__image {
+            position: relative;
+            width: 100%;
+            top: 20px;
+        
+            img {
+                border-radius: 20px;
+                opacity: 0.6;
+            }
+        }
+        
+     
+        h1 {
+            position: relative;
+            top: -50px;
+            left: 20px;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 1px; 
+        }
+
+        h2 {
+            position: relative;
+            top: -55px;
+            left: 20px;
+            text-transform: uppercase;
+            font-size: 1.7rem;
             font-weight: 500;
             letter-spacing: .5px;
+        }
+   
+        p {
+            position: relative;
+            text-align: justify;
+            font-size: 1.2rem;
+            font-weight: 400;
             margin-bottom: 20px;
+            top: -30px;
         }
 
-        p {
-            text-align: justify;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-    }
+    } 
+
 }
+
