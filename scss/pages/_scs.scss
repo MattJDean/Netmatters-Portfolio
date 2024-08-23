@@ -25,16 +25,23 @@
 
 
     .scs__intro {
-        margin-top: 180px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        max-width: 600px;
+        margin-top: 20px;
+        margin-right: 40px;
         padding: 20px 20px;
         text-align: justify;
+        
         
         h1 {
             text-transform: uppercase;
             font-size: 1.25rem;
             font-weight: 500;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -54,7 +61,10 @@
     .scs__content {
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        align-content: center;
+        justify-content: center;
+        max-width: 600px;
+        margin-top: 20px;
         width: calc(100% - 50px);
         padding: 20px 20px;
 

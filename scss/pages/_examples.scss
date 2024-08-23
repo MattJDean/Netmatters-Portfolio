@@ -25,29 +25,36 @@
 
 
     .examples__header {
-        margin-top: 210px;
+        margin-top: 50px;
         padding-left: 20px;
         
         h1 {
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.6rem;
+            font-weight: 500;
             letter-spacing: 1px;
             margin-bottom: 5px;
+            padding-left: 30px;  
+            
         }
 
-        p {
-            font-size: 1.25rem;
-            font-weight: 500;
-            letter-spacing: .5px;
-            margin-bottom: 20px;
-        }
     }
 
     .examples__image {
         display: flex;
         flex-direction: column;
-        padding-left: 20px;
+        margin-left: 20px;
+        margin-right: 40px;
+        align-items: center;
+
+        img{
+        position: absolute;
+        top: 33vh;
+        max-width: 80%;
+        height: 300px;
+        object-fit: cover;
+        opacity: 0.8;
+        border-radius: 60px;
+        }
     }
 
     .examples__content {
