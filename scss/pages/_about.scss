@@ -1,8 +1,6 @@
 // ----- //
 // About //
 // ----- // 
-
-
 .about__container {
     min-height: 100vh;
     width: 100%;
@@ -12,10 +10,9 @@
     border-left: 2px solid $primary-color;
     
     @include respond-to(md) {
-    width: calc(100% - 150px);
-    margin-left: 160px;
-    border-left: none;
-    
+        width: calc(100% - 150px);
+        margin-left: 160px;
+        border-left: none;
     }
 
     .about__content {
@@ -25,38 +22,47 @@
         justify-content: center; 
         width: calc(100% - 50px);
         margin: 20px;
-        
         font-family: $base-font-family;
         color: $text-color;
 
         .about__image {
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-start;
-            flex-shrink: 1;
-            flex-wrap: nowrap;
             position: relative;
-            width: 75vw;
+            display: flex; 
+            flex-direction: column;
+            min-height: 300px;
+            min-width: 80vw;
             margin-top: 50px;
             margin-bottom: 20px;
-            @include respond-to(md){
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            
+            @include respond-to(md) {
                 margin-top: 20px;
+                background-position: center;
             }
         
-            img {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: 300px;
-                
-                object-fit: cover;
-                object-position: 100% 10%;
-                border-radius: 20px;
-                opacity: 0.8;
-                filter: saturate(0.6);
+                height: 100%;
+                background-image: url('/assets/img/about-me.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+                opacity: 0.8; 
+                box-shadow: 5px 5px 30px 30px $background-color inset; 
+                z-index: 1; 
+                pointer-events: none; 
             }
 
+            
             h1, h2 {
-                position: absolute;
-                flex-shrink: 1;
+                position: relative; 
                 z-index: 2; 
                 color: $secondary-text-color; 
                 text-shadow: 2px 2px lighten($text-color, 10%);
@@ -65,41 +71,154 @@
                 margin: 0; 
                 padding: 10px; 
                 max-width: 75vw;
-                
             }
 
-
             h1 {
-                top: 230px;
-                left: 0px;
-                font-size: calc(1.2rem + 0.5vw);
-                font-weight: 500;
+                margin-left: 30px; 
+                margin-top: 30px;               
+                font-size: calc(1rem + 0.5vw); 
+                font-weight: 400;
                 letter-spacing: 1px; 
-               
             }
     
             h2 {
-                top: 255px;
-                left: 0px;
-                font-size: calc(1.7rem + 0.5vw);
+                margin-left: 30px;
+                margin-top: -20px;
+                font-size: calc(1.2rem + 0.5vw); 
                 font-weight: 500;
-                letter-spacing: .5px;
+                letter-spacing: 0.5px;
                 
             }  
+
         }
         
         p {
+            justify-self: center;
             max-width: 75vw;
-            text-align: justify;
+            
             font-size: 1.2rem;
             font-weight: 400;
             margin-bottom: 20px;  
         }
+    }
+}
+
+
+// .about__container {
+//     min-height: 100vh;
+//     width: 100%;
+//     margin: 20px;
+//     scroll-snap-align: start;
+//     background-color: $background-color;
+//     border-left: 2px solid $primary-color;
+    
+//     @include respond-to(md) {
+//     width: calc(100% - 150px);
+//     margin-left: 160px;
+//     border-left: none;
+    
+//     }
+
+//     .about__content {
+//         display: flex; 
+//         flex-direction: column; 
+//         align-items: center; 
+//         justify-content: center; 
+//         width: calc(100% - 50px);
+//         margin: 20px;
+        
+//         font-family: $base-font-family;
+//         color: $text-color;
+
+//         .about__image {
+//             position: relative;
+//             display: flex; 
+//             flex-direction: column;
+//             min-height: 300px;
+//             min-width: 80vw;
+//             margin-top: 50px;
+//             margin-bottom: 20px;
+           
+//             background-size: cover;
+//             background-repeat: no-repeat;
+//             background-position-x: center;
+            
+//             // box-shadow: 5px 5px 30px 30px $background-color inset; 
+//             @include respond-to(md){
+//                 margin-top: 20px;
+//             }
+        
+//             &::before {
+//                 content: '';
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 background-image: url('/assets/img/about-me.png');
+//                 background-size: cover;
+//                 background-repeat: no-repeat;
+//                 background-position: center;
+//                 opacity: 0.4; 
+//                 z-index: 1; 
+//                 pointer-events: none; 
+//             }
+
+//             h1, h2 {
+//                 display: flex;
+//                 flex-shrink: 1;
+//                 z-index: 2; 
+//                 color: $secondary-text-color; 
+//                 text-shadow: 2px 2px lighten($text-color, 10%);
+//                 text-transform: uppercase;
+//                 font-weight: 500;
+//                 margin: 0; 
+//                 padding: 10px; 
+//                 max-width: 75vw;
+                
+//             }
+
+
+//             h1 {
+//                 top: 3px;
+//                 left: 198px;
+//                 font-size: calc(0.8rem + 0.5vw);
+//                 font-weight: 400;
+//                 letter-spacing: 1px; 
+               
+//             }
+    
+//             h2 {
+//                 top: 20px;
+//                 left: 195px;
+//                 font-size: calc(1.2rem + 0.5vw);
+//                 font-weight: 500;
+//                 letter-spacing: .5px;
+//             }  
+
+//             .p-right {
+//                 flex: 1;
+//                 align-self: center;
+
+//                 // flex-basis: 
+//                 font-size: 1rem;
+//                 padding-right: 10px;
+                
+//             }
+//         }
+        
+//         p {
+//             max-width: 75vw;
+//             text-align: justify;
+//             font-size: 1.2rem;
+//             font-weight: 400;
+//             margin-bottom: 20px;  
+//         }
       
    
      
 
-    } 
+//     } 
 
-}
+// }
 
