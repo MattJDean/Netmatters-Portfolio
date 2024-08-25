@@ -63,4 +63,31 @@
         opacity: 0.9;
     }
 }
+
+// Form Input Styling //
+ 
+@mixin form-style() {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $primary-color;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: $base-font-family;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: text;
+  caret-color: $text-color;
   
+
+  &::placeholder {
+      color: lighten($text-color, 25%);
+      font-family: $base-font-family;
+      letter-spacing: 1px;
+}
+
+  &:focus {
+  border-color: lighten($primary-color, 10%);
+      outline: none;
+  }
+}

@@ -15,7 +15,6 @@
       "menu__logo menu__logo menu__logo"
       "menu__links menu__links menu__links"
       "menu__socials menu__socials menu__socials";
-    grid-area: menu__container;
     
     .menu__logo { grid-area: menu__logo; }
   
@@ -34,28 +33,7 @@
 
 
 
-// nav {
-//     display: flex;
-// }
 
-// .sidebar__burger {
-//     display: block;
-//     @include center-absolute(35px, calc(100% - 55px));
-//     z-index: 10;
-//     font-size: 3rem;
-//     color: $primary-color;
-//     text-shadow: 3px 3px darken($primary-color, 20%);
-//     cursor: pointer;
-
-//     &:hover {
-//         color: darken($primary-color, 20%);
-//         text-shadow: 3px 3px $primary-color;
-//     }
-
-//     @include respond-to(md) {
-//         display: none;
-//     }
-// }
 
 
 // .sidebar__container {

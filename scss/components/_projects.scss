@@ -2,16 +2,40 @@
 // Projects //
 // -------- //
 
-.project__container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    // grid-auto-flow: row;
-    grid-template-areas:
-      "project__card--1 project__card--2 project__card--3"
-      "project__card--4 project__card--5 project__card--6"
-      "project__card--7 project__card--8 project__card--9";
+/*-------------------------------*/
+/*Small Devices Project Container*/
+/*-------------------------------*/
 
+.project__container--xs {  
+      display: grid;
+      scroll-snap-align: start;
+   /*Heading*/
+   h3 {
+   grid-area: project__h3;
+   align-self: center;
+   justify-self: center;
+   margin-bottom: 20px;
+   font-size: 1.8rem;
+   font-weight: 500;
+   letter-spacing: 0.3px;
+   color: $text-color;
+   }
+
+    /*Small Devices Project Grid*/  
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 30px 0.5fr 0.5fr 0.5fr 30px;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+
+   /*Grid Layout*/
+   "        .          project__h3            .       "
+   "project__card--1 project__card--2 project__card--3"
+   "project__card--4 project__card--5 project__card--6"
+   "project__card--7 project__card--8 project__card--9"
+   "        .        project__scroll          .       ";
+
+   /*Project Grid Cards*/
     .project__card--1 {
        grid-area: project__card--1;
        @include project-card('/assets/img/coming-soon.png');
@@ -56,7 +80,117 @@
        grid-area: project__card--9;
        @include project-card('/assets/img/coming-soon.png');
        }
-  }
+
+
+   /*Scroll Down Icon*/
+   .project__scroll {
+   grid-area: project__scroll;
+   align-self: center;
+   justify-self: center;
+   
+      /*Icon Bouncing Animation*/
+      animation: bounce 3s infinite;
+      @keyframes bounce {
+         0%, 20%, 50%, 80%, 100% {
+         transform: translateY(0);
+         }
+         40% {
+         transform: translateY(-10px);
+         }
+         60% {
+         transform: translateY(-5px);
+         }
+      }
+
+      /*Hide Icon at 768px*/
+      @include respond-to(md) {
+         display: none;
+      }
+   }
+
+
+   /*Hide Small Devices Grid at 768px*/  
+   @include respond-to(md) {
+      display: none;
+   }
+}
+
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+
+  /*--------------------------------*/
+  /*Medium Devices Project Container*/
+  /*--------------------------------*/
+
+   .project__container--md { 
+
+      /*Hide Initially*/ 
+      display: none;
+
+      /*Display at 768px*/
+      @include respond-to(md) {
+      display: grid;
+      grid-template-columns: 0.5fr 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
+      gap: 5px 5px;
+      grid-auto-flow: row;
+      grid-template-areas:
+
+      /*Grid Layout*/
+      "project__card--1 project__card--2 project__card--3"
+      "project__card--4 project__card--5 project__card--6"
+      "project__card--7 project__card--8 project__card--9";
+      }
+
+      /*Medium Devices Project Grid Cards*/
+      .project__card--1 {
+         grid-area: project__card--1;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+   
+      .project__card--2 {
+         grid-area: project__card--2;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--3 {
+         grid-area: project__card--3;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--4 {
+         grid-area: project__card--4;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--5 {
+         grid-area: project__card--5;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--6 {
+         grid-area: project__card--6;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--7 {
+         grid-area: project__card--7;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--8 {
+         grid-area: project__card--8;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+      
+      .project__card--9 {
+         grid-area: project__card--9;
+         @include project-card('/assets/img/coming-soon.png');
+         }
+   }
+
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
   
  
 

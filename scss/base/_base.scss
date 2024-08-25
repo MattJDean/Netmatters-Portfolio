@@ -27,5 +27,12 @@ a {
   color: inherit;
 }
 
+body {
+  margin: 0;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+}
+
 
 
