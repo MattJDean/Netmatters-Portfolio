@@ -11,8 +11,7 @@
 }
 
 html, body {
-  min-height: 100vh;
-  background-color: $background-color;
+  height: auto;
   
   
 }
@@ -28,13 +27,5 @@ a {
   color: inherit;
 }
 
-#wrapper {
-  
-    max-width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: visible;
-    scroll-behavior: smooth;
-    
-}
+
 

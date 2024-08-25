@@ -2,149 +2,154 @@
 // Contact //
 // ------- //
 
-.contact__container {
+
+.contact__container { grid-area: contact__container; }
+
+
+
+// .contact__container {
     
-    position: relative; 
-    scroll-snap-align: start;
-    height: 100%;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    background-color: $background-color;
-    color: $text-color;
-    font-family: $base-font-family;
-    @include respond-to(md) {
-        width: calc(100% - 150px);
-        margin-left: 150px;
-    }
+//     position: relative; 
+//     scroll-snap-align: start;
+//     height: 100%;
+//     width: 100%;
+//     margin-top: 20px;
+//     margin-bottom: 50px;
+//     background-color: $background-color;
+//     color: $text-color;
+//     font-family: $base-font-family;
+//     @include respond-to(md) {
+//         width: calc(100% - 150px);
+//         margin-left: 150px;
+//     }
 
-    h2 {
-        position: relative;
-        top: 0;
-        left: 20px;
-        font-size: 2rem;
-        font-weight: 500;
-        line-height: 4rem;
-        letter-spacing: 0.1rem;
-    }
+//     h2 {
+//         position: relative;
+//         top: 0;
+//         left: 20px;
+//         font-size: 2rem;
+//         font-weight: 500;
+//         line-height: 4rem;
+//         letter-spacing: 0.1rem;
+//     }
 
 
-    .icon__phone {
-        position: relative;
-        top: 0;
-        float: left;
-        margin-left: 22px;
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 1px;
+//     .icon__phone {
+//         position: relative;
+//         top: 0;
+//         float: left;
+//         margin-left: 22px;
+//         font-size: 1rem;
+//         font-weight: 600;
+//         letter-spacing: 1px;
 
-        i {
-            font-size: 1.5rem;
-        }
-    }
+//         i {
+//             font-size: 1.5rem;
+//         }
+//     }
 
-    .icon__email {
-        position: relative;
-        top: 0;
-        float: left;
-        margin-left: 20px;
-        font-size: 1.25rem;
-        font-weight: 500;
-        letter-spacing: 1px;
+//     .icon__email {
+//         position: relative;
+//         top: 0;
+//         float: left;
+//         margin-left: 20px;
+//         font-size: 1.25rem;
+//         font-weight: 500;
+//         letter-spacing: 1px;
 
-        i {
-            font-size: 1.5rem;
-        }
-    }
+//         i {
+//             font-size: 1.5rem;
+//         }
+//     }
 
-    .contact__form {
-        position: relative;
-        left: calc(50% - 200px);
-        width: 100%;
-        max-width: 400px;
-        padding: 20px;
-        margin-top: 70px;
-        margin-bottom: 90px;
-        box-shadow: $box-shadow;
-        border-radius: 8px;
-        background-color: $background-color;
+//     .contact__form {
+//         position: relative;
+//         left: calc(50% - 200px);
+//         width: 100%;
+//         max-width: 400px;
+//         padding: 20px;
+//         margin-top: 70px;
+//         margin-bottom: 90px;
+//         box-shadow: $box-shadow;
+//         border-radius: 8px;
+//         background-color: $background-color;
     
-        .form {
-            input[type="text"],
-            input[type="email"],
-            textarea {
-                width: 100%;
-                padding: 12px 15px;
-                margin-bottom: 15px;
-                border: 2px solid $primary-color;
-                border-radius: 3px;
-                box-sizing: border-box;
-                font-size: 1em;
-                font-family: $base-font-family;
-                background-color: transparent;
-                transition: all 0.3s ease;
+//         .form {
+//             input[type="text"],
+//             input[type="email"],
+//             textarea {
+//                 width: 100%;
+//                 padding: 12px 15px;
+//                 margin-bottom: 15px;
+//                 border: 2px solid $primary-color;
+//                 border-radius: 3px;
+//                 box-sizing: border-box;
+//                 font-size: 1em;
+//                 font-family: $base-font-family;
+//                 background-color: transparent;
+//                 transition: all 0.3s ease;
     
-                &::placeholder {
-                    color: lighten($text-color, 25%);
-                    font-family: $base-font-family;
-                    letter-spacing: 1px;
-                }
+//                 &::placeholder {
+//                     color: lighten($text-color, 25%);
+//                     font-family: $base-font-family;
+//                     letter-spacing: 1px;
+//                 }
 
-                &:focus {
-                    border-color: lighten($primary-color, 10%);
-                    outline: none;
-                }
-            }
+//                 &:focus {
+//                     border-color: lighten($primary-color, 10%);
+//                     outline: none;
+//                 }
+//             }
     
-            button {
-                width: 100%;
-                padding: 12px;
-                background-color: darken($primary-color, 10%);
-                border: none;
-                border-radius: 6px;
-                color: $background-color;
-                font-size: 16px;
-                cursor: pointer;
-                margin-top: 10px;
+//             button {
+//                 width: 100%;
+//                 padding: 12px;
+//                 background-color: darken($primary-color, 10%);
+//                 border: none;
+//                 border-radius: 6px;
+//                 color: $background-color;
+//                 font-size: 16px;
+//                 cursor: pointer;
+//                 margin-top: 10px;
     
-                &:hover {
-                    background-color: lighten($primary-color, 1%);
-                    color: darken($background-color, 5%);
-                }
-            }
-        }
-    }
+//                 &:hover {
+//                     background-color: lighten($primary-color, 1%);
+//                     color: darken($background-color, 5%);
+//                 }
+//             }
+//         }
+//     }
 
 
 
 
-    .footer__top {
-        @include respond-to(md) {
-            display: none;
-        }
-        position: relative; 
-        bottom: 60px;
-        left: 0;  
-        width: 100%;
-        margin-top: 0;
-        text-align: center;
-        font-family: $base-font-family;
-        font-size: 1.25rem;
-        font-weight: 500;
-        color: $text-color;
+//     .footer__top {
+//         @include respond-to(md) {
+//             display: none;
+//         }
+//         position: relative; 
+//         bottom: 60px;
+//         left: 0;  
+//         width: 100%;
+//         margin-top: 0;
+//         text-align: center;
+//         font-family: $base-font-family;
+//         font-size: 1.25rem;
+//         font-weight: 500;
+//         color: $text-color;
        
-        animation: bounce 3s infinite;
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-    }
-}
+//         animation: bounce 3s infinite;
+//         @keyframes bounce {
+//             0%, 20%, 50%, 80%, 100% {
+//                 transform: translateY(0);
+//             }
+//             40% {
+//                 transform: translateY(-10px);
+//             }
+//             60% {
+//                 transform: translateY(-5px);
+//             }
+//         }
+//     }
+// }
 
