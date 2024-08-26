@@ -3,7 +3,9 @@
 // ------------ //
 
 
-.hero__container { 
+.hero__container--xs { 
+
+    /*Hero Section Layout*/
     display: grid;
     width: 100%;
     height: calc(100vh - 30px);
@@ -15,7 +17,7 @@
     overflow: hidden;
     grid-template-rows: 1fr auto;
     
-  
+    /*Main Hero Logo Image*/
     img {
         width: 100%;
         height: auto;
@@ -25,6 +27,7 @@
         align-self: center;
     }
 
+    /*Scroll Down Snap Align Icon*/
     .hero__scroll {
         display: grid;
         font-family: $base-font-family;
@@ -32,12 +35,10 @@
         font-weight: 500;
         color: $text-color;
         justify-self: center;
-        align-self: center;
-       
-       
-        margin-bottom: 30px;
         align-self: end;
-
+        margin-bottom: 30px;
+        
+        /*Scroll Down Icon Bounce Animation*/
         animation: bounce 3s infinite;
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -50,20 +51,21 @@
             transform: translateY(-5px);
             }
         }
-      
-    
-    
+        
+        /*'Scroll Down' Text*/
         span {
             grid-row: 1; 
             line-height: 5px;
         }
-    
+        
+        /*Arrow Icon Link*/
         a {
             grid-row: 2; 
             margin-top: 2px; 
             justify-self: center; 
         }
 
+        /*Hide At 768px For md Breakpoint*/
         @include respond-to(md) {
             display: none;
         }

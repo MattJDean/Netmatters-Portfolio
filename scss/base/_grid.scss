@@ -13,13 +13,13 @@
     grid-template-rows: 1fr 1fr auto 20px; 
     gap: 0px 0px; 
     grid-template-areas: 
-        "hero__container"
+        "hero__container--xs"
         "project__container--xs"
         "contact__container--xs"
         "footer__licence";
 
-    .hero__container { 
-        grid-area: hero__container;
+    .hero__container--xs { 
+        grid-area: hero__container--xs;
         margin: 10px; 
     }
 
@@ -53,8 +53,8 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 20px; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "menu__container hero__container"
-      "menu__container hero__container"
+      "menu__container hero__container--md"
+      "menu__container hero__container--md"
       "menu__container project__container--md"
       "menu__container project__container--md"
       "menu__container contact__container--md"
@@ -62,7 +62,7 @@
     width: 100%; 
   }
 
-  .hero__container {
+  .hero__container--md {
     grid-area: hero__container; 
   }
 
