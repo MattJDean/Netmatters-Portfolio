@@ -2,13 +2,19 @@
 // Footer License //
 // -------------- //
 
-.footer__container {
+#footer__licence {
+    position: relative;
+    bottom: 2px;
+    height: 20px;
+    width: 100%;
+    margin: 0;
     font-family: $base-font-family;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    line-height: 2.5;
-    padding-left: 5px;
+    padding: 5px;
     color: $text-color;
     background-color: $primary-color;
     justify-content: center;
+    align-content: center;
+    z-index: 100;
 }

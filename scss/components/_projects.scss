@@ -16,69 +16,76 @@
    justify-self: center;
    margin-bottom: 20px;
    font-size: 1.8rem;
-   font-weight: 500;
-   letter-spacing: 0.3px;
+   font-weight: 700;
+   letter-spacing: 0.1rem;
    color: $text-color;
+
+      span {
+         background-color: $primary-color;
+         padding: 5px;
+         border-radius: 6px;
+         
+      }
    }
 
     /*Small Devices Project Grid*/  
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 30px 0.5fr 0.5fr 0.5fr 30px;
+    grid-template-rows: 40px repeat(3, 3fr) 40px;
     gap: 5px 5px;
     grid-auto-flow: row;
     grid-template-areas:
 
    /*Grid Layout*/
-   "        .          project__h3            .       "
+   "       .         project__h3             .        "
    "project__card--1 project__card--2 project__card--3"
-   "project__card--4 project__card--5 project__card--6"
+   "project__card--4 project__card--5 project__card--6"  
    "project__card--7 project__card--8 project__card--9"
-   "        .        project__scroll          .       ";
+   "       .         project__scroll         .        ";
 
    /*Project Grid Cards*/
     .project__card--1 {
        grid-area: project__card--1;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
   
     .project__card--2 {
        grid-area: project__card--2;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--3 {
        grid-area: project__card--3;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--4 {
        grid-area: project__card--4;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--5 {
        grid-area: project__card--5;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--6 {
        grid-area: project__card--6;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--7 {
        grid-area: project__card--7;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--8 {
        grid-area: project__card--8;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
     
     .project__card--9 {
        grid-area: project__card--9;
-       @include project-card('/assets/img/coming-soon.png');
+       @include project-card('/assets/img/placeholder-img.png');
        }
 
 
@@ -145,47 +152,47 @@
       /*Medium Devices Project Grid Cards*/
       .project__card--1 {
          grid-area: project__card--1;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
    
       .project__card--2 {
          grid-area: project__card--2;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--3 {
          grid-area: project__card--3;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--4 {
          grid-area: project__card--4;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--5 {
          grid-area: project__card--5;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--6 {
          grid-area: project__card--6;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--7 {
          grid-area: project__card--7;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--8 {
          grid-area: project__card--8;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
       
       .project__card--9 {
          grid-area: project__card--9;
-         @include project-card('/assets/img/coming-soon.png');
+         @include project-card('/assets/img/placeholder-img.png');
          }
    }
 

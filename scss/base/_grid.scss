@@ -10,29 +10,31 @@
     
     display: grid;
     grid-template-columns: 1fr; 
-    grid-template-rows: repeat(3, 1fr) 20px; 
+    grid-template-rows: 1fr 1fr auto 20px; 
     gap: 0px 0px; 
-    margin: 0 10px;
     grid-template-areas: 
         "hero__container"
         "project__container--xs"
         "contact__container--xs"
-        "footer__container";
+        "footer__licence";
 
     .hero__container { 
-        grid-area: hero__container; 
+        grid-area: hero__container;
+        margin: 10px; 
     }
 
     .project__container--xs {
         grid-area: project__container--xs; 
+        margin: 10px; 
     }
 
     .contact__container--xs {
         grid-area: contact__container--xs;
+        margin: 10px; 
     }
 
-    .footer__container {
-        grid-area: footer__container;
+    #footer__licence {
+        grid-area: footer__licence;
     }
 }
   

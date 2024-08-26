@@ -34,9 +34,17 @@
         align-self: center;
         justify-self: left;
         margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: $base-font-family;
         font-size: 1.1rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
+
+        span {
+            background-color: $primary-color;
+            padding: 5px;
+            border-radius: 6px;
+         }
     }
 
     /*Phone Icon Link*/
@@ -44,14 +52,25 @@
         grid-area: contact__phone--xs;
         align-self: center;
         justify-self: left;
-        margin-top: 20px;
+        margin-top: 35px;
+        margin-left: 7px;
+        
 
         font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 1.5px;
+
+            // span {
+                
+                
+            //     border-radius: 2px;
+            //     padding: 10px;
+            //     background-color: $primary-color;
+            //     box-shadow: 20px 25px 0 darken($primary-color, 10%);              
+            // }
         
             i {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
     }
 
@@ -60,14 +79,15 @@
         grid-area: contact__email--xs;
         align-self: center;
         justify-self: left;
-        margin-top: 10px;
+        margin-top: 35px;
+        margin-left: 5px;
 
         font-size: 1.3rem;
         font-weight: 500;
         letter-spacing: 1.5px;
         
             i {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
     }
 
@@ -162,7 +182,8 @@
     .contact__scroll { 
         grid-area: contact__scroll;
 
-        margin-top: 30px;
+        margin-top: 70px;
+        margin-bottom: 60px;
         font-family: $base-font-family;
         font-size: 1.1rem;
         font-weight: 500;

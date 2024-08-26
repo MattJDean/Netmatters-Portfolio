@@ -43,6 +43,7 @@
 
   @mixin project-card($img-url) {
     align-content: center;
+    justify-content: center;
     max-height: 200px;
     max-width: 200px;
     background-color: transparent;
@@ -52,7 +53,7 @@
     cursor: pointer;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     background-image: url(#{$img-url});
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.7;
@@ -61,6 +62,20 @@
         transform: translateY(-5px); 
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  
         opacity: 0.9;
+    }
+
+    span {
+      font-family: $base-font-family;
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      color: $secondary-text-color;
+      background-color: $text-color;
+      padding: 3px;
+      border-radius: 4px;
+      opacity: 0.9;
+      text-align: center;
+      margin-left: 10px;
     }
 }
 
@@ -89,5 +104,10 @@
   &:focus {
   border-color: lighten($primary-color, 10%);
       outline: none;
+  }
+
+  &:hover {
+    cursor: text;
+    caret-color: $text-color;
   }
 }
