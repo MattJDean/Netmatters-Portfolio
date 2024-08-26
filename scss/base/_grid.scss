@@ -46,24 +46,27 @@
     }
 
 
-    .grid__container--md {
+  .grid__container--md {
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 150px 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 20px; 
-    gap: 0px 0px; 
+    gap: 10px 10px;
+    margin: 0 20px;
+    width: 100%; 
+    min-height: 100vh;
     grid-template-areas: 
       "menu__container hero__container--md"
       "menu__container hero__container--md"
       "menu__container project__container--md"
       "menu__container project__container--md"
       "menu__container contact__container--md"
-      "footer__container footer__container"; 
-    width: 100%; 
+      "footer__licence footer__licence"; 
+    
   }
 
   .hero__container--md {
-    grid-area: hero__container; 
+    grid-area: hero__container--md; 
   }
 
   .project__container--md {
@@ -74,8 +77,8 @@
     grid-area: contact__container--md;
   }
 
-  .footer__container {
-     grid-area: footer__container;
+  #footer__licence {
+     grid-area: footer__licence;
   }
 
 }

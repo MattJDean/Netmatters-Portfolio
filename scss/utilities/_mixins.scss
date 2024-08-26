@@ -42,19 +42,22 @@
   // Project Card //
 
   @mixin project-card($img-url) {
+    display: flex;
     align-content: center;
     justify-content: center;
-    max-height: 240px;
-    max-width: 240px;
+    
+    max-height: 400px;
+    max-width: 400px;
+    margin-right: 10px;
     background-color: transparent;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     background-image: url(#{$img-url});
-    background-size: auto;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
     opacity: 0.7;
 
@@ -65,17 +68,19 @@
     }
 
     span {
+      justify-content: center;
+      align-self: center;
       font-family: $base-font-family;
       font-size: 1.8rem;
-      font-weight: 500;
+      font-weight: 400;
+      line-height: 1.2rem;
       letter-spacing: 0.1px;
       color: $secondary-text-color;
       background-color: $text-color;
-      padding: 3px;
+      padding: 5px;
       border-radius: 4px;
       opacity: 0.9;
-      text-align: center;
-      margin-left: 10px;
+   
     }
 }
 

@@ -29,14 +29,16 @@
    }
 
     /*Small Devices Project Grid*/  
-   //  grid-template-columns: 1fr 1fr; 
-    grid-template-columns: repeat auto-fit, minmax(200px, 400px);
-    grid-template-rows: 50px repeat(10, 1fr) 50px;
-    gap: 10px;
-    justify-content: center;
-    align-content: stretch;
-    grid-auto-flow: row;
-    grid-template-areas:
+   
+   grid-template-columns: repeat auto-fit, minmax(100px, 400px);
+   grid-template-rows: 50px repeat(10, 1fr) 50px;
+   gap: 10px;
+   width: 100%;
+   height: auto;
+   justify-content: center;
+   align-content: stretch;
+   grid-auto-flow: row;
+   grid-template-areas:
 
    /*Grid Layout*/
    "project__h3 project__h3"
@@ -52,13 +54,12 @@
    "project__card--9 project__card--10"
    "project__scroll project__scroll"; 
 
-   width: 100%;
-   height: auto;
+   
 
    /*Project Grid Cards*/
     .project__card--1 {
        grid-area: project__card--1;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-typing.png');
        }
   
     .project__card--2 {
@@ -155,63 +156,95 @@
       /*Display at 768px*/
       @include respond-to(md) {
       display: grid;
-      grid-template-columns: 0.5fr 0.5fr 0.5fr;
-      grid-template-rows: 0.5fr 0.5fr 0.5fr;
-      gap: 5px 5px;
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-rows: auto 1fr 1fr 1fr;
+      gap: 10px 30px;
       grid-auto-flow: row;
+      height: auto;
+      width: 100%;
+      justify-self: center;
+  
       grid-template-areas:
 
       /*Grid Layout*/
+      "project__h3              .                .       "
       "project__card--1 project__card--2 project__card--3"
       "project__card--4 project__card--5 project__card--6"
       "project__card--7 project__card--8 project__card--9";
-      }
 
-      /*Medium Devices Project Grid Cards*/
-      .project__card--1 {
-         grid-area: project__card--1;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
-   
-      .project__card--2 {
-         grid-area: project__card--2;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
+      /*Heading*/
+      h3 {
+         display: grid;
+         grid-area: project__h3;
+         justify-self: left;
+         margin-bottom: 20px;
+         font-size: 1.8rem;
+         font-weight: 700;
+         letter-spacing: 0.1rem;
+         color: $text-color;
       
-      .project__card--3 {
-         grid-area: project__card--3;
-         @include project-card('/assets/img/placeholder-img.png');
+            span {
+               width: fit-content;
+               background-color: $primary-color;
+               padding: 5px;
+               border-radius: 6px;
+               box-shadow: 10px 10px 0 darken($primary-color, 10%);
+               
+            }
          }
+     
+
+            /*Medium Devices Project Grid Cards*/
+            .project__card--1 {
+               grid-area: project__card--1;
+               @include project-card('/assets/img/placeholder-typing.png');
+               }
+         
+            .project__card--2 {
+               grid-area: project__card--2;
+               @include project-card('/assets/img/placeholder-coffee.png');
+               }
+            
+            .project__card--3 {
+               grid-area: project__card--3;
+               @include project-card('/assets/img/placeholder-design.png');
+               }
+            
+            .project__card--4 {
+               grid-area: project__card--4;
+               @include project-card('/assets/img/placeholder-pc.png');
+               }
+            
+            .project__card--5 {
+               grid-area: project__card--5;
+               @include project-card('/assets/img/placeholder-cradle.png');
+               }
+            
+            .project__card--6 {
+               grid-area: project__card--6;
+               @include project-card('/assets/img/placeholder-work.png');
+               }
+            
+            .project__card--7 {
+               grid-area: project__card--7;
+               @include project-card('/assets/img/placeholder-closer-coffee.png');
+               }
+            
+            .project__card--8 {
+               grid-area: project__card--8;
+               @include project-card('/assets/img/placeholder-laptop.png');
+               }
       
-      .project__card--4 {
-         grid-area: project__card--4;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
+            .project__card--9 {
+               grid-area: project__card--9;
+               @include project-card('/assets/img/placeholder-phone.png');
+               }
       
-      .project__card--5 {
-         grid-area: project__card--5;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
-      
-      .project__card--6 {
-         grid-area: project__card--6;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
-      
-      .project__card--7 {
-         grid-area: project__card--7;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
-      
-      .project__card--8 {
-         grid-area: project__card--8;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
-      
-      .project__card--9 {
-         grid-area: project__card--9;
-         @include project-card('/assets/img/placeholder-img.png');
-         }
+            // .project__card--10 {
+            //    grid-area: project__card--10;
+            //    @include project-card('/assets/img/placeholder-abacus.png');
+            //    }
+      }      
    }
 
 /*----------------------------------------------------------------------*/
