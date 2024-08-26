@@ -29,18 +29,31 @@
    }
 
     /*Small Devices Project Grid*/  
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 40px repeat(3, 3fr) 40px;
-    gap: 5px 5px;
+   //  grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat auto-fit, minmax(200px, 400px);
+    grid-template-rows: 50px repeat(10, 1fr) 50px;
+    gap: 10px;
+    justify-content: center;
+    align-content: stretch;
     grid-auto-flow: row;
     grid-template-areas:
 
    /*Grid Layout*/
-   "       .         project__h3             .        "
-   "project__card--1 project__card--2 project__card--3"
-   "project__card--4 project__card--5 project__card--6"  
-   "project__card--7 project__card--8 project__card--9"
-   "       .         project__scroll         .        ";
+   "project__h3 project__h3"
+   "project__card--1 project__card--2"
+   "project__card--1 project__card--2"
+   "project__card--3 project__card--4"
+   "project__card--3 project__card--4"
+   "project__card--5 project__card--6"
+   "project__card--5 project__card--6"
+   "project__card--7 project__card--8"
+   "project__card--7 project__card--8"
+   "project__card--9 project__card--10"
+   "project__card--9 project__card--10"
+   "project__scroll project__scroll"; 
+
+   width: 100%;
+   height: auto;
 
    /*Project Grid Cards*/
     .project__card--1 {
@@ -50,44 +63,49 @@
   
     .project__card--2 {
        grid-area: project__card--2;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-coffee.png');
        }
     
     .project__card--3 {
        grid-area: project__card--3;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-design.png');
        }
     
     .project__card--4 {
        grid-area: project__card--4;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-pc.png');
        }
     
     .project__card--5 {
        grid-area: project__card--5;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-cradle.png');
        }
     
     .project__card--6 {
        grid-area: project__card--6;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-work.png');
        }
     
     .project__card--7 {
        grid-area: project__card--7;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-closer-coffee.png');
        }
     
     .project__card--8 {
        grid-area: project__card--8;
-       @include project-card('/assets/img/placeholder-img.png');
-       }
-    
-    .project__card--9 {
-       grid-area: project__card--9;
-       @include project-card('/assets/img/placeholder-img.png');
+       @include project-card('/assets/img/placeholder-laptop.png');
        }
 
+    .project__card--9 {
+       grid-area: project__card--9;
+       @include project-card('/assets/img/placeholder-phone.png');
+       }
+
+    .project__card--10 {
+       grid-area: project__card--10;
+       @include project-card('/assets/img/placeholder-abacus.png');
+       }
+   
 
    /*Scroll Down Icon*/
    .project__scroll {
