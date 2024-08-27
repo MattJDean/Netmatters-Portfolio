@@ -1,11 +1,37 @@
 // ----- //
 // About //
 // ----- // 
+
+body {
+    margin: 20px;
+}
+    .menu__container {
+
+        @include respond-to(xs) {
+            display: none;
+        }
+
+        @include respond-to(sm) {
+            display: none;
+        }
+
+        @include respond-to(md) {
+            display: block;
+        }
+    }
+
+.menu__burger {
+    display: block;
+
+    @include respond-to(md) {
+        display: none;
+    }
+}
+
 .about__container {
     min-height: 100vh;
     width: 100%;
     margin: 20px;
-    scroll-snap-align: start;
     background-color: $background-color;
     border-left: 2px solid $primary-color;
     
@@ -19,7 +45,7 @@
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        justify-content: center; 
+        justify-content:center; 
         width: calc(100% - 50px);
         margin: 20px;
         font-family: $base-font-family;
@@ -55,7 +81,7 @@
                 background-repeat: no-repeat;
                 background-position: top;
                 opacity: 0.8; 
-                box-shadow: 5px 5px 30px 30px $background-color inset; 
+                box-shadow: 5px 5px 20px 20px $background-color inset; 
                 z-index: 1; 
                 pointer-events: none; 
             }
@@ -88,18 +114,37 @@
                 font-weight: 500;
                 letter-spacing: 0.5px;
                 
-            }  
+            } 
+        }
 
-        }
-        
-        p {
-            justify-self: center;
-            max-width: 75vw;
+        .about__text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: center;
+            margin: 20px 40px;
+            background-color: darken($background-color, 2%);
+            border-radius: 10px;
+            padding: 10px;
             
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 20px;  
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.3rem;
+            letter-spacing: 0.8px;
+
+            p {
+                margin-bottom: 15px;
+                text-align: justify;
+            }
+
+        
+
+         
         }
+
+      
+        
+    
     }
 }
 

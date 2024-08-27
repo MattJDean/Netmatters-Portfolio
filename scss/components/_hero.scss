@@ -31,12 +31,12 @@
     .hero__scroll {
         display: grid;
         font-family: $base-font-family;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
         color: $text-color;
         justify-self: center;
         align-self: end;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         /*Scroll Down Icon Bounce Animation*/
         animation: bounce 3s infinite;
@@ -69,7 +69,7 @@
         /*Arrow Icon Link*/
         a {
             grid-row: 2;
-            margin-top: 2px;
+            margin-top: 7px;
             justify-self: center;
         }
 

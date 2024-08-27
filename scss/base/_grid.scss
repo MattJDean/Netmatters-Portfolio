@@ -25,7 +25,8 @@
 
     .project__container--xs {
         grid-area: project__container--xs; 
-        margin: 10px; 
+        margin: 10px;
+        margin-right: 40px; 
     }
 
     .contact__container--xs {
@@ -63,6 +64,10 @@
       "menu__container contact__container--md"
       "footer__licence footer__licence"; 
     
+  }
+
+  .menu__container {
+    grid-area: menu__container; 
   }
 
   .hero__container--md {

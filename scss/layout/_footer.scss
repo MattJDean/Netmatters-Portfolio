@@ -5,17 +5,17 @@
 #footer__licence {
     position: static;
     display: inline-block;
-    bottom: 0;
+    top: 100%;
     left: 0;
-    height: 20px;
+    line-height: 0;
+    height: 15px;
     width: 100%;
     
     font-family: $base-font-family;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 400;
-    padding: 5px;
+    padding: 7px;
     color: $text-color;
     background-color: $primary-color;
-    
-    z-index: 100;
+   
 }

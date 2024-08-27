@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ee55ddb165.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Matt Dean | About Me</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Matt Dean | Web Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <script src="https://kit.fontawesome.com/ee55ddb165.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 <body>
 
-    <nav>
-        <div class="sidebar__burger"><i class="fa-solid fa-bars"></i></div>
-        <div class="sidebar__container">
-            <div class="sidebar__logo">
-                <a href="index.html"><span>MD</span></a>
+
+        <!--------------------------------------------------------------Burger Menu-->
+        <div class="menu__burger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <!---------------------------Side Menu-->
+        <div class="menu__container">
+
+            <!-----------------------------------------------Side Menu Logo-->
+            <div class="menu__logo">
+                <a href="index.html#hero"><span>MD</span></a>
             </div>
 
-            <ul class="sidebar__links">
-                <li><a href="about-me.html">About Me</a></li>
-                <li><a href="index.html#projects">My Portfolio</a></li>
-                <li><a href="coding-examples.html">Coding Examples</a></li>
-                <li><a href="scs-scheme.html">SCS Scheme</a></li>
-                <li><a href="index.html#contact">Contact Me</a></li>
+            
+        
+             <!------------------------------------------------------------Side Menu Links-->
+            <ul class="menu__links">
+                <li><a href="about-me.html"><span>About Me</span></a></li>
+                <li><a href="index.html#projects"><span>My Portfolio</span></a></li>
+                <li><a href="coding-examples.html"><span>Coding Examples</span></a></li>
+                <li><a href="scs-scheme.html"><span>SCS Scheme</span></a></li>
+                <li><a href="index.html#contact"><span>Contact Me</span></a></li>
             </ul>
 
-            <div class="sidebar__socials">
+            <!-----------------------------------------------------------------------------------------------------Side Menu Socials-->
+            <div class="menu__socials">
                 <a href="https://www.linkedin.com/in/matt-dean-29263055/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/MattJDean"><i class="fa-brands fa-github"></i></a>
                 <a href="https://mattdean.tech/"><i class="fa-solid fa-globe"></i></a>
             </div>
         </div>
-    </nav>
  
     <div class="about__container">
         <section id="about">
@@ -46,19 +58,20 @@
                 
                     <h2>I'm Matt.</h2>
                 </div>
-
-                <p class="about__p--1">I'm ambitious, inspired and have a passion for designing and implementing things that function well and look great.</p>
-                
-                <p class="about__p--2">My fascination with tech started in the early 2000s during the explosion of the internet - Myspace was the social playground, and customising your profile with HTML/CSS was in vogue. Being able to tweak code to make a computer do different things felt incredible - the realisation of the unlimited scope of possibilities inspired and excited me - the opportunity to change the world or make a website about cats had never been on the same table before!</p>
-    
-                <p class="about__p--3">Today, I'm actively learning and developing my skills and knowledge of frontend development and web design. I have a solid foundation in Python and am expanding my knowledge into networking and backend technologies, aiming to become a well-rounded developer.</p>
-                
-               <p class="about__p--4">When I’m not writing code or reading documentation, you can find me playing my guitar, exploring new places, or playing with/spoiling my cats. Each day is a new opportunity to learn, create, and connect, and I'm excited to see where this journey will take me.</p>
+                <div class="about__text">
+                   
+                    <p>I'm ambitious, inspired and have a passion for designing and implementing things that function well and look great.</p>
+                    <p class="p2"> My fascination with tech started in the early 2000s during the explosion of the internet - Myspace was the social playground, and customising your profile with HTML/CSS was in vogue. Being able to tweak code to make a computer do different things felt incredible - the realisation of the unlimited scope of possibilities inspired and excited me - the opportunity to change the world or make a website about cats had never been on the same table before!</p>
+        
+                    <p class="p3">Today, I'm actively learning and developing my skills and knowledge of frontend development and web design. I have a solid foundation in Python and am expanding my knowledge into networking and backend technologies, aiming to become a well-rounded developer.</p>
+                    
+                    <p class="p4">When I’m not writing code or reading documentation, you can find me playing my guitar, exploring new places, or playing with/spoiling my cats. Each day is a new opportunity to learn, create, and connect, and I'm excited to see where this journey will take me.</p>
+               </div>
             </div> 
         </section>
     </div>
     <footer>
-       <span> <!-- <span class="footer__license">&copy; 2024 Matt Dean.</span> --></span>
+        <span class="footer__license">&copy; 2024 Matt Dean.</span>
     </footer>
 </body>
 </html>

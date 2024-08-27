@@ -24,6 +24,7 @@
          background-color: $primary-color;
          padding: 5px;
          border-radius: 6px;
+         box-shadow: 5px 5px 0 darken($primary-color, 10%);
          
       }
    }
@@ -158,7 +159,7 @@
       display: grid;
       grid-template-columns: 2fr 2fr 2fr;
       grid-template-rows: auto 1fr 1fr 1fr;
-      gap: 10px 30px;
+      gap: 10px 10px;
       grid-auto-flow: row;
       height: auto;
       width: 100%;
