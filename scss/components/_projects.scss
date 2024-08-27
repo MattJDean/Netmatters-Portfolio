@@ -2,104 +2,358 @@
 // Projects //
 // -------- //
 
-.project__container {
+/*-------------------------------*/
+/*Small Devices Project Container*/
+/*-------------------------------*/
 
-    margin: 20px 20px;
-    margin-bottom: 20px;
-    scroll-snap-align: start;
+.project__container--xs {  
+      display: grid;
+      scroll-snap-align: start;
+   /*Heading*/
+   h3 {
+   grid-area: project__h3;
+   align-self: center;
+   justify-self: center;
+   margin-bottom: 20px;
+   font-size: 1.8rem;
+   font-weight: 700;
+   letter-spacing: 0.1rem;
+   color: $text-color;
+
+      span {
+         background-color: $primary-color;
+         padding: 5px;
+         border-radius: 6px;
+         box-shadow: 5px 5px 0 darken($primary-color, 10%);
+         
+      }
+   }
+
+    /*Small Devices Project Grid*/  
    
-    h3 {
-        position: relative;
-        font-family: $base-font-family;
-        font-size: 1.7rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        color: $text-color;
-        top: 0;
-        text-align: center;
-        vertical-align: middle;
-        @include respond-to(md) {
-            margin-left: 170px;
-            text-align: left;
-        }
+   grid-template-columns: repeat auto-fit, minmax(100px, 400px);
+   grid-template-rows: 50px repeat(10, 1fr) 50px;
+   gap: 10px;
+   width: 100%;
+   height: auto;
+   justify-content: center;
+   align-content: stretch;
+   grid-auto-flow: row;
+   grid-template-areas:
+
+   /*Grid Layout*/
+   "project__h3 project__h3"
+   "project__card--1 project__card--2"
+   "project__card--1 project__card--2"
+   "project__card--3 project__card--4"
+   "project__card--3 project__card--4"
+   "project__card--5 project__card--6"
+   "project__card--5 project__card--6"
+   "project__card--7 project__card--8"
+   "project__card--7 project__card--8"
+   "project__card--9 project__card--10"
+   "project__card--9 project__card--10"
+   "project__scroll project__scroll"; 
+
+   
+
+   /*Project Grid Cards*/
+    .project__card--1 {
+       grid-area: project__card--1;
+       @include project-card('/assets/img/placeholder-typing.png');
+       }
+  
+    .project__card--2 {
+       grid-area: project__card--2;
+       @include project-card('/assets/img/placeholder-coffee.png');
+       }
+    
+    .project__card--3 {
+       grid-area: project__card--3;
+       @include project-card('/assets/img/placeholder-design.png');
+       }
+    
+    .project__card--4 {
+       grid-area: project__card--4;
+       @include project-card('/assets/img/placeholder-pc.png');
+       }
+    
+    .project__card--5 {
+       grid-area: project__card--5;
+       @include project-card('/assets/img/placeholder-cradle.png');
+       }
+    
+    .project__card--6 {
+       grid-area: project__card--6;
+       @include project-card('/assets/img/placeholder-work.png');
+       }
+    
+    .project__card--7 {
+       grid-area: project__card--7;
+       @include project-card('/assets/img/placeholder-closer-coffee.png');
+       }
+    
+    .project__card--8 {
+       grid-area: project__card--8;
+       @include project-card('/assets/img/placeholder-laptop.png');
+       }
+
+    .project__card--9 {
+       grid-area: project__card--9;
+       @include project-card('/assets/img/placeholder-phone.png');
+       }
+
+    .project__card--10 {
+       grid-area: project__card--10;
+       @include project-card('/assets/img/placeholder-abacus.png');
+       }
+   
+
+   /*Scroll Down Icon*/
+   .project__scroll {
+   grid-area: project__scroll;
+   align-self: center;
+   justify-self: center;
+   
+      /*Icon Bouncing Animation*/
+      animation: bounce 3s infinite;
+      @keyframes bounce {
+         0%, 20%, 50%, 80%, 100% {
+         transform: translateY(0);
+         }
+         40% {
+         transform: translateY(-10px);
+         }
+         60% {
+         transform: translateY(-5px);
+         }
+      }
+
+      /*Hide Icon at 768px*/
+      @include respond-to(md) {
+         display: none;
+      }
+   }
+
+
+   /*Hide Small Devices Grid at 768px*/  
+   @include respond-to(md) {
+      display: none;
+   }
+}
+
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+
+  /*--------------------------------*/
+  /*Medium Devices Project Container*/
+  /*--------------------------------*/
+
+   .project__container--md { 
+
+      /*Hide Initially*/ 
+      display: none;
+
+      /*Display at 768px*/
+      @include respond-to(md) {
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-rows: auto 1fr 1fr 1fr;
+      gap: 10px 10px;
+      grid-auto-flow: row;
+      height: auto;
+      width: 100%;
+      justify-self: center;
+  
+      grid-template-areas:
+
+      /*Grid Layout*/
+      "project__h3              .                .       "
+      "project__card--1 project__card--2 project__card--3"
+      "project__card--4 project__card--5 project__card--6"
+      "project__card--7 project__card--8 project__card--9";
+
+      /*Heading*/
+      h3 {
+         display: grid;
+         grid-area: project__h3;
+         justify-self: left;
+         margin-bottom: 20px;
+         font-size: 1.8rem;
+         font-weight: 700;
+         letter-spacing: 0.1rem;
+         color: $text-color;
+      
+            span {
+               width: fit-content;
+               background-color: $primary-color;
+               padding: 5px;
+               border-radius: 6px;
+               box-shadow: 10px 10px 0 darken($primary-color, 10%);
+               
+            }
+         }
+     
+
+            /*Medium Devices Project Grid Cards*/
+            .project__card--1 {
+               grid-area: project__card--1;
+               @include project-card('/assets/img/placeholder-typing.png');
+               }
+         
+            .project__card--2 {
+               grid-area: project__card--2;
+               @include project-card('/assets/img/placeholder-coffee.png');
+               }
+            
+            .project__card--3 {
+               grid-area: project__card--3;
+               @include project-card('/assets/img/placeholder-design.png');
+               }
+            
+            .project__card--4 {
+               grid-area: project__card--4;
+               @include project-card('/assets/img/placeholder-pc.png');
+               }
+            
+            .project__card--5 {
+               grid-area: project__card--5;
+               @include project-card('/assets/img/placeholder-cradle.png');
+               }
+            
+            .project__card--6 {
+               grid-area: project__card--6;
+               @include project-card('/assets/img/placeholder-work.png');
+               }
+            
+            .project__card--7 {
+               grid-area: project__card--7;
+               @include project-card('/assets/img/placeholder-closer-coffee.png');
+               }
+            
+            .project__card--8 {
+               grid-area: project__card--8;
+               @include project-card('/assets/img/placeholder-laptop.png');
+               }
+      
+            .project__card--9 {
+               grid-area: project__card--9;
+               @include project-card('/assets/img/placeholder-phone.png');
+               }
+      
+            // .project__card--10 {
+            //    grid-area: project__card--10;
+            //    @include project-card('/assets/img/placeholder-abacus.png');
+            //    }
+      }      
+   }
+
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+  
+ 
+
+
+
+
+// .project__container {
+
+//     margin: 20px 20px;
+//     margin-bottom: 20px;
+//     scroll-snap-align: start;
+   
+//     h3 {
+//         position: relative;
+//         font-family: $base-font-family;
+//         font-size: 1.7rem;
+//         font-weight: 500;
+//         letter-spacing: 0.5px;
+//         color: $text-color;
+//         top: 0;
+//         text-align: center;
+//         vertical-align: middle;
+//         @include respond-to(md) {
+//             margin-left: 170px;
+//             text-align: left;
+//         }
         
 
-    }
+//     }
 
 
-    .project__grid {
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        grid-template-columns: repeat(1, 1fr);
-        width: max-content;
-        gap: 20px;
-        margin: 0 auto; 
-        margin-bottom: 20px;
-        padding: 10px;
-        @include respond-to(md) {
-            grid-template-columns: repeat(3, 1fr); 
-            grid-template-rows: repeat(3, 1fr);  
-            gap: 20px;
-            width: 75vw;
-            margin-left: 150px;
-        }   
+//     .project__grid {
+//         display: grid;
+//         align-content: center;
+//         justify-content: center;
+//         grid-template-columns: repeat(1, 1fr);
+//         width: max-content;
+//         gap: 20px;
+//         margin: 0 auto; 
+//         margin-bottom: 20px;
+//         padding: 10px;
+//         @include respond-to(md) {
+//             grid-template-columns: repeat(3, 1fr); 
+//             grid-template-rows: repeat(3, 1fr);  
+//             gap: 20px;
+//             width: 75vw;
+//             margin-left: 150px;
+//         }   
        
-            .project__grid--card {
-                align-content: center;
-                background-color: transparent;
-                padding: 0;
-                border-radius: 40px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+//             .project__grid--card {
+//                 align-content: center;
+//                 background-color: transparent;
+//                 padding: 0;
+//                 border-radius: 40px;
+//                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//                 cursor: pointer;
+//                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-                &:hover {
-                    transform: translateY(-5px); 
-                    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  
-                }
+//                 &:hover {
+//                     transform: translateY(-5px); 
+//                     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  
+//                 }
                 
-                img {
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                    border-radius: 40px;
-                    opacity: 0.7;
-                }
+//                 img {
+//                     width: 100%;
+//                     height: auto;
+//                     object-fit: cover;
+//                     border-radius: 40px;
+//                     opacity: 0.7;
+//                 }
 
              
-            }
+//             }
 
   
 
-    }
+//     }
 
-    .project__down {
-        @include respond-to(md) {
-            display: none;
-        }
-        position: static; 
-        bottom: 0;
-        left: 0px;  
-        width: 100%;
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 500;
-        color: $text-color;
-        margin-bottom: 20px;
-        animation: bounce 3s infinite;
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-    }
+//     .project__down {
+//         @include respond-to(md) {
+//             display: none;
+//         }
+//         position: static; 
+//         bottom: 0;
+//         left: 0px;  
+//         width: 100%;
+//         text-align: center;
+//         font-size: 1.25rem;
+//         font-weight: 500;
+//         color: $text-color;
+//         margin-bottom: 20px;
+//         animation: bounce 3s infinite;
+//         @keyframes bounce {
+//             0%, 20%, 50%, 80%, 100% {
+//                 transform: translateY(0);
+//             }
+//             40% {
+//                 transform: translateY(-10px);
+//             }
+//             60% {
+//                 transform: translateY(-5px);
+//             }
+//         }
+//     }
 
-}
+// }
  

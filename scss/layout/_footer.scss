@@ -2,3 +2,20 @@
 // Footer License //
 // -------------- //
 
+#footer__licence {
+    position: static;
+    display: inline-block;
+    top: 100%;
+    left: 0;
+    line-height: 0;
+    height: 15px;
+    width: 100%;
+    
+    font-family: $base-font-family;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 7px;
+    color: $text-color;
+    background-color: $primary-color;
+   
+}

@@ -38,3 +38,81 @@
     left: $left;
     transform: translate(-50%, -50%);
   }
+
+  // Project Card //
+
+  @mixin project-card($img-url) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    max-height: 350px;
+    max-width: 350px;
+    margin-right: 10px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-image: url(#{$img-url});
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+
+    &:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  
+        opacity: 0.9;
+    }
+
+    span {
+      justify-content: center;
+      align-self: center;
+      font-family: $base-font-family;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.2rem;
+      letter-spacing: 0.1px;
+      color: $secondary-text-color;
+      background-color: $text-color;
+      padding: 5px;
+      border-radius: 4px;
+      opacity: 0.9;
+   
+    }
+}
+
+// Form Input Styling //
+ 
+@mixin form-style() {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $primary-color;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  font-family: $base-font-family;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  cursor: text;
+  caret-color: $text-color;
+  
+
+  &::placeholder {
+      color: lighten($text-color, 25%);
+      font-family: $base-font-family;
+      letter-spacing: 1px;
+}
+
+  &:focus {
+  border-color: lighten($primary-color, 10%);
+      outline: none;
+  }
+
+  &:hover {
+    cursor: text;
+    caret-color: $text-color;
+  }
+}

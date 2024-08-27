@@ -2,19 +2,23 @@
 // Typography //
 //============//
 
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
 
 // --------- //
 // Variables //
 // --------- //
 
-$base-font-family: "League Spartan", sans-serif;
+$base-font-family: Inter, sans-serif;
 $logo-font: "Abril Fatface", serif;
 $base-font-size: 16px;
 $base-font-weight: 400;
-$base-line-height: 1.5;
-$link-hover-color: lighten($link-color, 10%);
-$paragraph-margin-bottom: 1em;
-
 
 // ---- //
 // Base //
@@ -24,52 +28,8 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
-  line-height: $base-line-height;
   color: $text-color;
 
-}
-
-// -------- //
-// Headings //
-// -------- //
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $base-font-family;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
-// ---------- //
-// Paragraphs //
-// -----------//
-
-p {
-  margin-bottom: $paragraph-margin-bottom;
-  color: $text-color;
 }
 
 // ----- //

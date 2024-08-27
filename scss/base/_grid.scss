@@ -1,0 +1,100 @@
+/// -------------- ///
+/// Grid Container ///
+/// -------------- ///
+
+.grid__container--md {          /*Hide Larger Grid Initially*/
+    display: none;
+}
+
+.grid__container--xs {      /*Small Devices First*/
+    
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr auto 20px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "hero__container--xs"
+        "project__container--xs"
+        "contact__container--xs"
+        "footer__licence";
+
+    .hero__container--xs { 
+        grid-area: hero__container--xs;
+        margin: 10px; 
+    }
+
+    .project__container--xs {
+        grid-area: project__container--xs; 
+        margin: 10px;
+        margin-right: 40px; 
+    }
+
+    .contact__container--xs {
+        grid-area: contact__container--xs;
+        margin: 10px; 
+    }
+
+    #footer__licence {
+        grid-area: footer__licence;
+    }
+}
+  
+
+@include respond-to(md) {    /*Wakes Up at 768px*/
+
+    .grid__container--xs {
+        display: none;
+    }
+
+
+  .grid__container--md {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 150px 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 20px; 
+    gap: 10px 10px;
+    margin: 0 20px;
+    width: 100%; 
+    min-height: 100vh;
+    grid-template-areas: 
+      "menu__container hero__container--md"
+      "menu__container hero__container--md"
+      "menu__container project__container--md"
+      "menu__container project__container--md"
+      "menu__container contact__container--md"
+      "footer__licence footer__licence"; 
+    
+  }
+
+  .menu__container {
+    grid-area: menu__container; 
+  }
+
+  .hero__container--md {
+    grid-area: hero__container--md; 
+  }
+
+  .project__container--md {
+    grid-area: project__container--md;
+  }
+
+  .contact__container--md {
+    grid-area: contact__container--md;
+  }
+
+  #footer__licence {
+     grid-area: footer__licence;
+  }
+
+}
+
+
+  
+
+  
+
+  
+  
+  
+ 
+  

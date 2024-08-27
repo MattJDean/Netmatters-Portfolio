@@ -2,11 +2,23 @@
 // Code Examples //
 // ------------- // 
 
+
+.menu__burger {
+    display: block;
+
+    @include respond-to(md) {
+        display: none;
+    }
+}
+
+
 .examples__container {
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     flex: 1;
     margin: 20px 20px 0 20px;
     scroll-snap-align: start;
@@ -24,37 +36,17 @@
     }
 
 
-    .examples__header {
-        margin-top: 50px;
-        padding-left: 20px;
-        
-        h1 {
-            font-size: 1.6rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            padding-left: 30px;  
-            
-        }
-
-    }
 
     .examples__image {
-        display: flex;
-        flex-direction: column;
-        margin-left: 20px;
-        margin-right: 40px;
-        align-items: center;
-
-        img{
         position: absolute;
-        top: 33vh;
-        max-width: 80%;
+        top: 30%;
+        left: 40%;
         height: 300px;
-        object-fit: cover;
-        opacity: 0.8;
-        border-radius: 60px;
-        }
+        width: 600px;
+        
+        
+        
+        @include project-card('/assets/img/placeholder-typing.png');
     }
 
     .examples__content {
