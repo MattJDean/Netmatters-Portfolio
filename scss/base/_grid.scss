@@ -50,10 +50,10 @@
   .grid__container--md {
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 150px 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 30px; 
-    gap: 10px 10px;
-    margin: 0 auto;
+    grid-template-columns: 170px 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 40px; 
+    gap: 10px;
+    margin: 0;
     width: 100%; 
     min-height: 100vh;
     grid-template-areas: 

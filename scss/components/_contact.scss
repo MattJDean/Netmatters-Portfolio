@@ -245,11 +245,11 @@
             /*Medium Devices Contact Grid*/  
             display: grid;
             height: auto;
-            width: 95%;
+            width: 80%;
             grid-template-columns: 100%;
-            grid-template-rows: 30px 30px 30px 0.7fr;
-            gap: 0px 0px;
-            margin: 160px 40px 0 40px;
+            grid-template-rows: 30px 30px 30px 0.25fr;
+            gap: 10px;
+            margin: 80px 20px 0 20px;
             grid-auto-flow: row;
             grid-template-areas:
 
