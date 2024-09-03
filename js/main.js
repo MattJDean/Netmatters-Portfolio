@@ -10,18 +10,32 @@
 //     alert('Button Clicked');
 // });
 
-//Hero Text Typing
-const typedText = document.querySelector('#typedText');
+
+//Hero Text Typing Effect
+const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; // Array of both versions of the text (xs and md)
 const text = "I'm a web developer."; 
-let index = 0;
 
-function typedTextEffect() {
-  if (index < text.length) {
-    typedText.textContent += text.charAt(index);
-    index++;
-    setTimeout(typedTextEffect, 150); // Typing speed (in ms)
-  }
+
+function typedTextEffect(version) {
+    let index = 0; // Character index
+    function type() {
+        if (index < text.length) { //Loops through each character in the text
+            version.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 150); // Typing speed (in ms)
+        }
+    }
+    type();
 }
+  
 
-// Trigger the typing effect
-document.addEventListener('DOMContentLoaded', typedTextEffect);
+// Triggers the typing effect
+document.addEventListener('DOMContentLoaded', () => { 
+    typedText.forEach((version) => {
+    if (window.getComputedStyle(version).display !== 'none') { //Applies effect only to visible instance of h2 text.
+        typedTextEffect(version);
+    }
+    });
+});
+    
+
