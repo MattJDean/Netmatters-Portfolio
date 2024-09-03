@@ -37,5 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     });
 });
+
+// Burger Menu
+$(window).on("load", function() {
+    $(".burger__btn").on("click", function() {
+      $(".burger__hidden").toggleClass("showNav hideNav").removeClass("hidden"); // Toggle navigation visibility
+      $(this).toggleClass("animated"); // Toggle animation for button
+    });
+  });
+  
     
 
