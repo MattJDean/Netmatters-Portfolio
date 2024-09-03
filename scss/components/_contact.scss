@@ -11,6 +11,7 @@
 .contact__container--xs {
 
     /*Small Devices Contact Grid*/  
+    height: 100vh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30px 30px 30px 0.7fr 60px;
@@ -185,7 +186,7 @@
     .contact__scroll { 
         grid-area: contact__scroll;
 
-        margin-top: 70px;
+        margin-top: 170px;
         margin-bottom: 60px;
         font-family: $base-font-family;
         font-size: 1.1rem;
@@ -227,6 +228,8 @@
 }
 
 
+
+
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
   
@@ -241,11 +244,12 @@
             @include respond-to(md) {
             /*Medium Devices Contact Grid*/  
             display: grid;
+            height: auto;
+            width: 95%;
             grid-template-columns: 100%;
             grid-template-rows: 30px 30px 30px 0.7fr;
             gap: 0px 0px;
-            margin: 10px;
-            margin-right: 40px;
+            margin: 160px 40px 0 40px;
             grid-auto-flow: row;
             grid-template-areas:
 
@@ -413,4 +417,6 @@
 
         }
 
-}
+    }
+
+ 

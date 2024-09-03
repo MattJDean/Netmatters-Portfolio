@@ -7,10 +7,10 @@
 
  .menu__burger {
     
-    /*Top Right Positioning*/
+    /*Top Left Positioning*/
     position: fixed;
     top: 20px;
-    left: calc(100% - 80px);
+    left: 20px;
     z-index: 10;
     
     margin-top: 0;

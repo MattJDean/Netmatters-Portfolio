@@ -5,49 +5,82 @@
    
 // Breakpoint //
 
-@mixin respond-to($breakpoint) {
-    @if $breakpoint == xs {
-      @media (max-width: $breakpoint-xs) {
-        @content;
+@mixin respond-to($breakpoints...) {
+  @each $breakpoint in $breakpoints {
+      @if $breakpoint == xs {
+        @media (max-width: $breakpoint-xs)  {
+          @content;
+        }
+      } @else if $breakpoint == sm {
+        @media (max-width: $breakpoint-md) {
+          @content;
+        }
+      } @else if $breakpoint == md {
+        @media (min-width: $breakpoint-md) {
+          @content;
+        }
+      } @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg){
+          @content;
+        }
+      } @else if $breakpoint == xl {
+        @media (min-width: $breakpoint-xl) {
+          @content;
+        }
       }
-    } @else if $breakpoint == sm {
-      @media (min-width: $breakpoint-sm) {
-        @content;
-      }
-    } @else if $breakpoint == md {
-      @media (min-width: $breakpoint-md) {
-        @content;
-      }
-    } @else if $breakpoint == lg {
-      @media (min-width: $breakpoint-lg) {
-        @content;
-      }
-    } @else if $breakpoint == xl {
-      @media (min-width: $breakpoint-xl) {
-        @content;
-      }
-    }
   }
-  
-  // Center Absolute //
+}
 
-  @mixin center-absolute($top: 50%, $left: 50%) {
-    text-align: center;
-    position: absolute;
-    top: $top;
-    left: $left;
-    transform: translate(-50%, -50%);
-  }
 
   // Project Card //
+
+  @mixin project-card-xs($img-url) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-image: url(#{$img-url});
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+
+    &:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  
+        opacity: 0.9;
+    }
+
+    span {
+      justify-content: center;
+      align-self: center;
+      font-family: $base-font-family;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.2rem;
+      letter-spacing: 0.1px;
+      color: $secondary-text-color;
+      background-color: $text-color;
+      padding: 5px;
+      border-radius: 4px;
+      opacity: 0.9;
+   
+    }
+}
 
   @mixin project-card($img-url) {
     display: flex;
     align-content: center;
     justify-content: center;
     
-    max-height: 350px;
-    max-width: 350px;
+    min-height: 350px;
+    min-width: 350px;
     margin-right: 10px;
     background-color: transparent;
     padding: 15px;
@@ -91,6 +124,7 @@
   padding: 10px;
   border: 2px solid $primary-color;
   border-radius: 3px;
+  resize: none;
   box-sizing: border-box;
   font-size: 0.8em;
   font-family: $base-font-family;

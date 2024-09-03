@@ -2,6 +2,15 @@
 // Base Styles //
 /////////////////
 
+//Debug
+
+// * {
+//   outline: 1px solid red;
+// }
+
+
+
+
 *,
 *::before,
 *::after {
@@ -28,7 +37,7 @@ a {
 }
 
 body {
-  margin: 0;
+  margin: 10px;
   background-color: $background-color;
   color: $text-color;
   font-family: $base-font-family;
