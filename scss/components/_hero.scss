@@ -8,29 +8,66 @@
     /*Hero Section Layout*/
     display: grid;
     width: 100%;
-    height: calc(100vh - 30px);
+    height: 100vh;
     margin: 0 auto;
     scroll-snap-align: start;
     place-items: center;
-    // justify-items: center;
-    // justify-content: center;
-    // align-content: center;
     overflow: hidden;
-    grid-template-rows: 1fr auto;
+
+    grid-template-rows: 1fr auto 1fr; 
+    grid-template-columns: 1fr;
+   
+    .hero__text--h1 {
+        grid-row: 2;
+        align-self: end;
+        font-family: $hero-font;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $text-color;
+    }
+
+  
+
+    .hero__text--h2 {
+        grid-row: 3;
+        align-self: start;
+        font-family: $hero-font;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        color: $text-color;
+    }
+
+    #typedText {
+        overflow: hidden; 
+        border-right: 0.1em solid $text-color;
+        white-space: nowrap; 
+        margin: 0 auto; 
+        letter-spacing: 0.05em; 
+        animation: blink-caret 0.75s step-end infinite;
+      }
+      
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: $text-color; }
+      }
 
     /*Main Hero Logo Image*/
-    img {
-        margin-left: 40px;
-        width: 100%;
-        height: auto;
-        min-height: 150px;
-        image-rendering: optimizeQuality;
-        object-fit: cover;
-        align-self: center;
-    }
+    // img {
+    //     margin-left: 40px;
+    //     width: 100%;
+    //     height: auto;
+    //     min-height: 150px;
+    //     image-rendering: optimizeQuality;
+    //     object-fit: cover;
+    //     align-self: center;
+    // }
 
     /*Scroll Down Snap Align Icon*/
     .hero__scroll {
+        grid-row: 4;
         display: grid;
         font-family: $base-font-family;
         font-size: 1rem;
