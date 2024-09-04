@@ -17,6 +17,8 @@
     grid-template-rows: 1fr auto 1fr; 
     grid-template-columns: 1fr;
    
+ 
+
     .hero__text--h1 {
         grid-row: 2;
         align-self: end;
@@ -24,14 +26,29 @@
         justify-content: center; 
         align-items: center; 
         margin:  0 auto;
-        font-family: $hero-font;
-        font-size: clamp(0.8rem, 4vw, 1.8rem);
+        font-family: $hero-font; 
+        font-size: 2rem; 
         font-weight: 600;
         letter-spacing: 1px;
-        color: $text-color;
         text-wrap: nowrap;
-    }
-
+        line-height: 1.2; 
+        color: $text-color;
+        text-align: center; 
+        overflow: hidden; 
+        position: relative; 
+        display: inline-block; 
+      }
+      
+      
+      #heroTextTop {
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 
+                     2px 2px 0 rgba(0, 0, 0, 0.2); 
+        filter: blur(0.3px); 
+      }
+      
+  
+      
+   
     .hero__text--h2 {
         grid-row: 3;
         align-self: start;
@@ -44,6 +61,9 @@
         font-weight: 400;
         letter-spacing: .8px;
         color: $text-color;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 
+        2px 2px 0 rgba(0, 0, 0, 0.2); 
+        filter: blur(0.3px); 
     }
 
     #typedText {

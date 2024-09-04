@@ -127,16 +127,16 @@
 
               /* Compression Animations */
               &.compressing::before {
-                animation: compress-down 1s forwards; /* Top line moves down */
+                animation: compress-down 0.7s forwards; /* Top line moves down */
               }
 
               &.compressing::after {
-                animation: compress-up 1s forwards; /* Bottom line moves up */
+                animation: compress-up 0.7s forwards; /* Bottom line moves up */
               }
 
               /* Fade-out animation for text */
-              &.compressing {
-                animation: fadeOutText 0.5s forwards; /* Fade out text */
+              &.compressing span {
+                animation: fadeOutText 0.4s forwards; /* Fade out text */
               }
 
               /* Slide-out animation for lines */
@@ -184,10 +184,10 @@
 
             @keyframes slideOut {
               0% {
-                transform: scaleX(0);
+                transform: scaleX(1);
               }
               100% {
-                transform: scaleX(1);
+                transform: scaleX(0);
               }
 
             }  
@@ -220,7 +220,7 @@
       }
     }
     
-    //Burger Menu Animation
+    //Burger Menu Animation 
     .animated {
       .burger__btn--line {
         background-color: $primary-color-dark;

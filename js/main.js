@@ -11,6 +11,12 @@
 // });
 
 
+
+  
+  
+
+
+
 //Hero Text Typing Effect
 const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; // Array of both versions of the text (xs and md)
 const text = "I'm a web developer."; 
@@ -38,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 // Burger Menu
 $(window).on("load", function() {
     $(".burger__btn").on("click", function() {
@@ -45,6 +53,8 @@ $(window).on("load", function() {
       $(this).toggleClass("animated"); // Toggle animation for button
     });
   });
+
+
 
 // Hover Effect for Burger Menu Links
   document.addEventListener('DOMContentLoaded', function () {
@@ -72,25 +82,26 @@ $(window).on("load", function() {
         anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent the default link behavior
   
-        // Start compression animation
-        this.classList.add('compressing');
-  
-        // Wait for the compression animation to end before sliding out
-        setTimeout(() => {
-          this.classList.remove('compressing');
-          this.classList.add('sliding-out');
-  
-            // After slide out, navigate to target URL
+            // Start compression animation
+            this.classList.add('compressing');
+    
+            // Wait for the compression animation to end before sliding out
             setTimeout(() => {
-                this.classList.remove('sliding-out'); // Reset the animation classes
+            this.classList.remove('compressing');
+            this.classList.add('sliding-out');
+    
+                requestAnimationFrame(() => {
+                setTimeout(() => {
+                    this.classList.remove('sliding-out'); // Reset the animation classes
 
-           // Check if the link is valid and different from the current URL
-          if (this.href && this.href !== window.location.href) {
-            window.location.href = this.href;
-          }
-        }, 1000); // Time for slide-out animation 
-      }, 1000); // Time for compression animation 
-    });
+                        // Check if the link is valid and different from the current URL
+                        if (this.href && this.href !== window.location.href) {
+                            window.location.href = this.href;
+                        }
+                    }, 1000); // Time for slide-out animation 
+                });
+            }, 700); // Time for compression animation 
+        });
   });
 });
   
