@@ -100,23 +100,23 @@
             
             <!--Contact Form-->
             <div class="contact__form--xs">
-                <form class="form" action="#" method="post">
+                <form class="form" id="contactFormXs" action="#" method="post">
 
                     <!--First Name-->
-                    <input class="form__firstname--xs" type="text" id="first-name" name="first_name" placeholder="First Name" required>
-                    
+                    <input class="form__firstname--xs" type="text" id="firstNameXs" name="firstNameXs" placeholder="First Name" required>
+                    <span class="error" id="firstNameErrorXs"></span>
                     <!--Last Name-->
-                    <input class="form__lastname--xs" type="text" id="last-name" name="last_name" placeholder="Last Name" required>
-                
+                    <input class="form__lastname--xs" type="text" id="lastNameXs" name="lastNameXs" placeholder="Last Name" required>
+                    <span class="error" id="firstNameErrorXs"></span>
                     <!--Email-->
-                    <input class="form__email--xs" type="email" id="email" name="email" placeholder="Email" required>
-                
+                    <input class="form__email--xs" type="email" id="emailXs" name="emailXs" placeholder="Email" required>
+                    <span class="error" id="firstNameErrorXs"></span>
                     <!--Subject-->
-                    <input class="form__subject--xs" type="text" id="subject" name="subject" placeholder="Subject" required>
-                
+                    <input class="form__subject--xs" type="text" id="subjectXs" name="subjectXs" placeholder="Subject" required>
+                    <span class="error" id="firstNameErrorXs"></span>
                     <!--Message-->
-                    <textarea class="form__message--xs" id="message" name="message" rows="5" placeholder="Message..." required></textarea>
-                    
+                    <textarea class="form__message--xs" id="messageXs" name="messageXs" rows="5" placeholder="Message..." required></textarea>
+                    <span class="error" id="firstNameErrorXs"></span>
                     <!--Submit Button-->
                     <button class="form__submit--xs" type="submit">Submit</button>
                 </form>
@@ -207,22 +207,23 @@
             <span class="contact__email--md"><a  href="mailto:matt@mattdean.tech"><i class="fa-solid fa-envelope"></i></a>  matt@mattdean.tech</span>
             
             <div class="contact__form--md">
-                <form class="form" action="#" method="post">
+                <form class="form" id="contactFormMd" action="#" method="post">
                     
-                    <input class="form__firstname--md" type="text" id="first-name" name="first_name" placeholder="First Name" required>
-                
+                    <input class="form__firstname--md" type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <span class="error" id="firstNameError"></span>
                     
-                    <input class="form__lastname--md" type="text" id="last-name" name="last_name" placeholder="Last Name" required>
-                
+                    <input class="form__lastname--md" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    <span class="error" id="lastNameError"></span>
                     
                     <input class="form__email--md" type="email" id="email" name="email" placeholder="Email" required>
-                
+                    <span class="error" id="emailError"></span>
                     
                     <input class="form__subject--md" type="text" id="subject" name="subject" placeholder="Subject" required>
-                
+                    <span class="error" id="subjectError"></span>
                     
                     <textarea class="form__message--md" id="message" name="message" rows="5" placeholder="Message..." required></textarea>
-                
+                    <span class="error" id="messageError"></span>
+
                     <button class="form__submit--md" type="submit">Submit</button>
                 </form>
             </div>    
@@ -240,6 +241,7 @@
    
 
     <script src="js/main.js"></script>
+    <script src="js/formValidation.js"></script>
 
   </body>
     

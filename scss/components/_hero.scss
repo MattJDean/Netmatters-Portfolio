@@ -27,7 +27,7 @@
         align-items: center; 
         margin:  0 auto;
         font-family: $hero-font; 
-        font-size: 2rem; 
+        font-size: clamp(0.8rem, 4vw, 1.8rem);
         font-weight: 600;
         letter-spacing: 1px;
         text-wrap: nowrap;
@@ -80,16 +80,16 @@
         50% { border-color: $text-color; }
       }
 
-    /*Main Hero Logo Image*/
-    // img {
-    //     margin-left: 40px;
-    //     width: 100%;
-    //     height: auto;
-    //     min-height: 150px;
-    //     image-rendering: optimizeQuality;
-    //     object-fit: cover;
-    //     align-self: center;
-    // }
+      .pattern {
+        position: absolute;
+        top: var(--top, 0);
+        left: var(--left, 0);
+        width: var(--size, 20px);
+        height: var(--size, 20px);
+        background-color: var(--color, $primary-color);
+        border-radius: 50%;
+        opacity: 0.6;
+    }
 
     /*Scroll Down Snap Align Icon*/
     .hero__scroll {
