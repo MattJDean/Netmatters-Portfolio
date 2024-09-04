@@ -1,21 +1,3 @@
-// JS Test
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('test');
-// });
-
-// const formSubmit = document.querySelector('.form__submit--md');
-// formSubmit.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     alert('Button Clicked');
-// });
-
-
-
-  
-  
-
-
 
 //Hero Text Typing Effect
 const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; // Array of both versions of the text (xs and md)
