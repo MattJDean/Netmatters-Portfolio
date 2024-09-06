@@ -47,20 +47,49 @@
         background-color: darken($primary-color, 20%);
         box-shadow: 0 2px 2px $primary-color-dark;
       }
+
+      //Burger Menu Animation 
+      &.animated {
+        .burger__btn--line {
+          background-color: $primary-color-dark;
+          z-index: 999999;
+        }
+    
+        .top {
+          transform: translateY(15px) rotate(45deg);
+        }
+    
+        .bottom {
+          transform: translateY(-17px) rotate(-45deg);
+        }
+    
+        .middle {
+          width: 0;
+        }
+      }
     }
 
     //Hidden Burger Menu Styling
     .burger__hidden {
       position: fixed;
-      top: -100%;
+      top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: darken($background-color-comp-light, 10%);
+      background-color: #e2e2d9;
       height: 100%;
       z-index: 100;
-      transition: top 1s ease; 
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+
+      &.showNav {
+          opacity: 1;
+          visibility: visible;
+      }
+
     }
+  }
     
     //Burger Menu Links 
     .burger__links {
@@ -259,25 +288,7 @@
       }
     }
     
-    //Burger Menu Animation 
-    .animated {
-      .burger__btn--line {
-        background-color: $primary-color-dark;
-        z-index: 999999;
-      }
-  
-      .top {
-        transform: translateY(15px) rotate(45deg);
-      }
-  
-      .bottom {
-        transform: translateY(-17px) rotate(-45deg);
-      }
-  
-      .middle {
-        width: 0;
-      }
-    }
+
   
     .showNav {
       top: 0; 
@@ -290,7 +301,7 @@
     .hidden {
       display: none;
     }
-}
+
   
 
  

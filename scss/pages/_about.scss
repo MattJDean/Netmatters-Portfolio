@@ -1,71 +1,183 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-
 .about__container {
+    flex: 1 0 auto;
     max-width: 100%;
-    margin: 0 auto;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
+    @include respond-to(md) {
+        padding-left: 200px; 
+    }
 }
 
 #about {
     width: 100%;
 }
 
-/* Header Image */
 .about__header {
     width: 100%;
     position: relative;
     overflow: hidden;
-}
 
-.about__header--img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(0.5);
+    &--img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        filter: brightness(0.5);
+    }
 }
-
 
 .about__headline {
     position: absolute;
-    top: 390px;
+    width: 90%;
+    bottom: 20px;
     right: 20px;
     text-align: right;
-    color: $secondary-text-color; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
-}
+    font-family: $hero-font;
+    color: $secondary-text-color;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
-.headline__h1, .headline__h2 {
-    margin: 0;
-}
+    .headline__h1, .headline__h2 {
+        margin: 0;
+    }
 
-.headline__h1 {
-    font-size: 2.5rem; 
-}
+    .headline__h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
 
-.headline__h2 {
-    font-size: 3.5rem; 
-}
+    .headline__h2 {
+        font-size: clamp(2rem, 7vw, 3rem);
+        margin-top: 10px;
+    }
 
+    @include respond-to(md) {
+        bottom: 40px;
+        right: 40px;
+
+        .headline__h1 {
+            font-size: 3.5rem;
+        }
+
+        .headline__h2 {
+            font-size: 4.5rem;
+        }
+    }
+}
 
 .about__main {
-    max-width: 600px; /* Adjust the width as needed */
-    margin: 0 auto; /* Centers the div horizontally */
-    padding: 20px;
-    background-color: #f9f9f9; /* Optional: background color for the box */
-    border-radius: 8px; /* Optional: rounding the corners */
-    text-align: left; /* Centers text */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the box */
+    width: 90%;
+    max-width: 800px;
+    margin: -50px auto 50px;
+    padding: 30px;
+    background-color: $background-color-comp-light;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 16px rgba(145, 157, 130, 0.4) inset;
     position: relative;
-    top: -0px; /* Adjust the position to place it under the hero image */
+    z-index: 1;
+
+    @include respond-to(sm) {
+        width: 95%;
+        padding: 20px;
+    }
+
+    @include respond-to(md) {
+        width: 80%;
+        padding: 40px;
+        margin-top: -100px;
+    }
+
+    p {
+        font-family: $hero-font;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 15px;
+        max-width: 80ch;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include respond-to(md) {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            transition: color 0.3s ease;
+
+            &:hover, &:focus {
+                color: darken($primary-color, 10%);
+            }
+        }
+    }
 }
+
+.about__cta {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 50px;
+    text-align: right;
+
+    @include respond-to(sm) {
+        width: 95%;
+    }
+
+    @include respond-to(md) {
+        width: 80%;
+        margin-bottom: 0;
+    }
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $secondary-text-color;
+    text-decoration: none;
+    font-family: $hero-font;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover, &:focus {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    @include respond-to(md) {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+    padding:0;
+    text-align: left;
+    z-index: 1000;
+    position: relative;
+}
+             
+
 
 
 

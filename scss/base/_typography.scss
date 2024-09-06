@@ -22,7 +22,7 @@
 $base-font-family: Inter, sans-serif;
 $hero-font: "Bogart Medium", serif;
 $logo-font: "Bogart Medium", serif;
-$base-font-size: 16px;
+$base-font-size: calc(15px + 0.390625vw);
 $base-font-weight: 400;
 
 // ---- //

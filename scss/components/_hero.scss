@@ -12,12 +12,16 @@
     scroll-snap-align: start;
     overflow: hidden;
    
-       img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-
-            }
+    .hero__background--xs {
+        width: 100%;
+        height: -webkit-fill-available;
+        min-height: 100%;
+        background-image: url('/assets/img/mulberry-paper.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        filter: brightness(0.9);
+    }
 
     .hero__text--h1 {
         position: absolute; 
@@ -27,7 +31,7 @@
         text-align: center; 
         text-wrap: nowrap;
         font-family: $hero-font; 
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 4vw, 2rem);
         font-weight: 600;
         letter-spacing: 1px;
         line-height: 0; 
@@ -46,12 +50,12 @@
         position: absolute; 
         top: 50%; 
         left: 50%; 
-        margin-top: 50px;
+        margin-top: 20px;
         transform: translate(-50%, -50%);
         text-align: center;
         text-wrap: nowrap;
         font-family: $hero-font;
-        font-size: 2.2rem;
+        font-size: clamp(1rem, 4vw, 1.7rem);
         font-weight: 600;
         letter-spacing: .8px;
         color: $text-color;
@@ -59,49 +63,7 @@
         2px 2px 0 rgba(0, 0, 0, 0.2); 
         filter: blur(0.3px); 
         }
-      .hero__text--h1 {
-          position: absolute;
-          top: 45%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center;
-          text-wrap: nowrap;
-          font-family: $hero-font;
-          font-size: 3vw; 
-          font-weight: 600;
-          letter-spacing: 1px;
-          line-height: 1.2;
-          color: $text-color;
-          overflow: hidden;
-          padding: 2px 2px;
-          border-radius: 10px;
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 2px 2px 0 rgba(0, 0, 0, 0.2);
-          filter: blur(0.3px);
-      
-          @media (max-width: 768px) {
-              font-size: 7vw; 
-          }
-      }
-      
-      .hero__text--h2,
-      .typewriter {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          margin-top: 5vh; 
-          transform: translate(-50%, -50%);
-          text-align: center;
-          text-wrap: nowrap;
-          font-family: $hero-font;
-          font-size: 5vw; 
-          font-weight: 600;
-          letter-spacing: 0.8px;
-          color: $text-color;
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 2px 2px 0 rgba(0, 0, 0, 0.2);
-          filter: blur(0.3px);
-      
-          
-      }
+   
       
       // Cursor Animation
       #typedText {
@@ -166,6 +128,7 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
+            font-size: clamp(1rem, 3vw, 2rem);
 
             a {
                 text-decoration: none;
@@ -208,7 +171,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position-x: center;
-                box-shadow: 0 3000px rgba(215, 206, 199, 0.4)inset;
+                filter: brightness(0.9);
             }
            
 
@@ -233,6 +196,10 @@
             line-height: 1.2;    
             color: $text-color;
             text-wrap: nowrap;
+            text-shadow: 1px 1px 0 rgba (52, 53, 53) ;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 
+                         2px 2px 0 rgba(0, 0, 0, 0.2); 
+                         filter: blur(0.3px);
            
             }
         
@@ -240,8 +207,9 @@
 
         .hero__text--h2, .typewriter {
             position: absolute;
-            bottom: 12.5%;
+            bottom: -25%;
             left: 50%;
+            
             transform: translateX(-50%);
             text-align: center;
             font-family: $hero-font;
@@ -251,6 +219,10 @@
             letter-spacing: 1px;
             color: $text-color;
             text-wrap: nowrap;
+            text-shadow: 1px 1px 0 rgba (52, 53, 53) ;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 
+                         2px 2px 0 rgba(0, 0, 0, 0.2); 
+                         filter: blur(0.3px);
             }
 
         #typedTextMd {

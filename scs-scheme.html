@@ -14,12 +14,8 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
-    <div id="wrapper">
     
-        <!--------------------------------------------------------------Burger Menu-->
-        <div class="menu__burger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+    
         <!---------------------------Side Menu-->
         <div class="menu__container">
 
@@ -45,23 +41,53 @@
                 <a href="https://mattdean.tech/"><i class="fa-solid fa-globe"></i></a>
             </div>
         </div>
- 
+<div id="wrapper">
+   
+    
+    <!-- Side menu code here (unchanged) -->
+
     <div class="scs__container">
         <section id="scs-scheme">
-            <div class="scs__intro">
-                <h1><span>Scion Coalition Scheme</span></h1>
-                <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
+            <div class="scs__section">
+                <div class="scs__content">
+                    <h1><span>Scion Coalition Scheme</span></h1>
+                    <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers. Under the supervision of senior web developers, scions generally aim to complete training within six to nine months. The course is intensive and therefore the level of learning achieved is extensive in a short space of time.</p>
+                </div>
+                <div class="scs__image">
+                    <img src="path-to-scs-image.jpg" alt="SCS Scheme">
+                </div>
             </div>
             
-            <!-- <div class="scs__image">
-                <img src="your-image-url-here.jpg" alt="SCS Scheme">
-            </div> -->
-            
-            <div class="scs__content">
-                <h1><span>Treehouse</span></h1>
-                    <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress and see how much they?ve covered in certain areas.</p>
+            <div class="scs__section">
+                <div class="scs__content">
+                    <h1><span>Treehouse</span></h1>
+                    <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML to C# programming, iOS development, data analysis, and more. By completing courses users can earn points, allowing them to track their progress and see how much they've covered in certain areas.</p>
+                </div>
+                <div class="scs__image">
+                    <img src="path-to-treehouse-image.jpg" alt="Treehouse">
+                </div>
+                <div class="burger__menu">
+                    <button class="burger__btn">
+                        <span class="burger__btn--line top"></span>
+                        <span class="burger__btn--line middle"></span>
+                        <span class="burger__btn--line bottom"></span>
+                    </button>
+                    <div class="burger__hidden">
+                        <ul class="burger__links">
+                            <li class="burger__links--item">
+                                <a href="#" class="burger__links--anchor">Link 1</a>
+                            </li>
+                            <!-- More menu items... -->
+                        </ul>
+                        <ul class="burger__socials">
+                            <!-- Social links... -->
+                        </ul>
+                    </div>
+                </div>
 
-                <h1><span>About Netmatters</span></h1>
+            <div class="scs__section">
+                <div class="scs__content">
+                    <h1><span>About Netmatters</span></h1>
                     <ul>
                         <li>Established in 2008</li>
                         <li>Norfolk's leading technology company</li>
@@ -70,18 +96,22 @@
                         <li>80+ staff, 2 locations across Norfolk</li>
                         <li>Digital Marketing, Website & Software development & IT Support</li>
                         <li>Broad spectrum of clients, working nationwide</li>
-                        <li>Operate to strict company values </li>
+                        <li>Operate to strict company values</li>
                     </ul>
+                </div>
+                <div class="scs__image">
+                    <img src="path-to-netmatters-image.jpg" alt="Netmatters">
+                </div>
             </div>
         </section>
     </div>
+</div>
        
     </div>
     <footer>
         <span class="footer__licence">&copy; 2024 Matt Dean.</span>
     </footer>
-</body>
-</html>
+
     
 
     <script src="js/main.js"></script>

@@ -12,7 +12,7 @@
     font-family: $base-font-family;
     font-size: 0.8rem;
     color: $text-color;
-    background-color: $primary-color;
-    box-shadow: 0 -2px 0 darken($primary-color, 10%); 
+    background-color: $footer-bg-color;
+    
     z-index: 100;
 }

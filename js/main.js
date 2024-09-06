@@ -29,14 +29,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Burger Menu
-$(window).on("load", function() {
-    $(".burger__btn").on("click", function() {
-      $(".burger__hidden").toggleClass("showNav hideNav").removeClass("hidden"); // Toggle navigation visibility
-      $(this).toggleClass("animated"); // Toggle animation for button
-    });
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerBtn = document.querySelector('.burger__btn');
+    const burgerMenu = document.querySelector('.burger__menu');
+    const burgerHidden = document.querySelector('.burger__hidden');
+    const burgerLinks = document.querySelectorAll('.burger__links--anchor');
 
+    console.log('Burger Button:', burgerBtn);
+    console.log('Burger Menu:', burgerMenu);
+    console.log('Burger Hidden:', burgerHidden);
 
+    if (burgerBtn && burgerMenu && burgerHidden) {
+        burgerBtn.addEventListener('click', function() {
+            console.log('Burger button clicked');
+            burgerBtn.classList.toggle('animated');
+            burgerHidden.classList.toggle('showNav');
+            burgerHidden.classList.toggle('hideNav');
+            burgerHidden.classList.remove('hidden');
+        });
+
+        // Add click event listeners to menu links
+        burgerLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.classList.add('compressing');
+                setTimeout(() => {
+                    this.classList.remove('compressing');
+                    this.classList.add('sliding-out');
+                    // Navigate to the link after animation
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 1000);
+                }, 700);
+            });
+        });
+    } else {
+        console.log('One or more elements are missing');
+    }
+});
+ 
 
 // Hover Effect for Burger Menu Links
 document.addEventListener('DOMContentLoaded', function () {

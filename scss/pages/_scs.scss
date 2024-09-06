@@ -2,25 +2,25 @@
 // SCS Scheme //
 // ---------- // 
 
-
 .menu__burger {
-    display:block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: block;
 
     @include respond-to(md) {
         display: none;
     }
 }
 
-
-
-
 .scs__container {
     min-height: 100vh;
-    width: 100%;
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 20px 20px 0 20px;
+    margin: 60px 20px 0 20px; // Increased top margin for burger menu
     scroll-snap-align: start;
     font-family: $base-font-family;
     background-color: $background-color;
@@ -29,13 +29,99 @@
     padding-bottom: 20px;
     
     @include respond-to(md) {
-    width: calc(100% - 150px);
-    margin-left: 160px;
-    border-left: none;
-    
+        width: calc(100% - 200px);
+        margin-left: 200px;
+        border-left: none;
+        margin-top: 20px;
+    }
+}
+
+.scs__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    @include respond-to(md) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.scs__content {
+    max-width: 100%;
+    padding: 20px;
+
+    @include respond-to(md) {
+        max-width: 60%;
+        padding: 0 20px;
     }
 
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
 
+        span {
+            background-color: $primary-color;
+            box-shadow: 5px 5px 0 darken($primary-color, 10%);
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
+    }
+
+    p, ul {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+
+        @include respond-to(md) {
+            font-size: 1.1rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+
+        li {
+            position: relative;
+            margin-bottom: 10px;
+
+            &::before {
+                content: "•";
+                color: $primary-color;
+                font-weight: bold;
+                position: absolute;
+                left: -20px;
+            }
+        }
+    }
+}
+
+.scs__image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include respond-to(md) {
+        width: 40%;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
     .scs__intro {
         display: flex;
         flex-direction: column;
@@ -112,4 +198,3 @@
             list-style-type: none;
         }
     }
-}
