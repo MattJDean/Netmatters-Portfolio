@@ -16,7 +16,7 @@
            width: 100%;
            height: 100%;
            object-fit: cover;
-           filter: brightness(0.6);
+
             }
 
     .hero__text--h1 {
@@ -42,7 +42,7 @@
         filter: blur(0.3px); 
         }
    
-    .hero__text--h2 {
+    .hero__text--h2, .typewriter {
         position: absolute; 
         top: 50%; 
         left: 50%; 
@@ -59,20 +59,68 @@
         2px 2px 0 rgba(0, 0, 0, 0.2); 
         filter: blur(0.3px); 
         }
-
-    //Cursor Animation
-    #typedText {
-        overflow: hidden; 
-        border-right: 0.1em solid $text-color;
-        white-space: nowrap; 
-        margin: 0 auto; 
-        letter-spacing: 0.05em; 
-        animation: blink-caret 0.75s step-end infinite;
+      .hero__text--h1 {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          text-wrap: nowrap;
+          font-family: $hero-font;
+          font-size: 3vw; 
+          font-weight: 600;
+          letter-spacing: 1px;
+          line-height: 1.2;
+          color: $text-color;
+          overflow: hidden;
+          padding: 2px 2px;
+          border-radius: 10px;
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 2px 2px 0 rgba(0, 0, 0, 0.2);
+          filter: blur(0.3px);
+      
+          @media (max-width: 768px) {
+              font-size: 7vw; 
+          }
+      }
+      
+      .hero__text--h2,
+      .typewriter {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: 5vh; 
+          transform: translate(-50%, -50%);
+          text-align: center;
+          text-wrap: nowrap;
+          font-family: $hero-font;
+          font-size: 5vw; 
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          color: $text-color;
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3), 2px 2px 0 rgba(0, 0, 0, 0.2);
+          filter: blur(0.3px);
+      
+          
+      }
+      
+      // Cursor Animation
+      #typedText {
+          overflow: hidden;
+          border-right: 0.1em solid $text-color;
+          white-space: nowrap;
+          margin: 0 auto;
+          letter-spacing: 0.05em;
+          animation: blink-caret 0.75s step-end infinite;
       }
       
       @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: $text-color; }
+          from,
+          to {
+              border-color: transparent;
+          }
+          50% {
+              border-color: $text-color;
+          }
       }
 
 
@@ -146,91 +194,83 @@
 @include respond-to(md) {
     .hero__container--md {
         position: relative;
-        width: 100vw;
-        height: 100%;
-        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
         scroll-snap-align: start;
         overflow: hidden;
-
-            img {
-                position: absolute;
-                top: -15%;
-                left: 25%;
+        
+            .hero__background--md {
                 width: 100%;
-                height: 100%;
-                object-fit: contain;
-                object-position: 50% 50%;
-                filter:drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-                image-resolution: 2dppx;
-                image-rendering: -moz-crisp-edges;
-                aspect-ratio: 16/9;
-                
-                
+                height: -webkit-fill-available;
+                min-height: 100%;
+                background-image: url('/assets/img/mulberry-paper.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: center;
+                box-shadow: 0 3000px rgba(215, 206, 199, 0.4)inset;
             }
-    
-
-       
-
-        .hero__text--h1 {
-            position: absolute;
-            margin: 0 auto;
-           left: 45%;
-           top: 32.5%;
-           transform: translateX(-50%);
-           text-align: center;
            
-             
-            text-align: center; 
+
+          
+    
+        .hero__text-wrapper--md {
+            position: absolute;
+            top: 30%;  
+            left: 50%; 
+            transform: translate(-50%, -50%);  
+            text-align: center;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+
+
+            .hero__text--h1 {
             font-family: $hero-font;
-            font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+            font-size: clamp(1.5rem, 3vw, 2.75rem);
             font-weight: 600;
             letter-spacing: 1px;
-            line-height: 3.5rem;    
+            line-height: 1.2;    
             color: $text-color;
             text-wrap: nowrap;
+           
+            }
+        
         }
-    
-        .hero__text--h2 {
-           position: absolute;
-           margin: 0 auto;
-           left: 50%;
-           top: 45%;
-           transform: translateX(-50%);
-           text-align: center;
-           text-wrap: nowrap;
+
+        .hero__text--h2, .typewriter {
+            position: absolute;
+            bottom: 12.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
             font-family: $hero-font;
-            font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+            font-size: clamp(1.5rem, 3.5vw, 2.75rem);
             font-weight: 600;
-            line-height: 3.5rem;
+            line-height: 1.2;
             letter-spacing: 1px;
             color: $text-color;
-        }
-    
-        // #typedTextMd {
-        //     overflow: hidden; 
-        //     border-right: 0.1em solid $text-color;
-        //     white-space: nowrap; 
-        //     margin: 0 auto; 
-        //     letter-spacing: 0.05em; 
-        //     animation: blink-caret 0.75s step-end infinite;
-        //   }
-          
-        //   @keyframes blink-caret {
-        //     from, to { border-color: transparent; }
-        //     50% { border-color: $text-color; }
-        //   }
-    
+            text-wrap: nowrap;
+            }
 
-        // /*Main Hero Logo Image*/
-        // img {
-        //     width: 80%;
-        //     min-height: 150px;
-        //     image-rendering: optimizeQuality;
-        //     object-fit: cover;
-        //     align-self: center;
-        //     justify-self: center;
-        // }
+        #typedTextMd {
+            overflow: hidden; 
+            border-right: 0.1em solid $text-color;
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: 0.05em; 
+            animation: blink-caret 0.75s step-end infinite;
+          }
+          
+          @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: $text-color; }
+          }
     }
+}
+
+@include respond-to(lg) {
+
 }
 
 

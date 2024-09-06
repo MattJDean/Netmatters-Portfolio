@@ -1,566 +1,72 @@
-// ----- //
-// About //
-// ----- // 
 
 body {
-    display: flex;
     margin: 0;
-    flex-direction: column;
 }
 
-// Side Menu
-.menu__container {
-    // Hidden < 768px, Visible > 768px
-    display: none;
 
-    @include respond-to(xs) {
-    display: none;
-   }
-    @include respond-to(sm) {
-    display: none;
-   }
-    @include respond-to(md) {
-        display: block;
-    }
-}
-
-// Burger Menu
-.menu__burger {
-    display: block;
-
-    // Hidden > 768px
-    @include respond-to(md) {
-        display: none;
-    }
-}
-
-// <768px Viewport
 .about__container {
-    justify-content:space-around;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    max-width: 100%;
     margin: 0 auto;
-    background-color: $background-color;
-
-    @include respond-to(xs) {
-        .about__container {
-            display: flex;
-            align-items: stretch;
-            width:fit-content;
-        }
-        .about__content {
-            display: flex;
-            width: max-content;
-            flex-basis: 100%; ;
-            align-items: stretch;
-            justify-items: stretch;
-        }
-    }
-     
-        // Content
-        .about__content {
-            width: 100%;
-            height: auto;
-            margin: 0 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: "Bogart Medium";
-            color: $background-color-comp-dark;
-    
-
-                // Header
-                .about__header {    
-                margin-top: 100px;
-                margin: 5px;
-                align-self: center;
-                display: flex;
-                flex-direction: column;
-                align-content: space-around;
-                gap: .25rem;
-            
-                    // Header Image
-                    &--img {
-                        display: flex;
-                        width: 100%;
-                        height: 60px;
-                        background-image: url('/assets/img/about-me-img.svg');
-                        background-size: cover; 
-                        background-repeat: no-repeat;
-                        filter: sepia(80%) brightness(0.6) contrast(1.2);
-                        opacity: 0.8;
-                        border-radius: 20px;
-                    }
-
-                    // Header Image Cards - /*image distributed across the cards in thirds initially,
-                                            // then I played around with the positioning and adjusted 
-                                            // each accordingly with calc.*/
-                    .one {
-                        align-self: flex-end;
-                        background-position: 100% 0;
-                        width: calc(380px / 3 * 2);
-                        background-size: 150%;
-                    }
-
-                    .two {
-                        align-self: flex-end;
-                        background-position: 100% 40%;
-                        width: 330px;
-                        background-size: 115%;
-                    }
-
-                    .three {
-                        align-self: flex-end;
-                        background-position: 100% 80%;
-                        width: calc(380px / 3);
-                        background-size: 300%;
-                    }
-
-                    @include respond-to(xs){
-
-                        
-                    }
-                }
-                @include respond-to(xs) {
-                    .one, .two, .three {
-                        width: 100%;
-                        background-size: cover;
-                        background-position: center;
-                    }
-                }
-
-                @media (min-width: 400px) {
-                    .one, .two, .three {
-                        width: calc(100% / 3);
-                        transition: width 0.3s ease-in-out;
-                    }
-
-                    .one {
-                        background-size: 150%;
-                        background-position: 100% 0;
-                    }
-
-                    .two {
-                        background-size: 115%;
-                        background-position: 100% 40%;
-                    }
-
-                    .three {
-                        background-size: 300%;
-                        background-position: 100% 80%;
-                    }
-                }
-
-            // Headline
-            .about__headline {
-            display: block;
-            position: relative;
-            white-space: nowrap;
-            // overflow: hidden;
-            // padding: 100px;
-            
-                h1 {
-                color: $background-color-comp-dark;
-                position: absolute;
-                width: auto;
-                left: -163px; 
-                top: -80px;  
-                font-size: 1.4em; 
-                font-weight: 400;
-                letter-spacing: .1px;
-                text-align: justify; 
-                
-                span {
-                    width: 300px;
-                    text-align: justify;
-                }
-                }
-
-                h2 {
-                color: $background-color-comp-dark;
-                position: absolute;
-                left: -160px;
-                top: -40px;
-                font-size: 2.4em;
-                font-weight: 400;
-                letter-spacing: 3px;
-                text-align: center;
-                line-height: 1em;
-                }
-            
-            }
-
-             // Main Content
-            .about__main {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            gap: .25rem;
-            justify-items: center;
-            align-items: center;
-            justify-content: center;
-            align-content: space-around;
-            font-family: "Bogart Medium";
-            color: $background-color-comp-dark;
-
-                    &--card {
-                        align-content: center;
-                        justify-content: center;
-                        text-align: justify;
-                        height: 100px;
-                        width: 330px;
-                        padding: 10px;
-                        margin: 0;
-                        border-radius: 20px;
-                        background-color: $background-color-comp-light;
-                        color: $text-color-alt;
-                    }
-
-                    .uno {
-                    background-color: $about-card-1;
-                    
-                    
-                    }
-
-                    .dos {
-                        background-color: $about-card-2;
-                        
-                    }
-
-                    .tres { 
-                        background-color: $about-card-3;
-                        
-                    }
-
-                    .cuatro {
-                        background-color: $about-card-4;
-                        
-                    }
-            }
-        }   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-    
-        
 
+#about {
+    width: 100%;
+}
+
+/* Header Image */
+.about__header {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about__header--img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.5);
+}
+
+
+.about__headline {
+    position: absolute;
+    top: 390px;
+    right: 20px;
+    text-align: right;
+    color: $secondary-text-color; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.headline__h1, .headline__h2 {
+    margin: 0;
+}
+
+.headline__h1 {
+    font-size: 2.5rem; 
+}
+
+.headline__h2 {
+    font-size: 3.5rem; 
+}
+
+
+.about__main {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Centers the div horizontally */
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: background color for the box */
+    border-radius: 8px; /* Optional: rounding the corners */
+    text-align: left; /* Centers text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow to the box */
+    position: relative;
+    top: -0px; /* Adjust the position to place it under the hero image */
+}
 
 
-        @include respond-to(md) {
-            
-        min-height: 100vh;
-        width: 100%;
-        margin: 20px;
-        background-color: $background-color;
-        border-left: 2px solid $primary-color;
-        
-        // Adjust layout for larger screens
-        @include respond-to(md) {
-            width: calc(100% - 150px);
-            margin-left: 160px;
-            border-left: none;
-        }
 
-        .about__content {
-            position: relative;
-            // display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center;
-            width: calc(100% - 50px);
-            margin: 20px;
-            font-family: "Bogart Medium";
-            color: $text-color;
 
-            .about__card {
-                display: flex; 
-                justify-content: space-around;
-                gap: 1rem; 
-                width: 100%;
-                
-                
-                &--img  {
-                    width: 33%; 
-                    height: 300px; 
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                    background-image: url('/assets/img/about-me-img.svg'); 
-                    background-size: 300%; 
-                    background-repeat: no-repeat;
-                    border-radius: 10px; 
-                }
-
-                .one {
-                    filter: sepia(80%);
-                    opacity: 0.8;
-                    background-position: 5% 0;
-                    height: 260px;    
-                }
-
-                .two {
-                    filter: sepia(60%);
-                    opacity: 0.8;
-                    background-position: 40% 0;
-                    height: 260px;
-                }
-
-                .three {
-                    filter: sepia(50%);
-                    opacity: 0.8;
-                    background-position: 90% 0;
-                    height: 300px;    
-                }
-
-                &--text {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 1;
-                    
-                    
-                    h1 {
-                    position: absolute;
-                    left: 0; 
-                    top: -50px;        
-                    font-size: clamp(.5rem, 3vw, 2rem); 
-                    font-weight: 300;
-                    letter-spacing: -0.5px;    
-                    }
-                
-
-                    h2 {
-                        position: absolute;
-                        left: 215px;
-                        top: 5px;
-                        transform: translate(-75%, -10%);
-                        font-size: 4vw;
-                        font-weight: 400;
-                        letter-spacing: .5px;
-                    } 
-                }
-
-            }
-        }
-    }
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// body {
-//     margin: 20px;
-// }
-
-// // Side Menu
-// .menu__container {
-
-//     // Hidden < 768px
-//     @include respond-to(xs) {
-//         display: none;
-//     }
-
-//     @include respond-to(sm) {
-//         display: none;
-//     }
-
-//     // Visible > 768px
-//     @include respond-to(md) {
-//         display: block;
-//     }
-// }
-
-// // Burger Menu
-
-// // Visible < 768px 
-// .menu__burger {
-//     display: block;
-
-//     // Hidden > 768px
-//     @include respond-to(md) {
-//         display: none;
-//     }
-// }
-
-
-
-// .about__container {
-//     min-height: 100vh;
-//     width: 100%;
-//     margin: 20px;
-//     background-color: $background-color;
-//     border-left: 2px solid $primary-color;
-    
-//     // Moves content to the right at 768px to allow for the menu.
-//     @include respond-to(md) {
-//         width: calc(100% - 150px);
-//         margin-left: 160px;
-//         border-left: none;
-//     }
-
-//     .about__content {
-//         display: flex; 
-//         flex-direction: column; 
-//         align-items: center; 
-//         justify-content:center; 
-//         width: calc(100% - 50px);
-//         margin: 20px;
-//         font-family: $base-font-family;
-//         color: $text-color;
-
-//         .about__image {
-//             position: relative;
-//             display: flex; 
-//             flex-direction: column;
-//             min-height: 300px;
-//             min-width: 75vw;
-//             margin-top: 50px;
-//             margin-bottom: 20px;
-//             background-size: cover;
-//             background-repeat: no-repeat;
-//             background-position: center;
-            
-            
-//             @include respond-to(md) {
-//                 margin-top: 20px;
-//                 background-position: center;
-//             }
-        
-//             &::before {
-//                 content: '';
-//                 position: absolute;
-//                 top: 0;
-//                 left: 0;
-//                 width: 100%;
-//                 height: 100%;
-//                 background-image: url('/assets/img/about-me.png');
-//                 background-size: cover;
-//                 background-repeat: no-repeat;
-//                 background-position: top;
-//                 opacity: 0.6; 
-//                 box-shadow: 5px 5px 20px 20px $background-color inset; 
-//                 z-index: 1; 
-//                 pointer-events: none; 
-//             }
-
-            
-//             h1, h2 {
-//                 position: relative; 
-//                 z-index: 2; 
-//                 color: $secondary-text-color; 
-//                 text-shadow: 2px 2px lighten($text-color, 10%);
-//                 text-transform: uppercase;
-//                 font-weight: 500;
-//                 margin: 0; 
-//                 padding: 10px; 
-//                 max-width: 75vw;
-//             }
-
-//             h1 {
-//                 margin-left: 30px; 
-//                 margin-top: 30px;               
-//                 font-size: calc(1rem + 0.5vw); 
-//                 font-weight: 400;
-//                 letter-spacing: 1px; 
-//             }
-    
-//             h2 {
-//                 margin-left: 30px;
-//                 margin-top: -20px;
-//                 font-size: calc(1.2rem + 0.5vw); 
-//                 font-weight: 500;
-//                 letter-spacing: 0.5px;
-                
-//             } 
-//         }
-//     }}
-        
-
-//     .about__text{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         justify-items: center;
-
-//         .headline {
-//             font-size: 1.2rem;
-//             font-weight: 500;
-//             margin-bottom: 10px;
-//         }
-
-//         .box-1 {
-//             justify-self: center;
-//             font-size: 1rem;
-//             font-weight: 400;
-//             margin-bottom: 10px;
-//         }
-
-//         .box-2 {
-//             font-size: 1rem;
-//             font-weight: 400;
-//             margin-bottom: 10px;
-//         }
-
-//         .box-3 {
-//             font-size: 1rem;
-//             font-weight: 400;
-//             margin-bottom: 10px;
-//         }
-//     }
-        

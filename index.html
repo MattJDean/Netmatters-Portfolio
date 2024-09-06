@@ -26,7 +26,7 @@
     <!-------------------------------Grid Container--xs-->
     <div class="grid__container--xs">
 
-          <!--------------------------------------------------------------Burger Menu-->
+        <!--------------------------------------------------------------Burger Menu-->
         <div class="burger__menu">
             <div class="nav">
                 <button class="burger__btn" type="button">
@@ -59,7 +59,6 @@
             
             <div class="hero__text--h1">
                 <h1 id="heroTextTop">My name is Matt Dean.</h1>
-                <div class="stamp"></div> 
             </div>
               
             <div class="hero__text--h2"><h2 id="typedText"></h2></div>
@@ -85,7 +84,10 @@
               <!-------------------------------------------Scroll Snap Mid--xs-->
               <div class="project__scroll">
                 <a href="#contact-xs">
-                <i class="fa-solid fa-angles-down"></i></a>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 7 4 4 4-4m-8 6 4 4 4-4"/>
+                      </svg>
+                      </a>
              </div>
         </div>
              
@@ -122,13 +124,15 @@
                     <!--Submit Button-->
                     <button class="form__submit--xs" type="submit">Submit</button>
                 </form>
+                <!---------------------------------------------------------------Scroll Snap Bottom--xs-->
+                <div class="contact__scroll">
+                    <a href="#hero"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 17-4-4-4 4m8-6-4-4-4 4"/>
+                      </svg>
+                      </a><br>
+                    <span>Back To Top</span>
+                </div> 
             </div> 
-
-            <!---------------------------------------------------------------Scroll Snap Bottom--xs-->
-            <div class="contact__scroll">
-                <a href="#hero"><i class="fa-solid fa-angles-up"></i></a><br>
-                <span>Back To Top</span>
-            </div>  
         </div>
     </div>
 
@@ -177,15 +181,17 @@
 
         <!----------------------------------------------------------------Hero Section-->
         <div id="heroSectionLarge" class="hero__container--md hero">
-            <div class="hero__image--md"><img src="/assets/img/tree-web.png"></div>
-            <div class="hero__text--h1"><h1 id="heroTextTop">My name is Matt Dean.</h1></div>
-            <div class="hero__text--h2"><h2 id="typedTextMd">I'm a web developer.</h2></div>
-            <!-- <img src="/assets/typography/Matt-Dean-Hero-Text-833x411.png"> -->
-
+            <div class="hero__background--md"></div>
+            <div class="hero__text-wrapper--md">
+                <div class="hero__text--h1"><h1 id="heroTextTop">My name is Matt Dean.</h1></div>
+                <div class="hero__text--h2"><h2 id="typedTextMd"></h2></div>
+            </div>
+            
         </div>
 
         <!--------------------------------------Projects Section-->
         <div id="projects" class="project__container--md">
+            <div class="project__background--md"></div>
             <h3><span>My Projects</span></h3> 
 
             <div class="project__card--1"><span>Coming Soon</span></div>
@@ -202,6 +208,8 @@
         </div>
         <!-----------------------------------------------------------------------------------------------------------------------------------Contact Section-->
         <div id="contact" class="contact__container--md">
+
+            
 
             <div class="contact__header--md"><h2><span>Lets Connect...</span></h2></div>
 

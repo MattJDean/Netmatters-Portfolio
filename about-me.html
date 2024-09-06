@@ -12,14 +12,12 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <script src="https://kit.fontawesome.com/ee55ddb165.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
 <body>
 
 
-        <!--------------------------------------------------------------Burger Menu-->
-        <div class="menu__burger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+       
         
         <!---------------------------Side Menu-->
         <div class="menu__container">
@@ -48,16 +46,38 @@
             </div>
         </div>
 
+         <!--------------------------------------------------------------Burger Menu-->
+         <div class="burger__menu">
+            <div class="nav">
+                <button class="burger__btn" type="button">
+                    <span class="burger__btn--line top"></span>
+                    <span class="burger__btn--line middle"></span>
+                    <span class="burger__btn--line bottom"></span>  
+                </button>
+            </div>
+            <div class="burger__hidden hideNav hidden">
+                <ul class="burger__links">
+                    <li class="burger__links--item"><a href="about-me.html" class="burger__links--anchor"><span>About Me</span></a></li>
+                    <li class="burger__links--item"><a href="index.html#projects" class="burger__links--anchor"><span>My Portfolio</span></a></li>
+                    <li class="burger__links--item"><a href="coding-examples.html" class="burger__links--anchor"><span>Coding Examples</span></a></li>
+                    <li class="burger__links--item"><a href="scs-scheme.html" class="burger__links--anchor"><span>SCS Scheme</span></a></li>
+                    <li class="burger__links--item"><a href="index.html#contact" class="burger__links--anchor"><span>Contact Me</span></a></li>
+                </ul>
+
+                <ul class="burger__socials">
+                    <li class="burger__socials--item"><a href="https://www.linkedin.com/in/matt-dean-29263055/" class="burger__socials--anchor"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="burger__socials--item"><a href="https://github.com/MattJDean" class="burger__socials--anchor"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="burger__socials--item"><a href="https://mattdean.tech/" class="burger__socials--anchor"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
         <!-------------------------------------------------------------------------------------------------- < 768px Viewport-->
         <div class="about__container">
             <section id="about">
-                <div class="about__content">
-
                     <!--------------------------------------------------------------About Me Header-->
                     <div class="about__header">
-                        <div class="about__header--img one"></div>
-                        <div class="about__header--img two"></div>
-                        <div class="about__header--img three"></div>
+                        <div class="about__header--img"><img src="/assets/img/about-me.png"></div>
                     </div>
 
                     <!--------------------------------------------------------------About Me Headline-->
@@ -68,62 +88,18 @@
 
                     <!--------------------------------------------------------------About Me Main-->
                     <div class="about__main">
-                        <div class="about__main--card uno">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, doloribus! </p>
-                        </div>
-                        <div class="about__main--card dos">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, accusamus.</p>
-                        </div>
-                        <div class="about__main--card tres">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, officiis.</p>
-                        </div>
-                        <div class="about__main--card cuatro">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, eum.</p>
-                        </div>
+                            <p>I'm a trainee web developer based in Essex, UK. I'm inspired, enthusiastic and passionate about tech and how it shapes our lives. </p>
+                            <p>I'm currently learning the ropes on the SCS Scion Scheme, where I'm covering HTML, CSS, SCSS, JavaScript and jQuery.</p>
+                            <p>Away from the screen, I'm a music lover, guitar player, keen traveller and a cat fan.</p>
                     </div>
-                </div> 
             </section>
         </div>
 
-        <!-------------------------------------------------------------------------------------------------- > 768px Viewport-->
-        <!-- <div class="about__container--md">
-            <section id="about">
-                <div class="about__content--md"> -->
-
-                    <!--------------------------------------------------------------About Me Header-->
-                    <!-- <div class="about__header--md">
-                        <div class="about__header--img one"></div>
-                        <div class="about__header--img two"></div>
-                        <div class="about__header--img three"></div>
-                    </div> -->
-
-                    <!--------------------------------------------------------------About Me Headline-->
-                    <!-- <div class="about__headline--md">
-                        <h1 class="headline__h1"><span>Great to meet you,</span></h1>
-                        <h2 class="headline__h2"><span>I'm Matt.</span></h2>
-                    </div> -->
-
-                    <!--------------------------------------------------------------About Me Main-->
-                    <!-- <div class="about__main--md">
-                        <div class="about__main--card uno">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, doloribus! </p>
-                        </div>
-                        <div class="about__main--card dos">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, accusamus.</p>
-                        </div>
-                        <div class="about__main--card tres">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, officiis.</p>
-                        </div>
-                        <div class="about__main--card cuatro">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, eum.</p>
-                        </div>
-                    </div>
-                </div> 
-            </section>
-        </div> -->
-    <footer>
-        <span class="footer__licence">&copy; 2024 Matt Dean.</span>
-    </footer>
+        <footer>
+            <span class="footer__licence">&copy; 2024 Matt Dean.</span>
+        </footer>
+      
+    
 
     <script src="js/main.js"></script>
 </body>

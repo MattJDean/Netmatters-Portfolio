@@ -10,7 +10,7 @@
     
     display: grid;
     grid-template-columns: 1fr; 
-    grid-template-rows: .5fr 1fr .25fr 20px; 
+    grid-template-rows: 100vh auto auto 40px; 
     gap: 0px 0px; 
     grid-template-areas: 
         "hero__container--xs"
@@ -48,14 +48,13 @@
 
 
   .grid__container--md {
+    
+   
     display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 170px 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 40px; 
-    gap: 10px;
+    grid-template-columns: 200px 1fr; 
+    grid-template-rows: 100vh auto auto 40px; 
     margin: 0;
-    width: 100%; 
-    min-height: 100vh;
+    width: 100vw; 
     grid-template-areas: 
       "menu__container hero__container--md"
       "menu__container project__container--md"

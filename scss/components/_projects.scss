@@ -7,17 +7,18 @@
 /*-------------------------------*/
 
 .project__container--xs {
-   @include respond-to(xs, sm) {
+   @include respond-to(sm) {
       
    display: flex;
    flex-direction: column;
    width: 100%;
+   
    height: auto;
    margin: 0 auto;
    padding: 10px;
    align-items: center;
    justify-content: center;
-   gap: 10px;
+   gap: 30px;
   
    
          /*Heading*/
@@ -25,6 +26,7 @@
          grid-area: project__h3;
          align-self: center;
          justify-self: center;
+         margin-top: 60px;
          margin-bottom: 20px;
          font-size: 1.8rem;
          font-weight: 700;
@@ -81,27 +83,38 @@
    justify-self: center;
    margin-top: 40px;
    margin-bottom: 60px;
-   
-      /*Icon Bouncing Animation*/
-      animation: bounce 3s infinite;
+   border: none;
+   padding: 0;
+   background: transparent;
+   animation: bounce 3s infinite;
       @keyframes bounce {
          0%, 20%, 50%, 80%, 100% {
-         transform: translateY(0);
+            transform: translateY(0);
+           
          }
          40% {
-         transform: translateY(-10px);
+            transform: translateY(-10px);
+            
          }
          60% {
-         transform: translateY(-5px);
+            transform: translateY(-5px);
+            
          }
       }
 
-      /*Hide Icon at 768px*/
-      @include respond-to(md) {
-         display: none;
+      a {
+         text-decoration: none;
+         background: transparent;
+         
       }
-   }
 
+      i {
+         font-size: 2rem;
+         
+         border: none;
+         background: transparent;
+      }
+  }
 
    /*Hide Small Devices Container at 768px*/  
    @include respond-to(md) {
@@ -123,10 +136,11 @@
 
       /*Display at 768px*/
       @include respond-to(md) {
-      margin: 0 auto;
+      margin-top: 40px;
+      
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 20px;
       width: 100%;
       max-width: 1200px;
       padding: 20px;

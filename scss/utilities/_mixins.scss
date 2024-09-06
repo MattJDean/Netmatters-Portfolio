@@ -5,8 +5,8 @@
    
 // Breakpoint //
 
-@mixin respond-to($breakpoints...) {
-  @each $breakpoint in $breakpoints {
+@mixin respond-to($breakpoint) {
+  @each $breakpoint in $breakpoint {
       @if $breakpoint == xs {
         @media (max-width: $breakpoint-xs)  {
           @content;
@@ -38,7 +38,8 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-bottom: 10px;
+    
+    max-width: 500px;
     background-color: transparent;
     padding: 15px;
     border-radius: 15px;
@@ -80,8 +81,8 @@
     align-content: center;
     justify-content: center;
     
-    min-height: 350px;
-    min-width: 350px;
+    min-height: 300px;
+    min-width: 200px;
     margin-right: 10px;
     background-color: transparent;
     padding: 15px;

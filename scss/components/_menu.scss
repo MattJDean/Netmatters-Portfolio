@@ -1,6 +1,11 @@
 // --------- //
 // Side Menu //
 // --------- //
+    @include respond-to(xs) {
+      .menu__container {
+        display: none;
+      }
+    }
     @include respond-to(sm) {
       .menu__container {
         display: none;
@@ -8,17 +13,21 @@
     }
   
     @include respond-to(md) {
+      .burger__menu {
+        display: none;
+      }
+
       .menu__container {
           position: fixed;
-          top: 0;
-          height: 99vh;
+          height: 100vh;
           grid-row-start: 1;
           grid-row-end: 6;
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 100px 360px 0.33fr;
+          grid-template-rows: auto auto auto;
           gap: 0px 0px;
-          width: 170px;
+          width: 200px;
+          z-index: 20;
           grid-auto-flow: row;
           grid-template-areas:
           
@@ -32,34 +41,34 @@
           padding: 10px;
           box-sizing: border-box;
     
-            .menu__logo { 
-              display: grid;
-              place-items: center;
+            .menu__logo {
               grid-area: menu__logo;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
               margin: 0 auto;
-             
               padding: 0;
-              margin-top: 30px;
-              margin-bottom: 220px;
-              margin-right: 10px;
+              margin-top: 40px;
+              
               font-family: $logo-font;  
-              font-size: 4.5rem;
+              font-size: 3.5rem;
               font-weight: 400;
-              
-              
+               
             }
               
-    
             .menu__links {
               grid-area: menu__links;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
               list-style: none;
-              align-self: flex-end;
+              align-content: center;
+              
               padding: 0;
-              margin-right: 10px;
               font-size: 1rem;
               font-weight: 600;
               text-transform: uppercase;
-              text-wrap: none;
               line-height: 1.5rem;
               letter-spacing: 1px;
               color: $text-color;
@@ -88,15 +97,15 @@
      
             .menu__socials {
             grid-area: menu__socials;
-            margin-top: 20px;
-            margin-bottom: 250px;
+           
             display: flex;
             flex-direction: row;
+            gap: 20px;
             justify-content: center;
+            align-content: center;
           
-
               i { 
-                margin-right: 10px;
+                
                 color: darken($primary-color, 10%);
                 font-size: 1.75rem;
 
@@ -106,7 +115,6 @@
 
                   a {
                     text-decoration: none;
-                    color: $text-color;
                     font-size: 1rem;
                     display: flex;
                     align-items: center;        
@@ -116,15 +124,15 @@
       }  
     }
 
-    .menu__container{
-      @include respond-to(lg) {
-        display: block;
-      }
+    // .menu__container{
+    //   @include respond-to(lg) {
+    //     display: block;
+    //   }
 
-      @include respond-to(xl) {
-        display: block;
-      }
-    }
+    //   @include respond-to(xl) {
+    //     display: block;
+    //   }
+    // }
 
    
 
