@@ -39,8 +39,8 @@ body {
 .about__headline {
     position: absolute;
     width: 90%;
-    bottom: 20px;
-    right: 20px;
+    bottom: 60%;
+    right: 25px;
     text-align: right;
     font-family: $hero-font;
     color: $secondary-text-color;
@@ -51,11 +51,11 @@ body {
     }
 
     .headline__h1 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
+        font-size: 2.5rem;
     }
 
     .headline__h2 {
-        font-size: clamp(2rem, 7vw, 3rem);
+        font-size: 4.5rem;
         margin-top: 10px;
     }
 
@@ -66,8 +66,29 @@ body {
         .headline__h1 {
             font-size: 3.5rem;
         }
+.about__headline {
+  position: absolute;
+  width: 90%;
+  transform: translate(25px, 60%); // Move 25px from the right and 60% from the top
+  text-align: right;
+  font-family: $hero-font;
+  color: $secondary-text-color;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
-        .headline__h2 {
+  .headline__h1, .headline__h2 {
+    margin: 0;
+  }
+
+  .headline__h1 {
+    font-size: 2.5rem;
+  }
+
+  .headline__h2 {
+    font-size: 4.5rem;
+    margin-top: 10px;
+  }
+}
+        .headline__h2 { 
             font-size: 4.5rem;
         }
     }
@@ -77,7 +98,7 @@ body {
     width: 90%;
     max-width: 800px;
     margin: -50px auto 50px;
-    padding: 30px;
+    padding: 20px;
     background-color: $background-color-comp-light;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -97,7 +118,7 @@ body {
     }
 
     p {
-        font-family: $hero-font;
+        font-family: $base-font-family;
         font-size: clamp(1rem, 2vw, 1.2rem);
         line-height: 1.6;
         text-align: justify;

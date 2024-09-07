@@ -69,28 +69,15 @@
       }
     }
 
-    //Hidden Burger Menu Styling
-    .burger__hidden {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #e2e2d9;
-      height: 100%;
-      z-index: 100;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      opacity: 0;
-      visibility: hidden;
-
-      &.showNav {
-          opacity: 1;
-          visibility: visible;
-      }
-
-    }
-  }
-    
+   .burger__hidden {
+     
+     bottom: -100%; 
+     transition: bottom 0.3s ease; 
+   
+     &.slide-in {
+       bottom: 0; 
+   }
+  } 
     //Burger Menu Links 
     .burger__links {
       list-style: none;
@@ -311,4 +298,4 @@
         display: none;
     }
   
- 
+  }
