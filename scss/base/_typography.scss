@@ -10,14 +10,19 @@
   :root { font-family: InterVariable, sans-serif; }
 }
 
+@font-face {
+  font-family: "Bogart Medium";
+  src: url(/assets/typography/bogart__medium.TTF)
+}
 
 // --------- //
 // Variables //
 // --------- //
 
 $base-font-family: Inter, sans-serif;
-$logo-font: "Abril Fatface", serif;
-$base-font-size: 16px;
+$hero-font: "Bogart Medium", serif;
+$logo-font: "Bogart Medium", serif;
+$base-font-size: calc(15px + 0.390625vw);
 $base-font-weight: 400;
 
 // ---- //

@@ -11,9 +11,10 @@
 .contact__container--xs {
 
     /*Small Devices Contact Grid*/  
+    height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30px 30px 30px 0.7fr 60px;
+    grid-template-rows: 30px 30px 30px auto 60px;
     gap: 0px 0px;
     margin: 10px;
     grid-auto-flow: row;
@@ -178,15 +179,18 @@
                         color: darken($background-color, 5%);
                     }
             }
+
         }
     }
 
     /*Back To Top Icon Link*/
     .contact__scroll { 
         grid-area: contact__scroll;
-
-        margin-top: 70px;
-        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
         font-family: $base-font-family;
         font-size: 1.1rem;
         font-weight: 500;
@@ -194,13 +198,10 @@
         justify-self: center;
         align-self: center;
 
-        i {
-            margin-left: calc(100% - 55px);
-        }
-
-
         /*Icon Bouncing Animation*/
         animation: bounce 3s infinite;
+        filter: drop-shadow(1px 5px 5px rgba(0,0,0,0.6));
+            
             @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
             transform: translateY(0);
@@ -218,6 +219,10 @@
             display: none;
         }
     }
+       
+
+    
+   
 
     /*Hide Small Devices Contact Grid at 768px*/
     @include respond-to(md){
@@ -225,6 +230,8 @@
     }
 
 }
+
+
 
 
 /*----------------------------------------------------------------------*/
@@ -241,11 +248,12 @@
             @include respond-to(md) {
             /*Medium Devices Contact Grid*/  
             display: grid;
+            height: auto;
+            width: 80%;
             grid-template-columns: 100%;
-            grid-template-rows: 30px 30px 30px 0.7fr;
-            gap: 0px 0px;
-            margin: 10px;
-            margin-right: 40px;
+            grid-template-rows: 30px 30px 30px 0.25fr;
+            gap: 10px;
+            margin: 80px 20px 0 20px;
             grid-auto-flow: row;
             grid-template-areas:
 
@@ -413,4 +421,6 @@
 
         }
 
-}
+    }
+
+ 

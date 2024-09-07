@@ -1,22 +1,33 @@
 // --------- //
 // Side Menu //
 // --------- //
-@include respond-to(sm) {
-  display: none;
-}
+    @include respond-to(xs) {
+      .menu__container {
+        display: none;
+      }
+    }
+    @include respond-to(sm) {
+      .menu__container {
+        display: none;
+      }
+    }
   
     @include respond-to(md) {
+      .burger__menu {
+        display: none;
+      }
+
       .menu__container {
           position: fixed;
-          top: 0;
           height: 100vh;
           grid-row-start: 1;
           grid-row-end: 6;
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 100px 360px 0.33fr;
+          grid-template-rows: auto auto auto;
           gap: 0px 0px;
-          width: 150px;
+          width: 200px;
+          z-index: 20;
           grid-auto-flow: row;
           grid-template-areas:
           
@@ -30,78 +41,71 @@
           padding: 10px;
           box-sizing: border-box;
     
-            .menu__logo { 
+            .menu__logo {
               grid-area: menu__logo;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
               margin: 0 auto;
-              align-self: start;
-              padding-top: 0px;
-              padding-bottom: 3px;
-              margin-top: 10px;
-              margin-bottom: 220px;
+              padding: 0;
+              margin-top: 40px;
+              
               font-family: $logo-font;  
-              font-size: 3rem;
+              font-size: 3.5rem;
               font-weight: 400;
-              line-height: 2.5rem;
-
-              span {
-              
-               box-shadow: 0 -5px 0 $secondary-text-color,
-                           0 5px 0 darken($primary-color, 10%);
-               border-radius: 2px;
                
-               
-              }
-              
-           
             }
-    
+              
             .menu__links {
               grid-area: menu__links;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
               list-style: none;
-              align-self: flex-end;
+              align-content: center;
+              
               padding: 0;
-              margin-right: 10px;
               font-size: 1rem;
               font-weight: 600;
               text-transform: uppercase;
-              text-wrap: none;
               line-height: 1.5rem;
               letter-spacing: 1px;
               color: $text-color;
               
-              li {
-                  margin-bottom: 15px;
-              }
+                li {
+                    margin-bottom: 15px;
+                }
 
-              a {
-                text-decoration: none;
-                
-                
-                  &:hover {
-                    color: lighten($text-color, 10%);
-                  }
-              }
+                a {
+                  text-decoration: none;
+                  
+                  
+                    &:hover {
+                      color: lighten($text-color, 10%);
+                    }
+                }
 
-              span {
-                background-color: $primary-color;
-                padding: -1px;
-                border-radius: 6px;
-                box-shadow: 5px 5px 0 darken($primary-color, 10%);
-            }
+                span {
+                  background-color: $primary-color;
+                  padding: -1px;
+                  border-radius: 6px;
+                  box-shadow: 5px 5px 0 darken($primary-color, 10%);
+              }
             }
 
      
             .menu__socials {
             grid-area: menu__socials;
-            margin-top: 20px;
-            margin-bottom: 250px;
+           
             display: flex;
             flex-direction: row;
+            gap: 20px;
             justify-content: center;
+            align-content: center;
           
-
               i { 
-                margin-right: 10px;
+                
                 color: darken($primary-color, 10%);
                 font-size: 1.75rem;
 
@@ -111,14 +115,28 @@
 
                   a {
                     text-decoration: none;
-                    color: $text-color;
                     font-size: 1rem;
                     display: flex;
                     align-items: center;        
                   } 
               } 
-          }
-        }  }
+           }
+      }  
+    }
+
+    // .menu__container{
+    //   @include respond-to(lg) {
+    //     display: block;
+    //   }
+
+    //   @include respond-to(xl) {
+    //     display: block;
+    //   }
+    // }
+
+   
+
+  
 
 
   

@@ -2,6 +2,15 @@
 // Base Styles //
 /////////////////
 
+//Debug
+
+// * {
+//   outline: 1px solid red;
+// }
+
+
+
+
 *,
 *::before,
 *::after {
@@ -10,11 +19,7 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: auto;
-  
-  
-}
+
 
 img {
   max-width: 100%;
@@ -25,11 +30,13 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+ 
 }
 
 body {
-  margin: 0;
+  margin: 10px;
   background-color: $background-color;
+  
   color: $text-color;
   font-family: $base-font-family;
 }

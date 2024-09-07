@@ -2,8 +2,49 @@
 // Colours //
 /////////////
 
-$primary-color: darken(#879e82, 10%);
-$secondary-color: #7d6b57;
-$text-color: #0c0d0d;
-$secondary-text-color: #e1e3cf;
-$background-color: #B7B9A8;
+//Greens
+$primary-color: #919D82; 
+$primary-color-dark: darken(#626e60, 10%); //Verdant Hush
+//Complementary Shades
+$secondary-color: #7d6b57; //Warrior
+
+//Font Colours
+$text-color: #020202; //Black Wash
+$secondary-text-color: #e8ebe5; //Wild Wheat
+$grey-text-color: #6b6b6b; //Shadows
+$text-color-alt: #0d0d12; //Ruined Smores
+$footer-text-color: #020202;
+//Background Colours
+$background-color: #D7CEC7; 
+$ash: #B7B9A8; //Ash
+$footer-bg-color: #919D82;
+//Background Colour Complementary Shades
+
+//About-Me Cards Background Colours
+$about-card-1: #b1b3a4; //Dove
+$about-card-2: #acada0; //Gargoyle
+$about-card-3: #a6a89c; //Moorland
+$about-card-4: #a1a298; //Gateway Grey
+
+//Dark
+$background-color-comp-dark: #0d0d12; //Ruined Smores
+
+//Lighter
+$background-color-comp-light: #f8f8f6; //Off-White
+
+//Darker
+$background-color-comp: #484657; //Gun Powder
+$background-color-comp-dark: #0d0d12; //Ruined Smores
+
+
+$wilderness: #8e866b; //Wilderness
+$dire-wolf: #2c2926; //Dire Wolf 
+$meadow-morn:#b3bbaa; //Meadow Morn 
+$kelp: #504e3f; //Kelp
+$ivy-topiary: #655e4c; //Ivy Topiary
+$edamame: #a4a483; //Edamame
+$herbal-whispers:#6b6c56; //Herbal Whispers
+$carafe: #5c4e3b; //Carafe 
+$carafe-dark:#5c443c; //Carafe--Dark
+$twilight-zone: #161b15; //Twilight Zone
+$sage: #A0A28B; //Sage

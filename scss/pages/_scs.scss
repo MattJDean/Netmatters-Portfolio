@@ -2,47 +2,135 @@
 // SCS Scheme //
 // ---------- // 
 
-
 .menu__burger {
-    display:block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: block;
 
     @include respond-to(md) {
         display: none;
     }
 }
 
-
-
-
 .scs__container {
+    position: relative;
     min-height: 100vh;
-    width: 100%;
+    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 20px 20px 0 20px;
+    margin: 60px 20px 0 20px;
     scroll-snap-align: start;
     font-family: $base-font-family;
     background-color: $background-color;
     color: $text-color;
-    border-left: 3px solid $primary-color;
     padding-bottom: 20px;
     
     @include respond-to(md) {
-    width: calc(100% - 150px);
-    margin-left: 160px;
-    border-left: none;
+        width: calc(100% - 200px);
+        margin-left: 200px;
+        border-left: none;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.scs__content {
+    max-width: 90%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color-comp-light;
+    border-radius: 8px;
     
+
+    @include respond-to(md) {
+        max-width: 60%;
+        padding: 0 20px;
     }
 
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
 
+        span {
+            background-color: $primary-color;
+            box-shadow: 5px 5px 0 darken($primary-color, 10%);
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
+    }
+
+    p, ul {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        
+        @include respond-to(md) {
+            font-size: 1.1rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+
+        li {
+            position: relative;
+            margin-bottom: 10px;
+
+            &::before {
+                content: "•";
+                color: $primary-color;
+                font-weight: bold;
+                position: absolute;
+                left: -20px;
+            }
+        }
+    }
+}
+
+.scs__image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include respond-to(md) {
+        width: 40%;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%) ;
+    }
+}
     .scs__intro {
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         max-width: 600px;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-right: 40px;
         padding: 20px 20px;
         text-align: justify;
@@ -54,13 +142,19 @@
             font-weight: 500;
             letter-spacing: 1px;
             margin-bottom: 10px;
+
+            span {
+                background-color: $primary-color;
+                box-shadow: 5px 5px 0 darken($primary-color, 10%);
+                border-radius: 4px;
+            }
         }
 
         p {
             font-size: 1.1rem;
             font-weight: 400;
-            letter-spacing: .1px;
-            margin-bottom: 20px;
+            letter-spacing: .3px;
+            margin-bottom: 0;
         }
     }
 
@@ -80,17 +174,25 @@
         width: calc(100% - 50px);
         padding: 20px 20px;
 
-        h3 {
-            font-size: 1.2rem;
+        h1 {
+            text-transform: uppercase;
+            font-size: 1.25rem;
             font-weight: 500;
-            letter-spacing: .5px;
+            letter-spacing: 1px;
             margin-bottom: 10px;
+
+            span {
+                background-color: $primary-color;
+                box-shadow: 5px 5px 0 darken($primary-color, 10%);
+                border-radius: 4px;
+            }
         }
 
         p {
-            text-align: justify;
-            font-size: 1rem;
+            
+            font-size: 1.1rem;
             font-weight: 400;
+            letter-spacing: .3px;
             margin-bottom: 50px;
         }
 
@@ -98,4 +200,3 @@
             list-style-type: none;
         }
     }
-}

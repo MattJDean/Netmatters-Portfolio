@@ -12,14 +12,12 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <script src="https://kit.fontawesome.com/ee55ddb165.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
 <body>
 
 
-        <!--------------------------------------------------------------Burger Menu-->
-        <div class="menu__burger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+       
         
         <!---------------------------Side Menu-->
         <div class="menu__container">
@@ -47,43 +45,67 @@
                 <a href="https://mattdean.tech/"><i class="fa-solid fa-globe"></i></a>
             </div>
         </div>
- 
-    <div class="about__container">
-        <section id="about">
-            <div class="about__content">
 
-                <div class="about__image">
-                    
-                    <h1>Great to meet you,</h1>
-                
-                    <h2>I'm Matt.</h2>
-                </div>
-                
-                    
+         <!--------------------------------------------------------------Burger Menu-->
+         <div class="burger__menu">
+            <div class="nav">
+                <button class="burger__btn" type="button">
+                    <span class="burger__btn--line top"></span>
+                    <span class="burger__btn--line middle"></span>
+                    <span class="burger__btn--line bottom"></span>  
+                </button>
+            </div>
+            <div class="burger__hidden hideNav hidden">
+                <ul class="burger__links">
+                    <li class="burger__links--item"><a href="about-me.html" class="burger__links--anchor"><span>About Me</span></a></li>
+                    <li class="burger__links--item"><a href="index.html#projects" class="burger__links--anchor"><span>My Portfolio</span></a></li>
+                    <li class="burger__links--item"><a href="coding-examples.html" class="burger__links--anchor"><span>Coding Examples</span></a></li>
+                    <li class="burger__links--item"><a href="scs-scheme.html" class="burger__links--anchor"><span>SCS Scheme</span></a></li>
+                    <li class="burger__links--item"><a href="index.html#contact" class="burger__links--anchor"><span>Contact Me</span></a></li>
+                </ul>
 
-                <div class="about__text">
+                <ul class="burger__socials">
+                    <li class="burger__socials--item"><a href="https://www.linkedin.com/in/matt-dean-29263055/" class="burger__socials--anchor"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="burger__socials--item"><a href="https://github.com/MattJDean" class="burger__socials--anchor"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="burger__socials--item"><a href="https://mattdean.tech/" class="burger__socials--anchor"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="headline">
-                    <p><span>I'm ambitious, inspired and have a passion for designing and implementing things that function well and look great.</span></p>
-                    </div> 
-
-                    <div class="box-1">
-                    <p><span>My fascination with tech started in the early 2000s during the explosion of the internet - Myspace was the social playground, and customising your profile with HTML/CSS was in vogue. Being able to tweak code to make a computer do different things felt incredible - the realisation of the unlimited scope of possibilities inspired and excited me - the opportunity to change the world or make a website about cats had never been on the same table before!</span></p>
+        <!-------------------------------------------------------------------------------------------------- < 768px Viewport-->
+        <div class="about__container">
+            <section id="about">
+                    <!--------------------------------------------------------------About Me Header-->
+                    <div class="about__header">
+                        <div class="about__header--img"><img src="/assets/img/about-me.png"></div>
                     </div>
 
-                    <div class="box-2">
-                    <p><span> I'm actively learning and developing my skills and knowledge of frontend development and web design. I have a solid foundation in Python and am expanding my knowledge into networking and backend technologies, aiming to become a well-rounded developer.</span></p>
+                    <!--------------------------------------------------------------About Me Headline-->
+                    <div class="about__headline">
+                        <h1 class="headline__h1"><span>Great to meet you,</span></h1>
+                        <h2 class="headline__h2"><span>I'm Matt.</span></h2>
                     </div>
 
-                    <div class="box-3">
-                    <p><span>When I’m not writing code or reading documentation, you can find me playing my guitar, exploring new places, or playing with/spoiling my cats. Each day is a new opportunity to learn, create, and connect, and I'm excited to see where this journey will take me.</span></p>
+                    <!--------------------------------------------------------------About Me Main-->
+                    <div class="about__main">
+                            <p>I'm a web developer-in-training based in Essex, UK. I'm enthusiastic and passionate about the solutions tech brings us and the possibilities it inspires. </p>
+                            <p>I'm currently learning the ropes on the <a href="http://www.netmatters.co.uk/train-for-a-career-in-tech">SCS Scion Scheme</a>, where I'm covering HTML, CSS, SCSS, JavaScript, jQuery and PHP.</p>
+                            <p>Away from the screen, I'm a guitarist, a reader and a keen traveller. </p>
+                            <p></p>
+                            <div class="about__cta">
+                                <a href="/index.html#contact" class="contact-button">Contact Me</a>
+                            </div>
                     </div>
-               </div>
-            </div> 
-        </section>
-    </div>
-    <footer>
-        <span class="footer__license">&copy; 2024 Matt Dean.</span>
-    </footer>
+
+            </section>
+        </div>
+
+        <footer>
+            <span class="footer__licence">&copy; 2024 Matt Dean.</span>
+        </footer>
+      
+    
+
+    <script src="js/main.js"></script>
 </body>
 </html>
