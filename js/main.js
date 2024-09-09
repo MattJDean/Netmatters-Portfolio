@@ -6,6 +6,7 @@ const text = "I'm a web developer.";
 
 function typedTextEffect(version) {
     let index = 0; // Character index
+    version.textContent = ''; // Clear text content before starting
     function type() {
         if (index < text.length) { //Loops through each character in the text
             version.textContent += text.charAt(index);
@@ -20,8 +21,11 @@ function typedTextEffect(version) {
 // Triggers the typing effect
 document.addEventListener('DOMContentLoaded', () => { 
     typedText.forEach((version) => {
-    if (window.getComputedStyle(version).display !== 'none') { //Applies effect only to visible instance of h2 text.
+    if (version && window.getComputedStyle(version).display !== 'none') { //Applies effect only to visible instance of h2 text.
+      console.log('Applying typing effect to: ${version.id}');
         typedTextEffect(version);
+    } else {
+        console.log('Element not found or not visible: ${version}');
     }
     });
 });
@@ -29,44 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Burger Menu
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerBtn = document.querySelector('.burger__btn');
-    const burgerMenu = document.querySelector('.burger__menu');
-    const burgerHidden = document.querySelector('.burger__hidden');
-    const burgerLinks = document.querySelectorAll('.burger__links--anchor');
 
-    console.log('Burger Button:', burgerBtn);
-    console.log('Burger Menu:', burgerMenu);
-    console.log('Burger Hidden:', burgerHidden);
+$(window).on("load", function() {
+  console.log('jQuery loaded');
+  const btn = $(".burger__btn");
 
-    if (burgerBtn && burgerMenu && burgerHidden) {
-        burgerBtn.addEventListener('click', function() {
-            console.log('Burger button clicked');
-            burgerBtn.classList.toggle('animated');
-            burgerHidden.classList.toggle('showNav');
-            burgerHidden.classList.toggle('hideNav');
-            burgerHidden.classList.remove('hidden');
-        });
+  $(".burger__btn").on("click", function() {
+    $(".burger__hidden").toggleClass("showNav hideNav").removeClass("hidden"); // Toggle navigation visibility
+    $(this).toggleClass("animated"); // Toggle animation for button
+  });
 
-        // Add click event listeners to menu links
-        burgerLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.classList.add('compressing');
-                setTimeout(() => {
-                    this.classList.remove('compressing');
-                    this.classList.add('sliding-out');
-                    // Navigate to the link after animation
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 1000);
-                }, 700);
-            });
-        });
-    } else {
-        console.log('One or more elements are missing');
-    }
+
 });
+
  
 
 // Hover Effect for Burger Menu Links
