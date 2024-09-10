@@ -41,6 +41,7 @@
     align-items: center;
     justify-content: center;
     background-color: darken($background-color, 10%);
+    box-shadow: 1px 1px 10px darken($background-color, 30%);
     border-radius: 8px;
     
 
@@ -58,7 +59,7 @@
 
         span {
             background-color: $primary-color;
-            box-shadow: 5px 5px 0 darken($primary-color, 10%);
+            box-shadow: 5px 5px 0px darken($primary-color, 10%);
             border-radius: 4px;
             padding: 2px 5px;
         }
@@ -70,6 +71,8 @@
         letter-spacing: 0.3px;
         line-height: 1.6;
         margin-bottom: 20px;
+        text-align: center;
+        margin-top: 10px;
         
         @include respond-to(md) {
             font-size: 1.1rem;
@@ -125,7 +128,7 @@
         margin-top: 40px;
         margin-right: 40px;
         padding: 20px 20px;
-        text-align: justify;
+        text-align: center;
         
         
         h1 {
