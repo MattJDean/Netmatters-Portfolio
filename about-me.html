@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <script src="https://kit.fontawesome.com/ee55ddb165.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
 <body>
@@ -46,8 +47,8 @@
             </div>
         </div>
 
-         <!--------------------------------------------------------------Burger Menu-->
-         <div class="burger__menu">
+           <!--------------------------------------------------------------Burger Menu-->
+           <div class="burger__menu">
             <div class="nav">
                 <button class="burger__btn" type="button">
                     <span class="burger__btn--line top"></span>
@@ -57,25 +58,25 @@
             </div>
             <div class="burger__hidden hideNav hidden">
                 <ul class="burger__links">
-                    <li class="burger__links--item"><a href="about-me.html" class="burger__links--anchor"><span>About Me</span></a></li>
-                    <li class="burger__links--item"><a href="index.html#projects" class="burger__links--anchor"><span>My Portfolio</span></a></li>
-                    <li class="burger__links--item"><a href="coding-examples.html" class="burger__links--anchor"><span>Coding Examples</span></a></li>
-                    <li class="burger__links--item"><a href="scs-scheme.html" class="burger__links--anchor"><span>SCS Scheme</span></a></li>
-                    <li class="burger__links--item"><a href="index.html#contact" class="burger__links--anchor"><span>Contact Me</span></a></li>
+                    <li class="burger__links item"><a href="about-me.html" class="burger__links--anchor"><span>About Me</span></a></li>
+                    <li class="burger__links item"><a href="index.html#projects" class="burger__links--anchor"><span>My Portfolio</span></a></li>
+                    <li class="burger__links item"><a href="coding-examples.html" class="burger__links--anchor"><span>Coding Examples</span></a></li>
+                    <li class="burger__links item"><a href="scs-scheme.html" class="burger__links--anchor"><span>SCS Scheme</span></a></li>
+                    <li class="burger__links item"><a href="index.html#contact" class="burger__links--anchor"><span>Contact Me</span></a></li>
                 </ul>
 
                 <ul class="burger__socials">
-                    <li class="burger__socials--item"><a href="https://www.linkedin.com/in/matt-dean-29263055/" class="burger__socials--anchor"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li class="burger__socials--item"><a href="https://github.com/MattJDean" class="burger__socials--anchor"><i class="fa-brands fa-github"></i></a></li>
-                    <li class="burger__socials--item"><a href="https://mattdean.tech/" class="burger__socials--anchor"><i class="fa-solid fa-globe"></i></a></li>
+                    <li class="burger__socials item"><a href="https://www.linkedin.com/in/matt-dean-29263055/" class="burger__socials--anchor"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="burger__socials item"><a href="https://github.com/MattJDean" class="burger__socials--anchor"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="burger__socials item"><a href="https://mattdean.tech/" class="burger__socials--anchor"><i class="fa-solid fa-globe"></i></a></li>
                 </ul>
             </div>
         </div>
 
         <!-------------------------------------------------------------------------------------------------- < 768px Viewport-->
-        <div class="about__container">
-            <section id="about">
-                    <!--------------------------------------------------------------About Me Header-->
+        <div id="about" class="about__container">
+            <section class="image">
+                    <!--------------------------------------------------------------About Me Image-->
                     <div class="about__header">
                         <div class="about__header--img"><img src="/assets/img/about-me.png"></div>
                     </div>
@@ -85,18 +86,24 @@
                         <h1 class="headline__h1"><span>Great to meet you,</span></h1>
                         <h2 class="headline__h2"><span>I'm Matt.</span></h2>
                     </div>
-
-                    <!--------------------------------------------------------------About Me Main-->
-                    <div class="about__main">
-                            <p>I'm a web developer-in-training based in Essex, UK. I'm enthusiastic and passionate about the solutions tech brings us and the possibilities it inspires. </p>
-                            <p>I'm currently learning the ropes on the <a href="http://www.netmatters.co.uk/train-for-a-career-in-tech">SCS Scion Scheme</a>, where I'm covering HTML, CSS, SCSS, JavaScript, jQuery and PHP.</p>
-                            <p>Away from the screen, I'm a guitarist, a reader and a keen traveller. </p>
-                            <p></p>
-                            <div class="about__cta">
-                                <a href="/index.html#contact" class="contact-button">Contact Me</a>
-                            </div>
+            </section>
+                    <!--------------------------------------------------------------About Me Text-->
+            <section class="text">        
+                    <div class="about__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, corporis!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, similique?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, aut!</p>
+                            <i class="html"></i>
+                            <i class="html"></i>
+                            <i class="html"></i>
+                            <i class="html"></i>
+                            <i class="html"></i>
+                            <i class="html"></i>
+                            <i class="html"></i>
                     </div>
-
+                    <div class="about__cta">
+                        <a href="/index.html#contact" class="contact-button">Contact Me</a>
+                    </div>
             </section>
         </div>
 

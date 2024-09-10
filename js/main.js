@@ -1,27 +1,37 @@
 
 //Hero Text Typing Effect
-const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; // Array of both versions of the text (xs and md)
-const text = "I'm a web developer."; 
+
+// Selects both xs and md versions of the h2 text elements into an array
+const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; 
+const text = "I'm a web developer."; // The text to be typed out
 
 
+// Function to apply the typing effect to the selected version of the text (xs or md)
 function typedTextEffect(version) {
-    let index = 0; // Character index
+    let index = 0; // Start at the first character of the string
+    version.textContent = ''; // Clear any existing text content
+
+    // Function to type one character at a time
     function type() {
-        if (index < text.length) { //Loops through each character in the text
-            version.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 150); // Typing speed (in ms)
+        if (index < text.length) { // Check if there are characters left to type
+            version.textContent += text.charAt(index); // Append the next character to the content
+            index++; // Move to the next character
+            setTimeout(type, 150); // Call the function again after a delay (150 ms for typing speed)
         }
     }
-    type();
+    type(); 
 }
   
 
-// Triggers the typing effect
+// Trigger the typing effect once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => { 
     typedText.forEach((version) => {
-    if (window.getComputedStyle(version).display !== 'none') { //Applies effect only to visible instance of h2 text.
+     // Check if the version exists and is visible (only apply effect if it's visible)  
+    if (version && window.getComputedStyle(version).display !== 'none') {
+      console.log(`Applying typing effect to: ${version.id}`); // Debug message to indicate where it's being applied
         typedTextEffect(version);
+    } else {
+        console.log('Element not found or not visible'); // Debug message if the element isn't found or visible
     }
     });
 });
@@ -29,83 +39,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Burger Menu
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerBtn = document.querySelector('.burger__btn');
-    const burgerMenu = document.querySelector('.burger__menu');
-    const burgerHidden = document.querySelector('.burger__hidden');
-    const burgerLinks = document.querySelectorAll('.burger__links--anchor');
 
-    console.log('Burger Button:', burgerBtn);
-    console.log('Burger Menu:', burgerMenu);
-    console.log('Burger Hidden:', burgerHidden);
+$(window).on("load", function() {
+  console.log('jQuery loaded'); // Log a message when jQuery is fully loaded
+  const btn = $(".burger__btn"); // Select the burger button element
 
-    if (burgerBtn && burgerMenu && burgerHidden) {
-        burgerBtn.addEventListener('click', function() {
-            console.log('Burger button clicked');
-            burgerBtn.classList.toggle('animated');
-            burgerHidden.classList.toggle('showNav');
-            burgerHidden.classList.toggle('hideNav');
-            burgerHidden.classList.remove('hidden');
-        });
+  // When the burger button is clicked
+  $(".burger__btn").on("click", function() {
+    // Toggle the 'showNav' and 'hideNav' classes for the hidden burger menu
+    // Also remove the 'hidden' class to ensure visibility
+    $(".burger__hidden").toggleClass("showNav hideNav").removeClass("hidden"); 
+    // Toggle the 'animated' class to add or remove the animation for the button
+    $(this).toggleClass("animated"); 
+  });
 
-        // Add click event listeners to menu links
-        burgerLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.classList.add('compressing');
-                setTimeout(() => {
-                    this.classList.remove('compressing');
-                    this.classList.add('sliding-out');
-                    // Navigate to the link after animation
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 1000);
-                }, 700);
-            });
-        });
-    } else {
-        console.log('One or more elements are missing');
-    }
+
 });
+
  
 
 // Hover Effect for Burger Menu Links
 document.addEventListener('DOMContentLoaded', function () {
-  // Select all link elements within burger__links
+  // Select all anchor elements inside the '.burger__links' container
   const anchors = document.querySelectorAll('.burger__links--anchor');
 
+  // Loop over each 
   anchors.forEach(anchor => {
+
+    // When mouse enters the link (hover)
     anchor.addEventListener('mouseenter', function () {
-      // On hover, grow lines from their origin
-      this.style.setProperty('--after-transform-origin', 'left'); // Bottom line from left
-      this.style.setProperty('--before-transform-origin', 'right'); // Top line from right
-      this.style.setProperty('--after-transform', 'scaleX(1)'); // Bottom line grows full width
-      this.style.setProperty('--before-transform', 'scaleX(1)'); // Top line grows full width
+      // Set the origin for transforming the bottom line to the left
+      this.style.setProperty('--after-transform-origin', 'left'); 
+      // Set the origin for transforming the top line to the right
+      this.style.setProperty('--before-transform-origin', 'right'); 
+
+      // Grow the bottom line to full width
+      this.style.setProperty('--after-transform', 'scaleX(1)'); 
+      // Grow the top line to full width
+      this.style.setProperty('--before-transform', 'scaleX(1)'); 
     });
 
+    // When mouse leaves the link
     anchor.addEventListener('mouseleave', function () {
-      // On mouse leave, shrink lines back in reverse direction
-      this.style.setProperty('--after-transform-origin', 'right'); // Bottom line shrinks from right
-      this.style.setProperty('--before-transform-origin', 'left'); // Top line shrinks from left
-      this.style.setProperty('--after-transform', 'scaleX(0)'); // Bottom line shrinks to 0 width
-      this.style.setProperty('--before-transform', 'scaleX(0)'); // Top line shrinks to 0 width
+      // Set the origin for shrinking the bottom line to the right
+      this.style.setProperty('--after-transform-origin', 'right');
+      // Set the origin for shrinking the top line to the left 
+      this.style.setProperty('--before-transform-origin', 'left');
+      
+      // Shrink the bottom line back to zero width
+      this.style.setProperty('--after-transform', 'scaleX(0)'); 
+      // Shrink the top line back to zero width
+      this.style.setProperty('--before-transform', 'scaleX(0)'); 
     });
 
-    // Compress on click
+    // When the link is clicked
     anchor.addEventListener('click', function (e) {
-      e.preventDefault(); // Prevent the default link behavior
+      e.preventDefault(); // Prevent the default link behavior (page navigation)
 
-      // Start compression animation
+      // Add the 'compressing' class to trigger a compression animation
       this.classList.add('compressing');
 
-      // Wait for the compression animation to end before navigating
+      // After 500ms (compression animation duration)
       setTimeout(() => {
+        // Remove the 'compressing' class after the animation completes
         this.classList.remove('compressing');
-        // Check if the link is valid and different from the current URL
+
+        // If the link has a valid href and it's not the current URL, navigate to it
         if (this.href && this.href !== window.location.href) {
           window.location.href = this.href;
         }
-      }, 500); // Time for compression animation
+      }, 500); // 500ms delay for the compression animation
     });
   });
 });
