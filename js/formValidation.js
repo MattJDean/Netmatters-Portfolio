@@ -60,8 +60,9 @@ function validateForm(firstNameId, lastNameId, emailId, subjectId, messageId, er
   
   // Event listener for xs version of form
   document.querySelector('.form__submit--xs').addEventListener('click', function (e) {
+    console.log('XS Form button clicked');
     e.preventDefault(); // Prevent form submission
-    const isValid = validateForm('firstNameXs', 'lastNameXs', 'emailXs', 'subjectXs', 'messageXs', 'firstNameErrorXs');
+    const isValid = validateForm('firstNameXs', 'lastNameXs', 'emailXs', 'subjectXs', 'messageXs', 'Xs');
     if (isValid) {
       alert('Submitted successfully.');
       document.getElementById('contactFormXs').reset(); // Clear the form after successful submit
@@ -70,8 +71,9 @@ function validateForm(firstNameId, lastNameId, emailId, subjectId, messageId, er
   
   // Event listener for >768px version of form
   document.querySelector('.form__submit--md').addEventListener('click', function (e) {
+    console.log('MD Form button clicked');
     e.preventDefault(); // Prevent form submission
-    const isValid = validateForm('firstName', 'lastName', 'email', 'subject', 'message', '');
+    const isValid = validateForm('firstName', 'lastName', 'email', 'subject', 'message', 'md');
     if (isValid) {
       alert('Submitted successfully.');
       document.getElementById('contactFormMd').reset();  // Clear the form after successful submit

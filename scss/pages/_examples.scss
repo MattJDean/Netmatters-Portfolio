@@ -3,14 +3,6 @@
 // ------------- // 
 
 
-.menu__burger {
-    display: block;
-
-    @include respond-to(md) {
-        display: none;
-    }
-}
-
 
 .examples__container {
     min-height: 100vh;
@@ -25,12 +17,11 @@
     font-family: $base-font-family;
     background-color: $background-color;
     color: $text-color;
-    border-left: 3px solid $primary-color;
     padding-bottom: 20px;
     
     @include respond-to(md) {
-    width: calc(100% - 150px);
-    margin-left: 160px;
+    width: calc(100% - 250px);
+    margin-left: 75px;
     border-left: none;
     
     }
@@ -38,11 +29,12 @@
 
 
     .examples__image {
-        position: absolute;
-        top: 30%;
-        left: 40%;
-        height: 300px;
-        width: 600px;
+        position: relative;
+        top: 0;
+        left: calc(50vw - 250px);
+        height: 400px;
+        width: 500px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
         
         
         
