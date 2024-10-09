@@ -139,6 +139,15 @@ body {
     }
 }
 
+footer {
+    padding: 2px; 
+    width: 100vw;
+    bottom: -20px;
+    font-size: 0.7rem;
+    color: $text-color;
+    background-color: $footer-bg-color;
+    z-index: 1000;
+}
 
              
 

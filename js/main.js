@@ -3,7 +3,7 @@
 
 // Selects both xs and md versions of the h2 text elements into an array
 const typedText = [document.querySelector('#typedText'), document.querySelector('#typedTextMd')]; 
-const text = "I'm a web developer."; // The text to be typed out
+const text = "Web Developer."; // The text to be typed out
 
 
 // Function to apply the typing effect to the selected version of the text (xs or md)

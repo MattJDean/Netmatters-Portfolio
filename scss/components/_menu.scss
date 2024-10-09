@@ -37,7 +37,7 @@
 
           font-family: $base-font-family; 
           border-right: 3px solid $primary-color;  
-          background-color: $background-color; 
+          background-color: darken($background-color, 20%); 
           padding: 10px;
           box-sizing: border-box;
     
