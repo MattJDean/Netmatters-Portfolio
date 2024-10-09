@@ -46,32 +46,32 @@
          .project__card--1 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/netmatters-homepage-screenshot.png', 'center', 'top');
+            @include project-card-xs(url('/assets/img/netmatters-homepage-screenshot.png'), 'center', 'top');
          }   
          .project__card--2 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-coffee.png');
+            @include project-card-xs(url('/assets/img/placeholder-coffee.png'));
          }
          .project__card--3 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-design.png');
+            @include project-card-xs(url('/assets/img/placeholder-design.png'));
          }
          .project__card--4 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-pc.png');
+            @include project-card-xs(url('/assets/img/placeholder-pc.png'));
          }
          .project__card--5 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-cradle.png');
+            @include project-card-xs(url('/assets/img/placeholder-cradle.png'));
          }
          .project__card--6 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-work.png');
+            @include project-card-xs(url('/assets/img/placeholder-work.png'));
          }
             
    }
