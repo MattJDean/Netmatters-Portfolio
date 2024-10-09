@@ -121,11 +121,17 @@ body {
     background-color: darken($primary-color, 10%);
     color: $secondary-text-color;
     text-decoration: none;
-    font-family: $hero-font;
+    font-family: $base-font-family;
     font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: bold;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+
+      span {
+        background-color: $primary-color;
+        padding: -1px;
+        border-radius: 6px;
+        box-shadow: 5px 5px 0 darken($primary-color, 10%);
+    }
 
     &:hover, &:focus {
         background-color: darken($primary-color, 10%);
@@ -133,16 +139,7 @@ body {
     }
 }
 
-footer {
-    flex-shrink: 0;
-    width: 100%;
-    background-color: $footer-bg-color;
-    color: $footer-text-color;
-    padding:0;
-    text-align: left;
-    z-index: 1000;
-    position: relative;
-}
+
              
 
 
