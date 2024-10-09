@@ -113,6 +113,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
   
-  
-    
+
+// Examples Gallery Image Expander
+
+document.querySelectorAll('.expandable-image').forEach(image => {
+  const overlay = document.querySelector('.fullscreen-overlay');
+  const fullscreenImg = document.querySelector('.fullscreen-image');
+  const closeBtn = document.querySelector('.close-btn');
+
+  // Open image in full screen
+  image.addEventListener('click', function() {
+      overlay.style.display = 'flex';
+      fullscreenImg.src = this.src;
+  });
+
+  // Mouse wheel scrolls the image up/down
+  fullscreenImg.parentElement.addEventListener('wheel', function(e) {
+      e.preventDefault(); // Prevent default scroll behavior
+      this.scrollTop += e.deltaY; // Scroll vertically
+  });
+
+  // Close image when clicking outside the image or on the close button
+  overlay.addEventListener('click', function(e) {
+      if (e.target === overlay || e.target === closeBtn) {
+          overlay.style.display = 'none';
+      }
+  });
+});
 

@@ -4,7 +4,7 @@
 
 .footer__licence {
     position: relative;
-    bottom: 0;
+    bottom: -20px;
     width: 100vw;
     height: 20px;
     overflow: hidden;
@@ -14,5 +14,10 @@
     color: $text-color;
     background-color: $footer-bg-color;
     
-    z-index: 100;
+    z-index: 1000;
+}
+
+footer {
+    bottom: -20px;
+    font-size: 0.7rem;
 }
