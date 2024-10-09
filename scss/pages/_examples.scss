@@ -2,8 +2,6 @@
 // Code Examples //
 // ------------- // 
 
-
-
 .examples__container {
     min-height: 100vh;
     width: 100%;
@@ -11,8 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    flex: 1;
-    margin: 20px 20px 0 20px;
+    
+    margin: 0;
     scroll-snap-align: start;
     font-family: $base-font-family;
     background-color: $background-color;
@@ -20,26 +18,110 @@
     padding-bottom: 20px;
     
     @include respond-to(md) {
-    width: calc(100% - 250px);
-    margin-left: 75px;
+    width: 100%;
     border-left: none;
     
     }
 
+    h1 {
+        
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        margin-bottom: 40px;
+        color: $text-color;
 
-
-    .examples__image {
-        position: relative;
-        top: 0;
-        left: calc(50vw - 250px);
-        height: 400px;
-        width: 500px;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-        
-        
-        
-        @include project-card('/assets/img/placeholder-typing.png');
+        span {
+            background-color: lighten($text-color, 60%);
+            padding: 3px;
+            border-radius: 6px;
+            box-shadow: 5px 5px 0 lighten($text-color, 20%);
+        }
     }
+
+    .examples {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .example__item {
+        text-align: center;
+    }
+    
+    .example__title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: .1px;
+        margin-bottom: 20px;
+        
+        
+        span {
+            background-color: lighten($text-color, 60%);
+            padding: 3px;
+            border-radius: 6px;
+            box-shadow: 5px 5px 0 lighten($text-color, 20%);
+        }
+    }
+    
+    .example__caption {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        margin-top: 10px;
+        color: $text-color;
+
+        span{
+            background-color: lightgray;
+            padding: 1px;
+            border-radius: 3px;
+        }
+    }
+
+    .example__language {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        color: $text-color-alt;
+    }
+    
+    .example__image {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%; 
+        overflow: hidden;
+    }
+    
+    .expandable-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: zoom-in;
+        object-fit: cover; 
+        transition: all 0.4s ease-in-out;
+    }
+    
+    /* Fullscreen state for the image */
+    .expandable-image.fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        z-index: 10000;
+        cursor: zoom-out;
+    }
+
+    .expandable-image.fullscreen.zoomed {
+        transform: scale(2); 
+        cursor: zoom-in; 
+    }
+
+    
 
     .examples__content {
         display: flex;
@@ -49,4 +131,46 @@
         padding-left: 20px;
 
     }
+}
+
+/* Fullscreen overlay */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.fullscreen-image-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto; 
+    
+}
+
+.fullscreen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
 }

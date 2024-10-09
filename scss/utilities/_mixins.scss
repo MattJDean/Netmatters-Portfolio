@@ -34,10 +34,11 @@
 
   // Project Card //
 
-  @mixin project-card-xs($img-url) {
+  @mixin project-card-xs($img-url, $bg-position-x: center, $bg-position-y: center) {
     display: flex;
     align-content: center;
     justify-content: center;
+    text-decoration: none; 
     
     max-width: 500px;
     background-color: transparent;
@@ -48,7 +49,7 @@
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     background-image: url(#{$img-url});
     background-size: cover;
-    background-position: top;
+    background-position: #{$bg-position-x} #{$bg-position-y};
     background-repeat: no-repeat;
     aspect-ratio: 1;
     opacity: 0.7;
@@ -76,10 +77,11 @@
     }
 }
 
-  @mixin project-card($img-url) {
+  @mixin project-card($img-url, $bg-position-x: center, $bg-position-y: center) {
     display: flex;
     align-content: center;
     justify-content: center;
+    text-decoration: none; 
     
     min-height: 300px;
     min-width: 200px;
@@ -92,7 +94,7 @@
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     background-image: url(#{$img-url});
     background-size: cover;
-    background-position: top;
+    background-position: #{$bg-position-x} #{$bg-position-y};
     background-repeat: no-repeat;
     opacity: 0.7;
 
