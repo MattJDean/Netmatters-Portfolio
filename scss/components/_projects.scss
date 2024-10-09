@@ -46,32 +46,32 @@
          .project__card--1 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/netmatters-homepage-screenshot.png', 'center', 'top');
+            @include project-card-xs('../assets/img/netmatters-homepage-screenshot.png', 'center', 'top');
          }   
          .project__card--2 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-coffee.png');
+            @include project-card-xs('../assets/img/placeholder-coffee.png');
          }
          .project__card--3 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-design.png');
+            @include project-card-xs('../assets/img/placeholder-design.png');
          }
          .project__card--4 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-pc.png');
+            @include project-card-xs('../assets/img/placeholder-pc.png');
          }
          .project__card--5 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-cradle.png');
+            @include project-card-xs('../assets/img/placeholder-cradle.png');
          }
          .project__card--6 {
             width: 100%;
             height: 250px;
-            @include project-card-xs('/assets/img/placeholder-work.png');
+            @include project-card-xs('../assets/img/placeholder-work.png');
          }
             
    }
@@ -177,42 +177,42 @@
 
             /*Medium Devices Project Grid Cards*/
             .project__card--1 {             
-               @include project-card('/assets/img/netmatters-homepage-screenshot.png', 'center', 'top');
+               @include project-card('../assets/img/netmatters-homepage-screenshot.png', 'center', 'top');
                }
          
             .project__card--2 {             
-               @include project-card('/assets/img/placeholder-coffee.png');
+               @include project-card('../assets/img/placeholder-coffee.png');
                }
             
             .project__card--3 {              
-               @include project-card('/assets/img/placeholder-design.png');
+               @include project-card('../assets/img/placeholder-design.png');
                }
             
             .project__card--4 {              
-               @include project-card('/assets/img/placeholder-pc.png');
+               @include project-card('../assets/img/placeholder-pc.png');
                }
             
             .project__card--5 {              
-               @include project-card('/assets/img/placeholder-cradle.png');
+               @include project-card('../assets/img/placeholder-cradle.png');
                }
             
             .project__card--6 {             
-               @include project-card('/assets/img/placeholder-work.png');
+               @include project-card('../assets/img/placeholder-work.png');
                }
             
             .project__card--7 {             
-               @include project-card('/assets/img/placeholder-closer-coffee.png');
+               @include project-card('../assets/img/placeholder-closer-coffee.png');
                }
             
             .project__card--8 {              
-               @include project-card('/assets/img/placeholder-laptop.png');
+               @include project-card('../assets/img/placeholder-laptop.png');
                }
             .project__card--9{
                @include respond-to(md) {
                   display: none;
                }
                @include respond-to(lg) {
-                  @include project-card('/assets/img/placeholder-abacus.png');
+                  @include project-card('../assets/img/placeholder-abacus.png');
                }
             }   
       }      
