@@ -35,7 +35,7 @@ a {
 
 body {
   margin: 10px;
-  background-color: darken($background-color, 20%);
+  background-color: $background-color;
   
   color: $text-color;
   font-family: $base-font-family;

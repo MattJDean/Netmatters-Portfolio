@@ -2,14 +2,19 @@
 // SCS Scheme //
 // ---------- // 
 
-
+#scs-scheme {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+}
 
 .scs__container {
     position: relative;
     min-height: 100vh;
     width: calc(100% - 40px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1;
     margin-top: 60px;
     margin-left: 40px;
@@ -39,9 +44,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: darken($background-color, 10%);
-    box-shadow: 1px 1px 10px darken($background-color, 30%);
+    justify-content: start;
+    background-color: $background-color;
+    box-shadow: 1px 1px 10px lighten($primary-color, 30%);
     border-radius: 8px;
     
 
@@ -56,6 +61,7 @@
         font-weight: 500;
         letter-spacing: 1px;
         margin-bottom: 10px;
+        color: $secondary-text-color;
 
         span {
             background-color: $primary-color;
@@ -88,7 +94,7 @@
             margin-bottom: 10px;
 
             &::before {
-                content: "•";
+                content: "";
                 color: $primary-color;
                 font-weight: bold;
                 position: absolute;
@@ -163,7 +169,7 @@
         display: flex;
         flex-direction: column;
         align-content: center;
-        justify-content: center;
+        justify-content: start;
         max-width: 600px;
         margin-top: 20px;
         width: calc(100% - 50px);

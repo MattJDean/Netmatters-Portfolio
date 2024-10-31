@@ -37,7 +37,7 @@
 
           font-family: $base-font-family; 
           border-right: 3px solid $primary-color;  
-          background-color: darken($background-color, 20%); 
+          background-color: $background-color; 
           padding: 10px;
           box-sizing: border-box;
     
@@ -54,6 +54,7 @@
               font-family: $logo-font;  
               font-size: 3.5rem;
               font-weight: 400;
+              color: $text-color;
                
             }
               
@@ -72,7 +73,7 @@
               text-transform: uppercase;
               line-height: 1.5rem;
               letter-spacing: 1px;
-              color: $text-color;
+              color: $secondary-text-color;
               
                 li {
                     margin-bottom: 15px;
@@ -83,7 +84,7 @@
                   
                   
                     &:hover {
-                      color: lighten($text-color, 10%);
+                      color: lighten($primary-color, 50%);
                     }
                 }
 

@@ -23,6 +23,6 @@ footer {
     bottom: -20px;
     font-size: 0.7rem;
     color: $text-color;
-    background-color: $footer-bg-color;
+    background-color: lighten($primary-color, 5%);
     z-index: 1000;
 }

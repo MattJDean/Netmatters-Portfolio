@@ -30,19 +30,19 @@
         font-weight: 700;
         letter-spacing: 0.1rem;
         margin-bottom: 40px;
-        color: $text-color;
+        color: $secondary-text-color;
 
         span {
-            background-color: lighten($primary-color-dark, 10%);
+            background-color: $primary-color;
             padding: 3px;
             border-radius: 6px;
-            box-shadow: 5px 5px 0 darken($primary-color-dark, 10%);
+            box-shadow: 5px 5px 0 darken($primary-color, 10%);
         }
     }
 
     .examples {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px;
         margin: 20px auto;
     }
@@ -56,13 +56,14 @@
         font-weight: 500;
         letter-spacing: .1px;
         margin-bottom: 20px;
+        color: $secondary-text-color;
         
         
         span {
-            background-color: lighten($primary-color-dark, 15%);
+            background-color: $primary-color;
             padding: 3px;
             border-radius: 6px;
-            box-shadow: 5px 5px 0 darkenen($primary-color-dark, 10%);
+            box-shadow: 5px 5px 0 darkenen($primary-color, 10%);
         }
     }
     
@@ -71,12 +72,9 @@
         line-height: 1.2rem;
         margin-top: 10px;
         color: $text-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
 
-        span{
-            background-color: lightgray;
-            padding: 1px;
-            border-radius: 3px;
-        }
     }
 
     .example__language {
