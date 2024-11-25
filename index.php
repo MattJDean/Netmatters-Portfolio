@@ -105,26 +105,34 @@
             
             <!--Contact Form-->
             <div class="contact__form--xs">
-                <form class="form" id="contactFormXs" action="#" method="post">
+                <form class="form" id="contactFormXs" action="submit_contact.php" method="post">
+                <p><?php echo $message; ?></p>
 
                     <!--First Name-->
-                    <input class="form__firstname--xs" type="text" id="firstNameXs" name="firstNameXs" placeholder="First Name" required>
+                    <input class="form__firstname--xs" type="text" id="firstNameXs" name="first_name" placeholder="First Name" required>
                     <span class="error" id="XsfirstNameError"></span>
                     <!--Last Name-->
-                    <input class="form__lastname--xs" type="text" id="lastNameXs" name="lastNameXs" placeholder="Last Name" required>
+                    <input class="form__lastname--xs" type="text" id="lastNameXs" name="last_name" placeholder="Last Name" required>
                     <span class="error" id="XslastNameError"></span>
                     <!--Email-->
-                    <input class="form__email--xs" type="email" id="emailXs" name="emailXs" placeholder="Email" required>
+                    <input class="form__email--xs" type="email" id="emailXs" name="email" placeholder="Email" required>
                     <span class="error" id="XsemailError"></span>
                     <!--Subject-->
-                    <input class="form__subject--xs" type="text" id="subjectXs" name="subjectXs" placeholder="Subject" required>
+                    <input class="form__subject--xs" type="text" id="subjectXs" name="subject" placeholder="Subject" required>
                     <span class="error" id="XssubjectError"></span>
                     <!--Message-->
-                    <textarea class="form__message--xs" id="messageXs" name="messageXs" rows="5" placeholder="Message..." required></textarea>
+                    <textarea class="form__message--xs" id="messageXs" name="message" rows="5" placeholder="Message..." required></textarea>
                     <span class="error" id="XsmessageError"></span>
                     <!--Submit Button-->
                     <button class="form__submit--xs" type="submit">Submit</button>
                 </form>
+
+                    <div id="successModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="modalMessage"></p>
+                        </div>
+                    </div>
                 <!---------------------------------------------------------------Scroll Snap Bottom--xs-->
                 <div class="contact__scroll">
                     <a href="#hero"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="none" viewBox="0 0 24 24">
@@ -219,12 +227,13 @@
             <span class="contact__email--md"><a  href="mailto:matt@mattdean.tech"><i class="fa-solid fa-envelope"></i></a>  matt@mattdean.tech</span>
             
             <div class="contact__form--md">
-                <form class="form" id="contactFormMd" action="#" method="post">
+                <form class="form" id="contactFormMd" action="submit_contact.php" method="post">
+                    <p><?php echo $message; ?></p>
                     
-                    <input class="form__firstname--md" type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input class="form__firstname--md" type="text" id="first_name" name="firstName" placeholder="First Name" required>
                     <span class="error" id="mdfirstNameError"></span>
                     
-                    <input class="form__lastname--md" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    <input class="form__lastname--md" type="text" id="last_name" name="lastName" placeholder="Last Name" required>
                     <span class="error" id="mdlastNameError"></span>
                     
                     <input class="form__email--md" type="email" id="email" name="email" placeholder="Email" required>
@@ -239,6 +248,13 @@
                     <button class="form__submit--md" type="submit">Submit</button>
                 </form>
             </div>    
+                    <div id="successModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="modalMessage"></p>
+                        </div>
+                    </div>
+
         </div>
     </div> 
 
