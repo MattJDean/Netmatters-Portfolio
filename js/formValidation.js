@@ -1,110 +1,142 @@
-// formValidation.js
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const button = document.getElementById('submitButton');
+    console.log('Form loaded');
 
-// Validation function
-function validateForm(first_name, last_name, email, subject, message, errorPrefix) {
-  const firstName = document.getElementById(first_name).value.trim();
-  const lastName = document.getElementById(last_name).value.trim();
-  const email = document.getElementById(email).value.trim();
-  const subject = document.getElementById(subject).value.trim();
-  const message = document.getElementById(message).value.trim();
+    button.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('Form submitted');
+        // Clear previous errors
+        clearErrors();
 
-  let isValid = true;
-  const errorMessages = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: '',
-  };
+        // Get form values
+        const firstName = document.getElementById('first_name').value.trim();
+        const lastName = document.getElementById('last_name').value.trim();
+        const email = document.getElementById('emailField').value.trim();
+        const subject = document.getElementById('subjectField').value.trim();
+        const message = document.getElementById('messageField').value.trim();
 
-  const namePattern = /^[A-Za-z]{2,}$/;
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const subjectPattern = /^[A-Za-z0-9.,!?:; ]{3,}$/;
-  const messagePattern = /^.{10,}$/;
+        let isValid = true;
 
-  if (!namePattern.test(firstName)) {
-      errorMessages.firstName = 'First name must be at least 2 characters long and contain only letters.';
-      isValid = false;
-  }
-  if (!namePattern.test(lastName)) {
-      errorMessages.lastName = 'Last name must be at least 2 characters long and contain only letters.';
-      isValid = false;
-  }
-  if (!emailPattern.test(email)) {
-      errorMessages.email = 'Please enter a valid email address.';
-      isValid = false;
-  }
-  if (!subjectPattern.test(subject)) {
-      errorMessages.subject = 'Subject must be at least 3 characters long and contain only letters, numbers, and punctuation.';
-      isValid = false;
-  }
-  if (!messagePattern.test(message)) {
-      errorMessages.message = 'Message must be at least 10 characters long.';
-      isValid = false;
-  }
+        // Validate first name
+        if (firstName === '') {
+            document.getElementById('firstNameError').textContent = 'First name is required.';
+            isValid = false;
+        }
 
-  document.getElementById(errorPrefix + 'firstNameError').textContent = errorMessages.firstName;
-  document.getElementById(errorPrefix + 'lastNameError').textContent = errorMessages.lastName;
-  document.getElementById(errorPrefix + 'emailError').textContent = errorMessages.email;
-  document.getElementById(errorPrefix + 'subjectError').textContent = errorMessages.subject;
-  document.getElementById(errorPrefix + 'messageError').textContent = errorMessages.message;
+        // Validate last name
+        if (lastName === '') {
+            document.getElementById('lastNameError').textContent = 'Last name is required.';
+            isValid = false;
+        }
 
-  return isValid;
-}
+        // Validate email
+        if (email === '') {
+            document.getElementById('emailError').textContent = 'Email is required.';
+            isValid = false;
+        } else if (!validateEmail(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
 
-// Show Modal
-function showModal(message, success) {
-  const modal = document.getElementById('successModal');
-  const modalMessage = document.getElementById('modalMessage');
-  modalMessage.innerText = message;
+        // Validate subject
+        if (subject === '') {
+            document.getElementById('subjectError').textContent = 'Subject is required.';
+            isValid = false;
+        }
 
-  // Style based on success or failure
-  modalMessage.style.color = success ? 'green' : 'red';
-  modal.style.display = 'flex';
+        // Validate message
+        if (message === '') {
+            document.getElementById('messageError').textContent = 'Message is required.';
+            isValid = false;
+        }
 
-  // Automatically close modal after 3 seconds
-  setTimeout(() => {
-      modal.style.display = 'none';
-  }, 3000);
-}
+        if (isValid) {
+            // Prepare data to send
+            const formData = new FormData();
+            formData.append('firstName', firstName);
+            formData.append('lastName', lastName);
+            formData.append('email', email);
+            formData.append('subject', subject);
+            formData.append('message', message);
 
-// Close modal when the 'x' button is clicked
-document.querySelector('.modal .close').addEventListener('click', function () {
-  document.getElementById('successModal').style.display = 'none';
-});
+            // Send data using fetch
+            fetch('submit_contact.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle response data
+                if (data.success) {
+                    showSuccessModal(data.message);
+                    form.reset();
+                } else {
+                    // Handle server-side validation errors
+                    if (data.errors) {
+                        displayServerErrors(data.errors);
+                    } else {
+                        alert('An error occurred. Please try again later.');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        }
+    });
 
-// Intercept form submission for xs version
-document.getElementById('contactFormXs').addEventListener('submit', async function (e) {
-  e.preventDefault(); // Prevent default form submission
-  const formData = new FormData(this);
+    // Email validation function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
 
-  try {
-      const response = await fetch('submit_contact.php', { method: 'POST', body: formData });
-      const result = await response.json();
-      showModal(result.message, result.success);
+    // Function to clear error messages
+    function clearErrors() {
+        const errorSpans = document.querySelectorAll('.error');
+        errorSpans.forEach(span => {
+            span.textContent = '';
+        });
+    }
 
-      if (result.success) {
-          this.reset(); // Clear the form on success
-      }
-  } catch (error) {
-      showModal('An error occurred. Please try again.', false);
-  }
-});
+    // Function to display success modal
+    function showSuccessModal(message) {
+        const modal = document.getElementById('successModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeBtn = modal.querySelector('.close');
 
-// Intercept form submission for md version
-document.getElementById('contactFormMd').addEventListener('submit', async function (e) {
-  e.preventDefault(); // Prevent default form submission
-  const formData = new FormData(this);
+        modalMessage.textContent = message;
+        modal.style.display = 'block';
 
-  try {
-      const response = await fetch('submit_contact.php', { method: 'POST', body: formData });
-      const result = await response.json();
-      showModal(result.message, result.success);
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
 
-      if (result.success) {
-          this.reset(); // Clear the form on success
-      }
-  } catch (error) {
-      showModal('An error occurred. Please try again.', false);
-  }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    }
+
+    // Function to display server-side errors
+    function displayServerErrors(errors) {
+        if (errors.firstName) {
+            document.getElementById('firstNameError').textContent = errors.firstName;
+        }
+        if (errors.lastName) {
+            document.getElementById('lastNameError').textContent = errors.lastName;
+        }
+        if (errors.email) {
+            document.getElementById('emailError').textContent = errors.email;
+        }
+        if (errors.subject) {
+            document.getElementById('subjectError').textContent = errors.subject;
+        }
+        if (errors.message) {
+            document.getElementById('messageError').textContent = errors.message;
+        }
+    }
 });

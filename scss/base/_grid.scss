@@ -15,7 +15,7 @@
     grid-template-areas: 
         "hero__container--xs"
         "project__container--xs"
-        "contact__container--xs"
+        "contact__container"
         "footer__licence";
 
     .hero__container--xs { 
@@ -29,8 +29,8 @@
         
     }
 
-    .contact__container--xs {
-        grid-area: contact__container--xs;
+    .contact__container {
+        grid-area: contact__container;
         
     }
 
@@ -58,7 +58,7 @@
     grid-template-areas: 
       "menu__container hero__container--md"
       "menu__container project__container--md"
-      "menu__container contact__container--md"
+      "menu__container contact__container"
       "footer__licence footer__licence"; 
     
   }
@@ -77,8 +77,8 @@
    
   }
 
-  .contact__container--md {
-    grid-area: contact__container--md;
+  .contact__container {
+    grid-area: contact__container;
     
   }
 
